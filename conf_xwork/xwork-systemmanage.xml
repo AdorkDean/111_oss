@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="systemmanage" extends="default" namespace="/systemmanage">	
+		<!-- 配置文件管理 -->
+		<action name="sysc" class="com.rc.portal.webapp.action.SystemConfigAction">
+			<result name="sysc_add_page" type="freemarker" >/WEB-INF/pages/pname/system/sysc_add.ftl</result>
+			<result name="sysc_add" type="redirect" >sysc!syscList.action</result>
+			<result name="sysc_list" type="freemarker" >/WEB-INF/pages/pname/system/sysc_list.ftl</result>
+			<result name="get_view" type="freemarker" >/WEB-INF/pages/pname/system/sysc_update.ftl</result>
+			<result name="sysc_coupon_list" type="freemarker" >/WEB-INF/pages/pname/system/sysc_coupon.ftl</result>
+			<result name="get_view_coupon" type="freemarker" >/WEB-INF/pages/pname/system/sysc_update_coupon.ftl</result>
+			<result name="sysc_coupon" type="redirect" >sysc!sysCoupon.action</result>
+		</action>
+	</package>
+</xwork>

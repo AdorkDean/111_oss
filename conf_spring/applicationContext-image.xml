@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    <bean id="imagesParam" class="com.rc.portal.webapp.model.ImagesParam">
+        <property name="filepath">
+        	<value>${images.filepath}</value>
+        </property>
+        <property name="publicpath">
+        	<value>${images.publicpath}</value>
+        </property>
+        <property name="filetype">
+        	<value>${images.filetype}</value>
+        </property>
+        <property name="maxsize">
+        	<value>${images.maxsize}</value>
+        </property>
+        <property name="lessentypes">
+        	<value>${images.lessentypes}</value>
+        </property>
+        <property name="watermark">
+        	<value>${images.watermark}</value>
+        </property>
+        <property name="watermarkx">
+        	<value>${images.watermark_x}</value>
+        </property>
+        <property name="watermarky">
+        	<value>${images.watermark_y}</value>
+        </property>
+        <property name="watermarkopen">
+        	<value>${images.watermarkopen}</value>
+        </property>
+        
+    </bean>    
+</beans>

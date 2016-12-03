@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<hbnmap namespace="test"> 
+    <hsql id="1"> 
+			select new com.rc.oss.vo.Mytest(p.name,p.id) from TAdmPost p where 1=1
+			<isNotNull property="name">
+				and name='#name#'
+			</isNotNull>
+			<isNotNull property="age">
+				and id='#id#'
+			</isNotNull>
+    </hsql> 
+    
+    
+    <hsql id="2"> 
+			delete from TAdmOperationLogs t where t.id>21180
+    </hsql> 
+</hbnmap>

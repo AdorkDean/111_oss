@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="art_oss_cn">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/filter"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/conf_xwork"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/conf_spring"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/conf_system"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pname"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/conf_spring_pname"/>
+        <dependent-module archiveName="commonsproject.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/111_commonsproject/111_commonsproject">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="111_upmanframework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/111_upmanframework/111_upmanframework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="111_yao_service_client.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/111_yao_service_client/111_yao_service_client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="111_commonslib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/111_commonslib/111_commonslib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/art_oss_cn/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/111_oss"/>
+        <property name="me-merge-utility-modules" value="true"/>
+    </wb-module>
+</project-modules>

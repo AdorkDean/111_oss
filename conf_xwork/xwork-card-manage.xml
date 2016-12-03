@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<!-- Configuration for the user package. -->
+	<package name="card" extends="default" namespace="/card">
+		<action name="coupon" class="com.rc.portal.webapp.action.CouponAction">			
+			<result name="couponEdit" type="freemarker">/WEB-INF/pages/cardmanage/cardedit.ftl</result>
+			<result name="createCardEdit" type="freemarker">/WEB-INF/pages/cardmanage/createCard.ftl</result>
+			<result name="couponList" type="freemarker">/WEB-INF/pages/cardmanage/cardlist.ftl</result>
+			<result name="upcouponEdit" type="freemarker">/WEB-INF/pages/cardmanage/upcardedit.ftl</result>
+			<result name="list" type="redirect" >coupon!list.action</result>
+			<result name="getCouponCard" type="freemarker">/WEB-INF/pages/pname/coupon/coucard_list.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		<action name="longCard" class="com.rc.portal.webapp.action.LongCradAction">			
+			<result name="longCardEdit" type="freemarker">/WEB-INF/pages/cardmanage/longCard/longCardedit.ftl</result>
+			<result name="createLongCardEdit" type="freemarker">/WEB-INF/pages/cardmanage/longCard/createLongCard.ftl</result>
+			<result name="longCardList" type="freemarker">/WEB-INF/pages/cardmanage/longCard/longCardlist.ftl</result>
+			<result name="upLongCardEdit" type="freemarker">/WEB-INF/pages/cardmanage/longCard/upLongCardedit.ftl</result>
+			<result name="list" type="redirect" >longCard!list.action</result>
+			<result name="getLongCard" type="freemarker">/WEB-INF/pages/pname/long/longcard_list.ftl</result>
+		    <result name="xls">${url}</result>
+		</action>
+	</package>
+</xwork>

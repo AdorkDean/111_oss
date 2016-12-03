@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="goodsfreight" extends="default" namespace="/goodsfreight">
+		<!-- 预订单 -->
+		<action name="goodsfreight" class="com.rc.portal.webapp.action.GoodFreightAction">
+		   <result name="list" type="freemarker">/WEB-INF/pages/pname/freight/list.ftl</result>
+		   <result name="add" type="freemarker">/WEB-INF/pages/pname/freight/add.ftl</result>
+		   <result name="upfreight" type="freemarker">/WEB-INF/pages/pname/freight/upfreight.ftl</result>
+		   <result name="goodFreightList" type="freemarker">/WEB-INF/pages/pname/freight/goodFreightList.ftl</result>
+		   <result name="goodFreightPage" type="freemarker">/WEB-INF/pages/pname/freight/goodFreightPage.ftl</result>
+		</action>
+	</package>
+</xwork>

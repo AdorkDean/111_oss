@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_subject" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TSubject" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="name_file" property="nameFile" jdbcType="VARCHAR" />
+    <result column="templete_path" property="templetePath" jdbcType="VARCHAR" />
+    <result column="zt_path" property="ztPath" jdbcType="VARCHAR" />
+    <result column="ptype" property="ptype" jdbcType="INTEGER" />
+    <result column="create_dt" property="createDt" jdbcType="TIMESTAMP" />
+    <result column="last_dt" property="lastDt" jdbcType="TIMESTAMP" />
+    <result column="last_edit" property="lastEdit" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ibatorgenerated_ResultMapWithBLOBs" class="com.rc.portal.vo.TSubject" extends="t_subject.ibatorgenerated_BaseResultMap" >
+    <result column="zt_context" property="ztContext" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExampleWithBLOBs" resultMap="ibatorgenerated_ResultMapWithBLOBs" parameterClass="com.rc.portal.vo.TSubjectExample" >
+    select id, name, name_file, templete_path, zt_path, ptype, create_dt, last_dt, last_edit,
+      zt_context
+    from t_subject
+    <isParameterPresent >
+      <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TSubjectExample" >
+    select id, name, name_file, templete_path, zt_path, ptype, create_dt, last_dt, last_edit
+    from t_subject
+    <isParameterPresent >
+      <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_ResultMapWithBLOBs" parameterClass="com.rc.portal.vo.TSubject" >
+    select id, name, name_file, templete_path, zt_path, ptype, create_dt, last_dt, last_edit,
+      zt_context
+    from t_subject
+    where id = #id:INTEGER#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TSubject" >
+    delete from t_subject
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TSubjectExample" >
+    delete from t_subject
+    <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TSubject" >
+    insert into t_subject (id, name, name_file, templete_path, zt_path, ptype, create_dt, last_dt,
+      last_edit, zt_context)
+    values (#id:INTEGER#, #name:VARCHAR#, #nameFile:VARCHAR#, #templetePath:VARCHAR#,
+      #ztPath:VARCHAR#, #ptype:INTEGER#, #createDt:TIMESTAMP#, #lastDt:TIMESTAMP#,
+      #lastEdit:VARCHAR#, #ztContext:LONGVARBINARY#)
+	<selectKey resultClass="int" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TSubject" >
+    insert into t_subject
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        name
+      </isNotNull>
+      <isNotNull prepend="," property="nameFile" >
+        name_file
+      </isNotNull>
+      <isNotNull prepend="," property="templetePath" >
+        templete_path
+      </isNotNull>
+      <isNotNull prepend="," property="ztPath" >
+        zt_path
+      </isNotNull>
+      <isNotNull prepend="," property="ptype" >
+        ptype
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt
+      </isNotNull>
+      <isNotNull prepend="," property="lastDt" >
+        last_dt
+      </isNotNull>
+      <isNotNull prepend="," property="lastEdit" >
+        last_edit
+      </isNotNull>
+      <isNotNull prepend="," property="ztContext" >
+        zt_context
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="nameFile" >
+        #nameFile:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="templetePath" >
+        #templetePath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ztPath" >
+        #ztPath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ptype" >
+        #ptype:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        #createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastDt" >
+        #lastDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEdit" >
+        #lastEdit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ztContext" >
+        #ztContext:LONGVARBINARY#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="int" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+    select count(*) from t_subject where 1 = 1
+	<isNotNull prepend="and" property="ptype" >
+		ptype = #ptype#
+	</isNotNull>
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update t_subject
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.name" >
+        name = #record.name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.nameFile" >
+        name_file = #record.nameFile:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.templetePath" >
+        templete_path = #record.templetePath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.ztPath" >
+        zt_path = #record.ztPath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.ptype" >
+        ptype = #record.ptype:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createDt" >
+        create_dt = #record.createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.lastDt" >
+        last_dt = #record.lastDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.lastEdit" >
+        last_edit = #record.lastEdit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.ztContext" >
+        zt_context = #record.ztContext:LONGVARBINARY#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExampleWithBLOBs" >
+    update t_subject
+    set id = #record.id:INTEGER#,
+      name = #record.name:VARCHAR#,
+      name_file = #record.nameFile:VARCHAR#,
+      templete_path = #record.templetePath:VARCHAR#,
+      zt_path = #record.ztPath:VARCHAR#,
+      ptype = #record.ptype:INTEGER#,
+      create_dt = #record.createDt:TIMESTAMP#,
+      last_dt = #record.lastDt:TIMESTAMP#,
+      last_edit = #record.lastEdit:VARCHAR#,
+      zt_context = #record.ztContext:LONGVARBINARY#
+    <isParameterPresent >
+      <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update t_subject
+    set id = #record.id:INTEGER#,
+      name = #record.name:VARCHAR#,
+      name_file = #record.nameFile:VARCHAR#,
+      templete_path = #record.templetePath:VARCHAR#,
+      zt_path = #record.ztPath:VARCHAR#,
+      ptype = #record.ptype:INTEGER#,
+      create_dt = #record.createDt:TIMESTAMP#,
+      last_dt = #record.lastDt:TIMESTAMP#,
+      last_edit = #record.lastEdit:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_subject.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TSubject" >
+    update t_subject
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="name" >
+        name = #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="nameFile" >
+        name_file = #nameFile:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="templetePath" >
+        templete_path = #templetePath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ztPath" >
+        zt_path = #ztPath:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ptype" >
+        ptype = #ptype:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt = #createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastDt" >
+        last_dt = #lastDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEdit" >
+        last_edit = #lastEdit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ztContext" >
+        zt_context = #ztContext:LONGVARBINARY#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeyWithBLOBs" parameterClass="com.rc.portal.vo.TSubject" >
+    update t_subject
+    set name = #name:VARCHAR#,
+      name_file = #nameFile:VARCHAR#,
+      templete_path = #templetePath:VARCHAR#,
+      zt_path = #ztPath:VARCHAR#,
+      ptype = #ptype:INTEGER#,
+      create_dt = #createDt:TIMESTAMP#,
+      last_dt = #lastDt:TIMESTAMP#,
+      last_edit = #lastEdit:VARCHAR#,
+      zt_context = #ztContext:LONGVARBINARY#
+    where id = #id:INTEGER#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TSubject" >
+    update t_subject
+    set name = #name:VARCHAR#,
+      name_file = #nameFile:VARCHAR#,
+      templete_path = #templetePath:VARCHAR#,
+      zt_path = #ztPath:VARCHAR#,
+      ptype = #ptype:INTEGER#,
+      create_dt = #createDt:TIMESTAMP#,
+      last_dt = #lastDt:TIMESTAMP#,
+      last_edit = #lastEdit:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="java.util.Map">
+	  	SELECT ts.id,  
+	  	       ts.`name`, 
+	  	       ts.name_file, 
+	  	       ts.templete_path, 
+	  	       ts.zt_path, 
+	  	       ts.ptype, 
+	  	       ts.create_dt, 
+	  	       ts.last_dt, 
+	  	       ts.last_edit
+		FROM t_subject AS ts
+		WHERE 1 = 1
+		<isNotNull prepend="and" property="ptype" >
+		ts.ptype = #ptype#
+		</isNotNull>
+		<isNotNull prepend="and" property="name" >
+		ts.`name` LIKE #name#
+		</isNotNull>
+		ORDER BY ts.id DESC
+	    limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+</sqlMap>

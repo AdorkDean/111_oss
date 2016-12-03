@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="/web/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/web/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/web/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/web/js/cookieUtil.js"></script>
+<script type="text/javascript" src="/web/js/common.new.js"></script>
+<script type="text/javascript" src="/web/js/alert.main.js"></script>
+<title>商品详情</title>
+</head>
+
+<body onLoad="loaded()">
+<header class="header">
+    <a href="javascript:;" class="iconfont top-left-btn">B</a>
+    <h2 class="header-title">
+        商品详情
+    </h2>
+    <a href="javascript:;" class="iconfont top-heart-btn" id="collect-btn">H</a>
+    <a href="/index.html" class="iconfont top-right-btn">h</a>
+</header>
+
+<script type="text/javascript" src="/web/js/iscroll.js"></script>
+<script type="text/javascript">
+	var myScroll;
+	function loaded ()
+	{
+		myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+</script>
+
+<article class="details-main">
+  <!--效果html开始-->
+  <div class="slider">
+    <div class="slider-page"><span id="cur-num">1</span>/<span>5</span></div>
+	  <ul>
+	            	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+	  </ul>
+  </div>
+  <script type="text/javascript" src="/web/js/yxMobileSlider.js"></script>
+  <script>
+      $(".slider").yxMobileSlider({width:640,height:640,during:3000})
+  </script>  
+  <!--效果html结束-->
+  <article class="product-box">
+    <header class="product-info">
+      <h1 class="product-title">锌钙特 葡萄糖酸钙锌口服溶液 10ml*12支</h1>
+      <input type="hidden" id="goodsid" value="292"/>
+      <p class="product-price">
+        <i style="font-family:'Microsoft Yahei'">￥</i><b id="mprice">18</b>
+        <span id="pcount">6折</span>
+      </p>
+      <p class="priduct-spec"><span>原价:<i style="font-family:'Microsoft Yahei'">￥</i><b id="oprice">28</b></span><span style="text-decoration:none;">规格:</span></p>
+    </header>
+  </article>
+  <ul class="explain clearfix">
+  	<li><span class="iconfont">M</span>30天无理由退换货</li>
+    <li><span class="iconfont">M</span>真品假一赔十</li>
+    <li><span class="iconfont">M</span>全程冷藏运输</li>
+    <li><span class="iconfont">M</span>全国规模化采购，药厂直销</li>
+  </ul>
+  <article class="product-info-link">
+    <a href="/goodscomment/gcmt!list.action?id=292" class="product-info-link-title">商品评论<b class="iconfont">J</b></a>
+    <h2 class="product-info-link-title">商品详情</h2>
+    <div class="details-img">
+    	<p><span style="LINE-HEIGHT: 23px; FONT-FAMILY: &#39;arial verdana 瀹嬩綋&#39;; COLOR: rgb(102,102,102); FONT-SIZE: small">銆愬晢鍝佸悕绉般�閿岄挋鐗�/span><br/></p><p style="LINE-HEIGHT: 23px; FONT-FAMILY: arial verdana 瀹嬩綋; COLOR: #666666; FONT-SIZE: small">銆愰�鐢ㄥ悕绉般�钁¤悇绯栭吀閽欓攲鍙ｆ湇婧舵恫<br/>銆愮敓浜т紒涓氥�婢宠锛堜腑鍥斤級鍒惰嵂鏈夐檺鍏徃<br/>銆愬晢鍝佽鏍笺�10ml*12鏀�br/>銆愰� 搴�鐥囥�鐢ㄤ簬娌荤枟鍥犵己閽欍�閿屽紩璧风殑鐤剧梾锛屽寘鎷璐ㄧ枏鏉俱�鎵嬭冻鎶芥悙鐥囥�楠ㄥ彂鑲蹭笉鍏ㄣ�浣濆伝骞跺濞犲濂冲拰鍝轰钩鏈熷濂炽�缁濈粡鏈熷濂抽挋鐨勮ˉ鍏咃紝灏忓効鐢熼暱鍙戣偛杩熺紦锛岄娆茬己涔忥紝鍘岄鐥囷紝澶嶅彂鎬у彛鑵旀簝鐤′互鍙婄棨鐤瓑銆�br/>銆愬墏 鍨嬨�鍙ｆ湇娑�br/>銆愭垚 鍒嗐�鏈搧涓哄鏂瑰埗鍓傦紝姣�0姣崌鍚憽钀勭硸閰搁挋600姣厠锛堢浉褰撲簬閽�4姣厠锛夛紝钁¤悇绯栭吀閿�0姣厠锛堢浉褰撲簬閿�.3姣厠锛夛紝鐩愰吀璧栨皑閰�00姣厠銆傝緟鏂欎负涔抽吀銆佽嫰鐢查吀閽犮�闃挎柉宸寸敎銆佸畨璧涜湝銆侀绮惧拰绾寲姘淬�<br/>銆愭� 鐘躲�鏈搧涓烘棤鑹叉垨寰粍鑹叉緞娓呮恫浣撱�<br/>銆愪綔鐢ㄧ被鍒�鏈搧涓虹熆鐗╄川绫婚潪澶勬柟鑽嵂鍝�br/>銆愮敤娉曠敤閲忋�鍙ｆ湇銆傚┐骞煎効涓�棩5锝�0姣崌锛屾垚浜轰竴鏃�0锝�0姣崌锛屽垎2锝�娆★紝楗悗鏈嶃�<br/>銆愪笉鑹弽搴斻�<br/>1.鍙杞诲害鎭跺績銆佸憰鍚愩�渚跨绛夊弽搴斻�<br/>2.闀挎湡鏈嶇敤鍙紩璧峰弽璺虫�鑳冮吀鍒嗘硨澧為珮銆�br/>銆愮 蹇屻�琛�挋銆佽閿岃繃楂樸�鐢茬姸鏃佽吅鍔熻兘浜㈣繘鎮ｈ�绂佺敤銆�br/>銆愭敞鎰忎簨椤广�<br/>1.鑲惧姛鑳戒笉鍏ㄦ垨绯栧翱鐥呮偅鑰呮厧鐢ㄣ�<br/>2.瀵规湰鍝佽繃鏁忚�绂佺敤锛岃繃鏁忎綋璐ㄨ�鎱庣敤銆�br/>3.鏈搧鎬х姸鍙戠敓鏀瑰彉鏃剁姝娇鐢ㄣ�<br/>4.璇峰皢鏈搧鏀惧湪鍎跨涓嶈兘鎺ヨЕ鐨勫湴鏂广�<br/>5.鍎跨蹇呴』鍦ㄦ垚浜虹洃鎶や笅浣跨敤銆�br/>6.濡傛鍦ㄤ娇鐢ㄥ叾浠栬嵂鍝侊紝浣跨敤鏈搧鍓嶈鍜ㄨ鍖诲笀鎴栬嵂甯堛�<br/>7.瀛曞銆佸摵涔虫湡濡囧コ銆佸効绔ャ�鑰佷汉搴斿湪鍖诲笀鎸囧涓嬩娇鐢ㄣ�<br/>銆愯串钘忋�瀵嗗皝銆佸共鐕ュ淇濆瓨銆�br/>銆愬寘瑁呫�PVC/PE澶嶅悎纭墖鍖呰锛�2鏀�br/>銆愭湁鏁堟湡銆�4涓湀<br/>銆愭墽琛屾爣鍑嗐�鍥藉鑽搧鏍囧噯WS1-XG-008-2002<br/>銆愭壒鍑嗘枃鍙枫�鍥借嵂鍑嗗瓧H20013241</p><p><img id="ids-tag-m-35187" class="ke_anchor" name="ids-tag-m-35187" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif"/><img title="201501221421920331456058492.jpg" alt="閿岄挋鐗筥01.jpg" src="http://www.111yao.com/upload/images/201501221421920331456058492.jpg"/><img title="201501221421920340282009645.jpg" alt="閿岄挋鐗筥02.jpg" src="http://www.111yao.com/upload/images/201501221421920340282009645.jpg"/><img title="201501221421920349934007326.jpg" alt="閿岄挋鐗筥03.jpg" src="http://www.111yao.com/upload/images/201501221421920349934007326.jpg"/><img title="201501221421920361090043799.jpg" alt="閿岄挋鐗筥04.jpg" src="http://www.111yao.com/upload/images/201501221421920361090043799.jpg"/><img title="201501221421920369386009604.jpg" alt="閿岄挋鐗筥05.jpg" src="http://www.111yao.com/upload/images/201501221421920369386009604.jpg"/><img title="201501221421920378164095333.jpg" alt="閿岄挋鐗筥06.jpg" src="http://www.111yao.com/upload/images/201501221421920378164095333.jpg"/><img title="201501221421920387988023210.jpg" alt="閿岄挋鐗筥07.jpg" src="http://www.111yao.com/upload/images/201501221421920387988023210.jpg"/><img title="201501221421920397497049773.jpg" alt="閿岄挋鐗筥08.jpg" src="http://www.111yao.com/upload/images/201501221421920397497049773.jpg"/><img title="201501221421920404031028930.jpg" alt="閿岄挋鐗筥09.jpg" src="http://www.111yao.com/upload/images/201501221421920404031028930.jpg"/><img title="201501221421920410998079680.jpg" alt="閿岄挋鐗筥10.jpg" src="http://www.111yao.com/upload/images/201501221421920410998079680.jpg"/> </p><p>&nbsp;</p>
+    </div>
+  </article>
+  <div class="groom-box">
+    <h2 class="guess-title"><span>猜你在找</span></h2>
+    <div class="guess-box" id="wrapper">
+        <div class="guess-box-list" id="scroller">
+            <ul>
+            </ul>
+        </div>
+    </div>
+  </div>
+</article>
+<div class="details-btn-fixed">
+	<ul class="clearfix">
+    	<li><a href="/carts/cart!page.action" class="iconfont">C</a><span class="cart-count">0</span></li>
+        <li><a href="javascript:;" class="add-cart-btn">加入购物车</a></li>
+    </ul>
+</div>
+<!--loading-->
+<div class="spinner" style="display:none;">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<script type="text/javascript" src="/web/js/hotsale-goods.js"></script>
+<script type="text/javascript" src="/web/js/wap-cart.js"></script>
+<script>
+var jsCtx = "";
+$(function(){
+	var id = $.trim($("#goodsid").val());
+	if(checklogin())
+	{
+		$.get("/index!isattent.action?id="+id,null,function(data)
+		{
+			if(data == 1)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+				$("#collect-btn").html("H");
+			}
+			if(data == 0)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+				$("#collect-btn").html("I");
+			}
+		});
+	}
+	//Get the number of shopping cart from server
+	getnum();
+	//This is collection button
+	$("#collect-btn").click(function(){
+		if(checklogin()){
+			$.get("/index!attentionpro.action?id="+id+"&type=0",null,function(data)
+			{
+				if(data == 0)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+					$("#collect-btn").html("H");
+				}
+				if(data == 1)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+					$("#collect-btn").html("I");
+				}
+			});
+		}else{
+			window.location.href = "/login/login!index.action?redirectUrl="+location.href;
+		}
+	});
+	//Put goods into shopping cart
+	$(".add-cart-btn").click(function(){
+		var rs = add_cart(id,1);
+		if(rs > 0)
+		{
+			$alert("success","已成功添加至购物车");
+			getnum();
+			return false;
+		} 
+		if(rs == -2)
+		{
+			$alert("warn","库存不足");
+			return false;
+		}
+		if(rs == -3)
+		{
+			$alert("warn","超出购买数量");
+			return false;
+		}
+		if(rs == 0)
+		{
+			$alert("warn","操作失败");
+			return false;
+		}
+	});
+});
+
+//Get the number of shopping cart from server
+function getnum()
+{
+	jQuery.ajax
+	({
+       type: "post",
+       url: "/carts/cart!getCartSum.action",	 
+       async:false, 
+       success: function(data)
+       {
+    	   $(".cart-count").html(data);
+       }
+     }); 	  
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="T_ADM_RESC" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TAdmResc" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="RES_TYPE" property="resType" jdbcType="VARCHAR" />
+    <result column="RES_STRING" property="resString" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="DESCN" property="descn" jdbcType="VARCHAR" />
+    <result column="EDITABLE" property="editable" jdbcType="DECIMAL" />
+    <result column="WEBID" property="webid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmRescExample" >
+    select ID, NAME, RES_TYPE, RES_STRING, PRIORITY, DESCN, EDITABLE, WEBID
+    from T_ADM_RESC
+    <isParameterPresent >
+      <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmResc" >
+    select ID, NAME, RES_TYPE, RES_STRING, PRIORITY, DESCN, EDITABLE, WEBID
+    from T_ADM_RESC
+    where ID = #id:DECIMAL#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmResc" >
+    delete from T_ADM_RESC
+    where ID = #id:DECIMAL#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TAdmRescExample" >
+    delete from T_ADM_RESC
+    <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TAdmResc" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT SEQ_RESC_ID.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_RESC (ID, NAME, RES_TYPE, RES_STRING, PRIORITY, DESCN, EDITABLE, WEBID)
+    values (#id:DECIMAL#, #name:VARCHAR#, #resType:VARCHAR#, #resString:VARCHAR#,
+      #priority:DECIMAL#, #descn:VARCHAR#, #editable:DECIMAL#, #webid:DECIMAL#)
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TAdmResc" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT SEQ_RESC_ID.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_RESC
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        ID
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        NAME
+      </isNotNull>
+      <isNotNull prepend="," property="resType" >
+        RES_TYPE
+      </isNotNull>
+      <isNotNull prepend="," property="resString" >
+        RES_STRING
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        PRIORITY
+      </isNotNull>
+      <isNotNull prepend="," property="descn" >
+        DESCN
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        EDITABLE
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="resType" >
+        #resType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="resString" >
+        #resString:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        #priority:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="descn" >
+        #descn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        #editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        #webid:DECIMAL#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TAdmRescExample" resultClass="java.lang.Integer" >
+    select count(*) from T_ADM_RESC
+    <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update T_ADM_RESC
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        ID = #record.id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.name" >
+        NAME = #record.name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.resType" >
+        RES_TYPE = #record.resType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.resString" >
+        RES_STRING = #record.resString:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.priority" >
+        PRIORITY = #record.priority:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.descn" >
+        DESCN = #record.descn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.editable" >
+        EDITABLE = #record.editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.webid" >
+        WEBID = #record.webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update T_ADM_RESC
+    set ID = #record.id:DECIMAL#,
+      NAME = #record.name:VARCHAR#,
+      RES_TYPE = #record.resType:VARCHAR#,
+      RES_STRING = #record.resString:VARCHAR#,
+      PRIORITY = #record.priority:DECIMAL#,
+      DESCN = #record.descn:VARCHAR#,
+      EDITABLE = #record.editable:DECIMAL#,
+      WEBID = #record.webid:DECIMAL#
+    <isParameterPresent >
+      <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TAdmResc" >
+    update T_ADM_RESC
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="name" >
+        NAME = #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="resType" >
+        RES_TYPE = #resType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="resString" >
+        RES_STRING = #resString:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        PRIORITY = #priority:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="descn" >
+        DESCN = #descn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        EDITABLE = #editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID = #webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    where ID = #id:DECIMAL#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmResc" >
+    update T_ADM_RESC
+    set NAME = #name:VARCHAR#,
+      RES_TYPE = #resType:VARCHAR#,
+      RES_STRING = #resString:VARCHAR#,
+      PRIORITY = #priority:DECIMAL#,
+      DESCN = #descn:VARCHAR#,
+      EDITABLE = #editable:DECIMAL#,
+      WEBID = #webid:DECIMAL#
+    where ID = #id:DECIMAL#
+  </update>
+  
+  <select id="ibatorgenerated_maxByExample"  resultClass="java.lang.String" >
+    select max(PRIORITY) from T_ADM_RESC t where t.priority!=9999 
+  </select>
+    
+  
+  <select id="ibatorgenerated_selectByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmRescExample" >
+     	    select 
+		    *
+	     	from 
+    			(
+		    			select A.*,ROWNUM as rn from
+		    					(  
+							    select *
+							    from T_ADM_RESC
+							    <isParameterPresent >
+							      <include refid="T_ADM_RESC.ibatorgenerated_Example_Where_Clause" />
+							      <isNotNull property="orderByClause" >
+							        order by $orderByClause$
+							      </isNotNull>
+							    </isParameterPresent>							  
+			    ) A				
+		<![CDATA[  where ROWNUM<= ($pageInfo.page$*$pageInfo.pageSize$)  ]]>
+		<![CDATA[   ) where rn > ($pageInfo.page$ - 1) * $pageInfo.pageSize$]]>
+	</select>									  
+</sqlMap>

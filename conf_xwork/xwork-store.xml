@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+<!-- 门店地址管理 -->
+	<package name="store" extends="default" namespace="/store">
+		<action name="store" class="com.rc.portal.webapp.action.StoreDispatchingRangeAction">
+			<result name="getDispatchList" type="freemarker" >/WEB-INF/pages/pname/store/store_dispatching_list.ftl</result>
+			<result name="addOrEditStore" type="freemarker" >/WEB-INF/pages/pname/store/add_edit_store.ftl</result>
+		</action>
+	</package>
+</xwork>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
+	<!-- ibatis sqlMapClient config -->
+	<bean id="sqlMapClient"
+		class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>classpath:applicationContext-sqlmap.xml</value>
+		</property>
+		<property name="dataSource" ref="dataSource" />
+		<property name="lobHandler" ref="lobHandler" />
+	</bean>
+	
+	<!-- Transaction manager for a single JDBC DataSource -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_portal_cn" />
+	</bean>
+
+	
+	<!-- add by yinbin 2011.03.30 -->
+	<!-- add DAO by yourself like this -->
+	<!--
+    <bean id="userinfoDao" class="com.rc.portal.dao.impl.UserinfoDaoiBatis">        
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+    -->      
+			  
+
+    <bean id="tadmmodulesdao" class="com.rc.portal.dao.impl.TAdmModulesDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmoperationlogsdao" class="com.rc.portal.dao.impl.TAdmOperationLogsDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmrescdao" class="com.rc.portal.dao.impl.TAdmRescDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmrescrolesdao" class="com.rc.portal.dao.impl.TAdmRescRolesDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmrolesdao" class="com.rc.portal.dao.impl.TAdmRolesDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmuserrolesdao" class="com.rc.portal.dao.impl.TAdmUserRolesDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmusersdao" class="com.rc.portal.dao.impl.TAdmUsersDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmusersmodulesdao" class="com.rc.portal.dao.impl.TAdmUsersModulesDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmpostdao" class="com.rc.portal.dao.impl.TAdmPostDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmpostroledao" class="com.rc.portal.dao.impl.TAdmPostRoleDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+
+    <bean id="tadmuserpostdao" class="com.rc.portal.dao.impl.TAdmUserPostDAOImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
+    
+</beans>

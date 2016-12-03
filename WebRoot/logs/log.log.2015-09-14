@@ -1,0 +1,1357 @@
+2015-09-14 11:12:32 - [ INFO ] Hibernate 3.2.5
+2015-09-14 11:12:32 - [ INFO ] hibernate.properties not found
+2015-09-14 11:12:32 - [ INFO ] Bytecode provider name : cglib
+2015-09-14 11:12:32 - [ INFO ] using JDK 1.4 java.sql.Timestamp handling
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 11:12:32 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 11:12:32 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 11:12:32 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 11:12:33 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 11:12:33 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 11:12:33 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 11:12:33 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 11:12:33 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 11:12:33 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 11:12:33 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 11:12:33 - [ INFO ] JDBC batch size: 15
+2015-09-14 11:12:33 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 11:12:33 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 11:12:33 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 11:12:33 - [ INFO ] Connection release mode: auto
+2015-09-14 11:12:33 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 11:12:33 - [ INFO ] Default batch fetch size: 1
+2015-09-14 11:12:33 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 11:12:33 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 11:12:33 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 11:12:33 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 11:12:33 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 11:12:33 - [ INFO ] Query language substitutions: {}
+2015-09-14 11:12:33 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 11:12:33 - [ INFO ] Second-level cache: enabled
+2015-09-14 11:12:33 - [ INFO ] Query cache: disabled
+2015-09-14 11:12:33 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 11:12:33 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 11:12:33 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 11:12:33 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 11:12:33 - [ INFO ] Statistics: disabled
+2015-09-14 11:12:33 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 11:12:33 - [ INFO ] Default entity-mode: pojo
+2015-09-14 11:12:33 - [ INFO ] Named query checking : enabled
+2015-09-14 11:12:33 - [ INFO ] building session factory
+2015-09-14 11:12:33 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 11:12:33 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 11:12:34 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 11:12:34 - [ INFO ] Loading global messages from ApplicationResources
+2015-09-14 11:12:34 - [ INFO ] Initializing WebWork-Spring integration...
+2015-09-14 11:12:34 - [ INFO ] Setting autowire strategy to name
+2015-09-14 11:12:34 - [ INFO ] ... initialized WebWork-Spring integration successfully
+2015-09-14 11:12:34 - [ INFO ] Instantiating Freemarker ConfigManager!, com.rc.portal.webapp.filter.ExtendFreemarkerManager
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 11:12:36 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 11:12:36 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 11:12:36 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 11:12:36 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 11:12:36 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 11:12:36 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 11:12:36 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 11:12:36 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 11:12:36 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 11:12:36 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 11:12:36 - [ INFO ] JDBC batch size: 15
+2015-09-14 11:12:36 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 11:12:36 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 11:12:36 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 11:12:36 - [ INFO ] Connection release mode: auto
+2015-09-14 11:12:36 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 11:12:36 - [ INFO ] Default batch fetch size: 1
+2015-09-14 11:12:36 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 11:12:36 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 11:12:36 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 11:12:36 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 11:12:36 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 11:12:36 - [ INFO ] Query language substitutions: {}
+2015-09-14 11:12:36 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 11:12:36 - [ INFO ] Second-level cache: enabled
+2015-09-14 11:12:36 - [ INFO ] Query cache: disabled
+2015-09-14 11:12:36 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 11:12:36 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 11:12:36 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 11:12:36 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 11:12:36 - [ INFO ] Statistics: disabled
+2015-09-14 11:12:36 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 11:12:36 - [ INFO ] Default entity-mode: pojo
+2015-09-14 11:12:36 - [ INFO ] Named query checking : enabled
+2015-09-14 11:12:36 - [ INFO ] building session factory
+2015-09-14 11:12:36 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 11:12:36 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 11:12:36 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 11:12:51 - [ ERROR ] Unable to find interceptor class referenced by ref-name unionPageInterceptor
+2015-09-14 11:12:52 - [ INFO ] 【登陆信息】showLogin()初始化进入 IP:127.0.0.1
+2015-09-14 11:12:52 - [ INFO ] 【登陆信息】showLogin()初始化进入 IP:127.0.0.1
+2015-09-14 11:13:04 - [ INFO ] 【登陆信息】login()初始化进入 IP:127.0.0.1
+2015-09-14 11:13:04 - [ INFO ] 【登陆信息】载入right!
+2015-09-14 11:13:04 - [ INFO ] 【登陆信息】载入top!
+2015-09-14 11:13:04 - [ INFO ] 【登陆信息】载入left!
+2015-09-14 11:14:04 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :t_category.selectCategoryCountByMap | t_category.selectCategoryListByMap | 1 | 20
+2015-09-14 11:14:04 - [ DEBUG ] {conn-100000} Connection
+2015-09-14 11:14:04 - [ DEBUG ] {conn-100000} Preparing Statement:    select  count(t.id) from t_category t  left join t_category a on a.id=t.parent_id  where 1=1            
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100001} Executing Statement:    select  count(t.id) from t_category t  left join t_category a on a.id=t.parent_id  where 1=1            
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100001} Parameters: []
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100001} Types: []
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100002} ResultSet
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100002} Header: [count(t.id)]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100002} Result: [59]
+2015-09-14 11:14:04 - [ DEBUG ] {conn-100003} Connection
+2015-09-14 11:14:04 - [ DEBUG ] {conn-100003} Preparing Statement:   select  t.id,t.category_name,t.category_level,t.is_app,t.is_pc,t.is_wap,t.remarks,t.create_time,a.category_name  AS parentname from t_category t  left join t_category a on a.id=t.parent_id  where 1=1                order by t.create_time desc      LIMIT 0,20   
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100004} Executing Statement:   select  t.id,t.category_name,t.category_level,t.is_app,t.is_pc,t.is_wap,t.remarks,t.create_time,a.category_name  AS parentname from t_category t  left join t_category a on a.id=t.parent_id  where 1=1                order by t.create_time desc      LIMIT 0,20   
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100004} Parameters: []
+2015-09-14 11:14:04 - [ DEBUG ] {pstm-100004} Types: []
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} ResultSet
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Header: [id, category_name, category_level, is_app, is_pc, is_wap, remarks, create_time, parentname]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [103, 调节免疫, 4, 1, 1, 1, 1, 2015-09-11 21:17:29.0, 营养保健]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [102, 调节免疫, 4, 1, 1, 1, 1, 2015-09-11 21:16:49.0, 营养保健]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [101, 1, 1, 1, 1, 1, 111, 2015-09-11 20:40:55.0, null]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [99, 隐形眼镜, 2, 1, 1, 1, 1, 2015-09-11 18:37:34.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [98, 成人用品, 2, 1, 1, 1, 1, 2015-09-11 18:37:08.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [97, 保健器械, 2, 1, 1, 1, 1, 2015-09-11 18:36:31.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [96, 美容护肤, 2, 1, 1, 1, 1, 2015-09-11 18:36:13.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [95, 滋补养生, 2, 1, 1, 1, 1, 2015-09-11 18:35:54.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [94, 营养保健, 2, 1, 1, 1, 1, 2015-09-11 18:35:19.0, 母婴馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [93, 母婴馆, 1, 1, 1, 1, 1, 2015-09-11 18:34:03.0, null]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [92, 隐形眼镜, 2, 1, 1, 1, 1, 2015-09-11 16:57:17.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [90, 成人用品, 2, 1, 1, 1, 1, 2015-09-11 16:56:31.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [89, 保健器械, 2, 1, 1, 1, 1, 2015-09-11 16:56:08.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [87, 美容护肤, 2, 1, 1, 1, 1, 2015-09-11 16:55:14.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [86, 滋补养生, 2, 1, 1, 1, 1, 2015-09-11 16:54:54.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [85, 营养保健, 2, 1, 1, 1, 1, 2015-09-11 16:54:31.0, 保健馆]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [84, 保健馆, 1, 1, 1, 1, 1, 2015-09-11 16:53:38.0, null]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [83, 时尚美妆, 2, 1, 1, 1, 1, 2015-09-11 15:28:19.0, 全部商品分类]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [82, 成人用品, 2, 1, 1, 1, 1, 2015-09-11 15:28:01.0, 全部商品分类]
+2015-09-14 11:14:04 - [ DEBUG ] {rset-100005} Result: [81, 日常用药, 1, 1, 1, 1, 1, 2015-09-11 15:27:35.0, null]
+2015-09-14 11:14:08 - [ DEBUG ] {conn-100006} Connection
+2015-09-14 11:14:08 - [ DEBUG ] {conn-100006} Preparing Statement:      select id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,       is_app, is_pc, create_time, remarks, seo_title, seo_keyword, seo_describe     from t_category        
+2015-09-14 11:14:08 - [ DEBUG ] {pstm-100007} Executing Statement:      select id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,       is_app, is_pc, create_time, remarks, seo_title, seo_keyword, seo_describe     from t_category        
+2015-09-14 11:14:08 - [ DEBUG ] {pstm-100007} Parameters: []
+2015-09-14 11:14:08 - [ DEBUG ] {pstm-100007} Types: []
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} ResultSet
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Header: [id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap, is_app, is_pc, create_time, remarks, seo_title, seo_keyword, seo_describe]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [1, 全部商品分类, 0, 1, , null, 1, 0, 1, 2015-08-12 21:15:25.0, 这是根级目录, 测试, 测试, 测试]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [27, 医药馆, 0, 1, , null, 1, 1, 1, 2015-08-24 19:35:54.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [32, 中西药品, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:07:33.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [33, 营养保健, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:04.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [34, 医疗器械, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:25.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [35, 血压仪器, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:40.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [36, 性福生活, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:56.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [37, 孕婴专区, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:10:18.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [38, 感冒呼吸, 1, 3, ,1,32,, 32, 1, 1, 1, 2015-08-25 10:28:06.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [39, 2, 2, 3, ,1,33,, 33, 1, 1, 1, 2015-08-25 10:28:41.0, 2, 2, 2, 2]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [40, 3, 3, 3, ,1,34,, 34, 1, 1, 1, 2015-08-25 10:28:59.0, 3, 3, 3, 3]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [41, 4, 4, 3, ,1,35,, 35, 1, 1, 1, 2015-08-25 10:33:45.0, 4, 4, 4, 4]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [42, 5, 5, 3, ,1,36,, 36, 1, 1, 1, 2015-08-25 10:34:31.0, 5, 5, 5, 5]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [43, 6, 7地对地导弹 , 3, ,1,37,, 37, 1, 1, 1, 2015-08-25 10:34:49.0, 6, 6, 6, 6]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [44, 感冒感冒感冒感冒, 0, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-25 10:44:35.0, 0, 0, 0, 0]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [45, 呼吸, 8, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-25 10:46:22.0, 8, 8, 8, 8]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [46, yinbin, sdds, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-26 16:45:00.0, dssds, sd, sds, sdsd]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [47, 医药馆1, 测试数据误删顶顶顶顶 , 2, ,27,, 27, 1, 1, 1, 2015-08-26 20:55:50.0, 11111111灌灌灌灌灌灌灌灌灌灌, 11111, 111111111111111, 1111111111111]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [48, 医药馆2, 11111111111, 3, ,27,47,, 47, 1, 1, 1, 2015-08-26 20:55:50.0, 11111111, 1111, 111111111111111, 1111111111111]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [49, 医药馆3, 11111111111, 4, ,27,47,48,, 48, 1, 1, 1, 2015-08-26 20:55:50.0, 11111111, 1111, 111111111111111, 1111111111111]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [61, 营养滋补, 11, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:39:49.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [62, 1, 1, 3, ,1,61,, 61, 1, 1, 1, 2015-08-31 15:40:11.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [63, 补肾, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:44:16.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [64, 补水, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:44:37.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [65, 地黄丸, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:48:42.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [66, 谷维素, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:48:43.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [67, 杜蕾斯, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:49:19.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [68, 维生素, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:49:57.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [69, 送女士, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:50:22.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [70, 健康礼品, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:50:54.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [71, 蛋白质粉, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:53:08.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [72, 日常护理, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:53:26.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [73, 测试, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 13:03:18.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [74, 肝胆科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:57:48.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [75, 胃肠道药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:58:11.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [76, 神经科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:58:31.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [77, 呼吸科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:59:04.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [78, 呼吸科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:59:27.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [80, 泌尿科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:26:26.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [81, 日常用药, 1, 1, , null, 1, 1, 1, 2015-09-11 15:27:35.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [82, 成人用品, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:28:01.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [83, 时尚美妆, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:28:19.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [84, 保健馆, 1, 1, , null, 1, 1, 1, 2015-09-11 16:53:38.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [85, 营养保健, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:31.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [86, 滋补养生, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:54.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [87, 美容护肤, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:55:14.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [89, 保健器械, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:08.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [90, 成人用品, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:31.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [92, 隐形眼镜, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:57:17.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [93, 母婴馆, 1, 1, , null, 1, 1, 1, 2015-09-11 18:34:03.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [94, 营养保健, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:35:19.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [95, 滋补养生, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:35:54.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [96, 美容护肤, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:36:13.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [97, 保健器械, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:36:31.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [98, 成人用品, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:37:08.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [99, 隐形眼镜, 1, 2, ,93,, 93, 1, 1, 1, 2015-09-11 18:37:34.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [101, 1, 1, 1, , null, 1, 1, 1, 2015-09-11 20:40:55.0, 111, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [102, 调节免疫, 1, 4, ,93,94,, 94, 1, 1, 1, 2015-09-11 21:16:49.0, 1, 1, 1, 1]
+2015-09-14 11:14:08 - [ DEBUG ] {rset-100008} Result: [103, 调节免疫, 1, 4, ,84,85,, 85, 1, 1, 1, 2015-09-11 21:17:29.0, 1, 1, 1, 1]
+2015-09-14 14:55:52 - [ INFO ] Hibernate 3.2.5
+2015-09-14 14:55:52 - [ INFO ] hibernate.properties not found
+2015-09-14 14:55:52 - [ INFO ] Bytecode provider name : cglib
+2015-09-14 14:55:52 - [ INFO ] using JDK 1.4 java.sql.Timestamp handling
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 14:55:52 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 14:55:52 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 14:55:53 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 14:55:53 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 14:55:53 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 14:55:53 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 14:55:53 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 14:55:53 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 14:55:53 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 14:55:53 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 14:55:53 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 14:55:53 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 14:55:53 - [ INFO ] JDBC batch size: 15
+2015-09-14 14:55:53 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 14:55:53 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 14:55:53 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 14:55:53 - [ INFO ] Connection release mode: auto
+2015-09-14 14:55:53 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 14:55:53 - [ INFO ] Default batch fetch size: 1
+2015-09-14 14:55:53 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 14:55:53 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 14:55:53 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 14:55:53 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 14:55:53 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 14:55:53 - [ INFO ] Query language substitutions: {}
+2015-09-14 14:55:53 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 14:55:53 - [ INFO ] Second-level cache: enabled
+2015-09-14 14:55:53 - [ INFO ] Query cache: disabled
+2015-09-14 14:55:53 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 14:55:53 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 14:55:53 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 14:55:53 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 14:55:53 - [ INFO ] Statistics: disabled
+2015-09-14 14:55:53 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 14:55:53 - [ INFO ] Default entity-mode: pojo
+2015-09-14 14:55:53 - [ INFO ] Named query checking : enabled
+2015-09-14 14:55:53 - [ INFO ] building session factory
+2015-09-14 14:55:53 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 14:55:53 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 14:55:54 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 14:55:54 - [ INFO ] Loading global messages from ApplicationResources
+2015-09-14 14:55:54 - [ INFO ] Initializing WebWork-Spring integration...
+2015-09-14 14:55:54 - [ INFO ] Setting autowire strategy to name
+2015-09-14 14:55:54 - [ INFO ] ... initialized WebWork-Spring integration successfully
+2015-09-14 14:55:54 - [ INFO ] Instantiating Freemarker ConfigManager!, com.rc.portal.webapp.filter.ExtendFreemarkerManager
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 14:55:55 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 14:55:55 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 14:55:55 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 14:55:56 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 14:55:56 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 14:55:56 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 14:55:56 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 14:55:56 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 14:55:56 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 14:55:56 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 14:55:56 - [ INFO ] JDBC batch size: 15
+2015-09-14 14:55:56 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 14:55:56 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 14:55:56 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 14:55:56 - [ INFO ] Connection release mode: auto
+2015-09-14 14:55:56 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 14:55:56 - [ INFO ] Default batch fetch size: 1
+2015-09-14 14:55:56 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 14:55:56 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 14:55:56 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 14:55:56 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 14:55:56 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 14:55:56 - [ INFO ] Query language substitutions: {}
+2015-09-14 14:55:56 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 14:55:56 - [ INFO ] Second-level cache: enabled
+2015-09-14 14:55:56 - [ INFO ] Query cache: disabled
+2015-09-14 14:55:56 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 14:55:56 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 14:55:56 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 14:55:56 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 14:55:56 - [ INFO ] Statistics: disabled
+2015-09-14 14:55:56 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 14:55:56 - [ INFO ] Default entity-mode: pojo
+2015-09-14 14:55:56 - [ INFO ] Named query checking : enabled
+2015-09-14 14:55:56 - [ INFO ] building session factory
+2015-09-14 14:55:56 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 14:55:56 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 14:55:56 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 15:48:44 - [ INFO ] Hibernate 3.2.5
+2015-09-14 15:48:44 - [ INFO ] hibernate.properties not found
+2015-09-14 15:48:44 - [ INFO ] Bytecode provider name : cglib
+2015-09-14 15:48:44 - [ INFO ] using JDK 1.4 java.sql.Timestamp handling
+2015-09-14 15:48:44 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 15:48:45 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 15:48:45 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 15:48:45 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 15:48:45 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 15:48:45 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 15:48:45 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 15:48:45 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 15:48:45 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 15:48:45 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 15:48:45 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 15:48:45 - [ INFO ] JDBC batch size: 15
+2015-09-14 15:48:45 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 15:48:45 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 15:48:45 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 15:48:45 - [ INFO ] Connection release mode: auto
+2015-09-14 15:48:45 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 15:48:45 - [ INFO ] Default batch fetch size: 1
+2015-09-14 15:48:45 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 15:48:45 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 15:48:45 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 15:48:45 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 15:48:45 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 15:48:45 - [ INFO ] Query language substitutions: {}
+2015-09-14 15:48:45 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 15:48:45 - [ INFO ] Second-level cache: enabled
+2015-09-14 15:48:45 - [ INFO ] Query cache: disabled
+2015-09-14 15:48:45 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 15:48:45 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 15:48:45 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 15:48:45 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 15:48:45 - [ INFO ] Statistics: disabled
+2015-09-14 15:48:45 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 15:48:45 - [ INFO ] Default entity-mode: pojo
+2015-09-14 15:48:45 - [ INFO ] Named query checking : enabled
+2015-09-14 15:48:45 - [ INFO ] building session factory
+2015-09-14 15:48:46 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 15:48:46 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 15:48:46 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 15:48:47 - [ INFO ] Loading global messages from ApplicationResources
+2015-09-14 15:48:47 - [ INFO ] Initializing WebWork-Spring integration...
+2015-09-14 15:48:47 - [ INFO ] Setting autowire strategy to name
+2015-09-14 15:48:47 - [ INFO ] ... initialized WebWork-Spring integration successfully
+2015-09-14 15:48:47 - [ INFO ] Instantiating Freemarker ConfigManager!, com.rc.portal.webapp.filter.ExtendFreemarkerManager
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 15:48:48 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 15:48:48 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 15:48:48 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 15:48:48 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 15:48:48 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 15:48:48 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 15:48:48 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 15:48:48 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 15:48:48 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 15:48:48 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 15:48:48 - [ INFO ] JDBC batch size: 15
+2015-09-14 15:48:48 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 15:48:48 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 15:48:48 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 15:48:48 - [ INFO ] Connection release mode: auto
+2015-09-14 15:48:48 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 15:48:48 - [ INFO ] Default batch fetch size: 1
+2015-09-14 15:48:48 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 15:48:48 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 15:48:48 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 15:48:48 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 15:48:48 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 15:48:48 - [ INFO ] Query language substitutions: {}
+2015-09-14 15:48:48 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 15:48:48 - [ INFO ] Second-level cache: enabled
+2015-09-14 15:48:48 - [ INFO ] Query cache: disabled
+2015-09-14 15:48:48 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 15:48:48 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 15:48:48 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 15:48:48 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 15:48:48 - [ INFO ] Statistics: disabled
+2015-09-14 15:48:48 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 15:48:48 - [ INFO ] Default entity-mode: pojo
+2015-09-14 15:48:48 - [ INFO ] Named query checking : enabled
+2015-09-14 15:48:48 - [ INFO ] building session factory
+2015-09-14 15:48:48 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 15:48:48 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 15:48:48 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 15:48:58 - [ ERROR ] Unable to find interceptor class referenced by ref-name unionPageInterceptor
+2015-09-14 15:48:58 - [ INFO ] 【登陆信息】showLogin()初始化进入 IP:127.0.0.1
+2015-09-14 15:49:12 - [ INFO ] 【登陆信息】login()初始化进入 IP:127.0.0.1
+2015-09-14 15:49:12 - [ INFO ] 【登陆信息】载入left!
+2015-09-14 15:49:12 - [ INFO ] 【登陆信息】载入top!
+2015-09-14 15:49:12 - [ INFO ] 【登陆信息】载入right!
+2015-09-14 15:50:23 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_list.count_selectByname | c_position_list.selectByname | 1 | 20
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100000} Connection
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100000} Preparing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1        
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100001} Executing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1        
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100001} Parameters: []
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100001} Types: []
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100002} ResultSet
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100002} Header: [count(*)]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100002} Result: [42]
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100003} Connection
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100003} Preparing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1       LIMIT 0 ,20   
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100004} Executing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1       LIMIT 0 ,20   
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100004} Parameters: []
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100004} Types: []
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} ResultSet
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Header: [id, name, mPath, mName, outPath, createDt, genre]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [17, PC-头部轮播图, WEB-INF/T/index, index_lbtp.ftl, static/imgout/index_lbtp.html, 2015-08-14 15:29:16.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [18, PC-头部广告图, WEB-INF/T/index, index_lbcdt.ftl, static/imgout/index_lbcdt.html, 2015-08-14 21:48:30.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [19, PC-首页限时抢购-左边, WEB-INF/T/index, index_countdown_left.ftl, static/imgout/index_countdown_left.html, 2015-08-15 11:36:09.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [20, PC-首页限时抢购-中间, WEB-INF/T/index, index_countdown_middle.ftl, static/imgout/index_countdown_middle.html, 2015-08-15 14:55:48.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [21, PC-首页限时抢购-右边, WEB-INF/T/index, index_countdown_right.ftl, static/imgout/index_countdown_right.html, 2015-08-17 11:01:55.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [22, PC-首页-通栏广告, WEB-INF/T/index, index_tlgg.ftl, static/imgout/index_tlgg.html, 2015-08-17 11:24:27.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [23, PC-首页-最热活动-产品-1, WEB-INF/T/index, index_zrhd_product_1.ftl, static/imgout/index_zrhd_product_1.html, 2015-08-17 11:46:22.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [24, PC-首页-最热活动-产品-2, WEB-INF/T/index, index_zrhd_product_2.ftl, static/imgout/index_zrhd_product_2.html, 2015-08-17 11:53:28.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [25, PC-首页-最热活动-产品-3, WEB-INF/T/index, index_zrhd_product_2.ftl, static/imgout/index_zrhd_product_3.html, 2015-08-17 11:54:20.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [26, PC-首页-最热活动-模块, WEB-INF/T/index, index_zrhd.ftl, static/imgout/index_zrhd.html, 2015-08-17 11:59:01.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [27, PC-首页-精选品牌, WEB-INF/T/index, index_jxpp.ftl, static/imgout/index_jxpp.html, 2015-08-17 14:08:09.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [28, PC-首页-精应季常见病-感冒, WEB-INF/T/index, index_yjcjb_ganmao.ftl, static/imgout/index_yjcjb_ganmao.html, 2015-08-17 15:51:56.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [29, PC-首页-精应季常见病-减肥, WEB-INF/T/index, index_yjcjb_jianfei.ftl, static/imgout/index_yjcjb_jianfei.html, 2015-08-17 16:06:03.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [30, PC-首页-精应季常见病-右边, WEB-INF/T/index, index_yjcjb_right.ftl, static/imgout/index_yjcjb_right.html, 2015-08-17 16:20:51.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [31, PC-首页-通栏广告-2, WEB-INF/T/index, index_tlgg_2.ftl, static/imgout/index_tlgg_2.html, 2015-08-17 16:42:02.0, PC站首页]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [33, 商品分类-01, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_01.html, 2015-08-18 13:57:02.0, 商品分类]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [36, 商品分类-02, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_02.html, 2015-08-18 16:32:14.0, 商品分类]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [37, 商品分类-03, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_03.html, 2015-08-18 16:35:19.0, 商品分类]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [38, 商品分类-04, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_04.html, 2015-08-18 16:38:33.0, 商品分类]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100005} Result: [39, 商品分类-05, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_05.html, 2015-08-18 16:41:20.0, 商品分类]
+2015-09-14 15:50:23 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_type.ibatorgenerated_countByExample | c_position_type.selectByExampleByPage | 1 | 50
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100006} Connection
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100006} Preparing Statement:      select count(*) from c_position_type        
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100007} Executing Statement:      select count(*) from c_position_type        
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100007} Parameters: []
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100007} Types: []
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100008} ResultSet
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100008} Header: [count(*)]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100008} Result: [5]
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100009} Connection
+2015-09-14 15:50:23 - [ DEBUG ] {conn-100009} Preparing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100010} Executing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100010} Parameters: []
+2015-09-14 15:50:23 - [ DEBUG ] {pstm-100010} Types: []
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} ResultSet
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Header: [id, name, create_date]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Result: [40, 其它, 2015-09-01 19:43:25.0]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Result: [37, PC站头部, 2015-08-21 11:24:53.0]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Result: [36, PC站底部, 2015-08-19 20:58:06.0]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Result: [35, 商品分类, 2015-08-18 13:40:05.0]
+2015-09-14 15:50:23 - [ DEBUG ] {rset-100011} Result: [34, PC站首页, 2015-08-14 15:24:45.0]
+2015-09-14 15:50:26 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_list.count_selectByname | c_position_list.selectByname | 1 | 20
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100012} Connection
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100012} Preparing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1     and   t.`genre`=?     
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100013} Executing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1     and   t.`genre`=?     
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100013} Parameters: [37]
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100013} Types: [java.lang.Integer]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100014} ResultSet
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100014} Header: [count(*)]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100014} Result: [3]
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100015} Connection
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100015} Preparing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1     and   t.`genre`=?    LIMIT 0 ,20   
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100016} Executing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1     and   t.`genre`=?    LIMIT 0 ,20   
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100016} Parameters: [37]
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100016} Types: [java.lang.Integer]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100017} ResultSet
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100017} Header: [id, name, mPath, mName, outPath, createDt, genre]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100017} Result: [52, PC-头部导航, WEB-INF/T/index, header_nav.ftl, static/imgout/header_nav.html, 2015-08-18 20:55:59.0, PC站头部]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100017} Result: [59, PC-头部-搜索热词, WEB-INF/T/index, header_keyword.ftl, static/imgout/header_keyword.html, 2015-08-21 11:30:58.0, PC站头部]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100017} Result: [60, PC-头部-Logo, WEB-INF/T/index, header_logo.ftl, static/imgout/header_logo.html, 2015-08-21 11:40:18.0, PC站头部]
+2015-09-14 15:50:26 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_type.ibatorgenerated_countByExample | c_position_type.selectByExampleByPage | 1 | 50
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100018} Connection
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100018} Preparing Statement:      select count(*) from c_position_type        
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100019} Executing Statement:      select count(*) from c_position_type        
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100019} Parameters: []
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100019} Types: []
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100020} ResultSet
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100020} Header: [count(*)]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100020} Result: [5]
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100021} Connection
+2015-09-14 15:50:26 - [ DEBUG ] {conn-100021} Preparing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100022} Executing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100022} Parameters: []
+2015-09-14 15:50:26 - [ DEBUG ] {pstm-100022} Types: []
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} ResultSet
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Header: [id, name, create_date]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Result: [40, 其它, 2015-09-01 19:43:25.0]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Result: [37, PC站头部, 2015-08-21 11:24:53.0]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Result: [36, PC站底部, 2015-08-19 20:58:06.0]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Result: [35, 商品分类, 2015-08-18 13:40:05.0]
+2015-09-14 15:50:26 - [ DEBUG ] {rset-100023} Result: [34, PC站首页, 2015-08-14 15:24:45.0]
+2015-09-14 15:50:28 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position.countPositionInfo | c_position.queryPositionInfo | 1 | 20
+2015-09-14 15:50:28 - [ DEBUG ] {conn-100024} Connection
+2015-09-14 15:50:28 - [ DEBUG ] {conn-100024} Preparing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100025} Executing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100025} Parameters: [59]
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100025} Types: [java.lang.String]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100026} ResultSet
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100026} Header: [count(*)]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100026} Result: [6]
+2015-09-14 15:50:28 - [ DEBUG ] {conn-100027} Connection
+2015-09-14 15:50:28 - [ DEBUG ] {conn-100027} Preparing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100028} Executing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100028} Parameters: [59]
+2015-09-14 15:50:28 - [ DEBUG ] {pstm-100028} Types: [java.lang.String]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} ResultSet
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [215, 59, /口罩/slist.html, null, 1, 口罩, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [214, 59, /上臂式清凉油/slist.html, null, 1, 上臂式清凉油, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [213, 59, /血压计/slist.html, null, 1, 血压计, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [212, 59, /血糖仪/slist.html, null, 1, 血糖仪, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [211, 59, /隐形眼镜/slist.html, null, 1, 隐形眼镜, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:28 - [ DEBUG ] {rset-100029} Result: [210, 59, /避孕套/slist.html, null, 1, 避孕套, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:29 - [ INFO ] [OpenSqlDAOImpl] 查找返回Object :c_position_list.queryRule
+2015-09-14 15:50:29 - [ DEBUG ] {conn-100030} Connection
+2015-09-14 15:50:29 - [ DEBUG ] {conn-100030} Preparing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:50:29 - [ DEBUG ] {pstm-100031} Executing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:50:29 - [ DEBUG ] {pstm-100031} Parameters: [59]
+2015-09-14 15:50:29 - [ DEBUG ] {pstm-100031} Types: [java.lang.String]
+2015-09-14 15:50:29 - [ DEBUG ] {rset-100032} ResultSet
+2015-09-14 15:50:29 - [ DEBUG ] {rset-100032} Header: [id, rule, isrelease]
+2015-09-14 15:50:29 - [ DEBUG ] {rset-100032} Result: [59, {"img":{"ishow":"0","name":""},"img_url":{"ishow":"1","name":"链接"},"market_price":{"ishow":"0","name":""},"price":{"ishow":"0","name":""},"price_url":{"ishow":"0","name":""},"title":{"ishow":"1","name":"名称"},"title_all":{"ishow":"0","name":""},"title_url":{"ishow":"0","name":""},"txt":{"ishow":"0","name":""},"txt_url":{"ishow":"0","name":""},"type":null}, 1]
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100033} Connection
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100033} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100034} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100034} Parameters: [215]
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100034} Types: [java.lang.Integer]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100035} ResultSet
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100035} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100035} Result: [215, 59, /口罩/slist.html, null, 1, 口罩, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100036} Connection
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100036} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100037} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100037} Parameters: [214]
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100037} Types: [java.lang.Integer]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100038} ResultSet
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100038} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100038} Result: [214, 59, /上臂式清凉油/slist.html, null, 1, 上臂式清凉油, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100039} Connection
+2015-09-14 15:50:34 - [ DEBUG ] {conn-100039} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100040} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100040} Parameters: [213]
+2015-09-14 15:50:34 - [ DEBUG ] {pstm-100040} Types: [java.lang.Integer]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100041} ResultSet
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100041} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:34 - [ DEBUG ] {rset-100041} Result: [213, 59, /血压计/slist.html, null, 1, 血压计, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:35 - [ DEBUG ] {conn-100042} Connection
+2015-09-14 15:50:35 - [ DEBUG ] {conn-100042} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100043} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100043} Parameters: [212]
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100043} Types: [java.lang.Integer]
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100044} ResultSet
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100044} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100044} Result: [212, 59, /血糖仪/slist.html, null, 1, 血糖仪, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:35 - [ DEBUG ] {conn-100045} Connection
+2015-09-14 15:50:35 - [ DEBUG ] {conn-100045} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100046} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100046} Parameters: [211]
+2015-09-14 15:50:35 - [ DEBUG ] {pstm-100046} Types: [java.lang.Integer]
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100047} ResultSet
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100047} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:35 - [ DEBUG ] {rset-100047} Result: [211, 59, /隐形眼镜/slist.html, null, 1, 隐形眼镜, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100048} Connection
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100048} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100049} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100049} Parameters: [210]
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100049} Types: [java.lang.Integer]
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100050} ResultSet
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100050} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100050} Result: [210, 59, /避孕套/slist.html, null, 1, 避孕套, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100051} Connection
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100051} Preparing Statement:      select id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre     from c_position_list     where id = ?   
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100052} Executing Statement:      select id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre     from c_position_list     where id = ?   
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100052} Parameters: [59]
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100052} Types: [java.lang.Integer]
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100053} ResultSet
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100053} Header: [id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre]
+2015-09-14 15:50:36 - [ DEBUG ] {rset-100053} Result: [59, PC-头部-搜索热词, WEB-INF/T/index, header_keyword.ftl, static/imgout/header_keyword.html, 2015-08-21 11:30:58.0, {"img":{"ishow":"0","name":""},"img_url":{"ishow":"1","name":"链接"},"market_price":{"ishow":"0","name":""},"price":{"ishow":"0","name":""},"price_url":{"ishow":"0","name":""},"title":{"ishow":"1","name":"名称"},"title_all":{"ishow":"0","name":""},"title_url":{"ishow":"0","name":""},"txt":{"ishow":"0","name":""},"txt_url":{"ishow":"0","name":""},"type":null}, 1, 37]
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100054} Connection
+2015-09-14 15:50:36 - [ DEBUG ] {conn-100054} Preparing Statement:           update c_position     set                                            issue = ?                                                                                                        where                (                             issue =             ?         and           channel =             ?                                    )                       
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100055} Executing Statement:           update c_position     set                                            issue = ?                                                                                                        where                (                             issue =             ?         and           channel =             ?                                    )                       
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100055} Parameters: [0, 1, 59]
+2015-09-14 15:50:36 - [ DEBUG ] {pstm-100055} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:37 - [ DEBUG ] {conn-100056} Connection
+2015-09-14 15:50:37 - [ DEBUG ] {conn-100056} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100057} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100057} Parameters: [1, 215]
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100057} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:37 - [ DEBUG ] {conn-100058} Connection
+2015-09-14 15:50:37 - [ DEBUG ] {conn-100058} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100059} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100059} Parameters: [1, 214]
+2015-09-14 15:50:37 - [ DEBUG ] {pstm-100059} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:38 - [ DEBUG ] {conn-100060} Connection
+2015-09-14 15:50:38 - [ DEBUG ] {conn-100060} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100061} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100061} Parameters: [1, 213]
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100061} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:38 - [ DEBUG ] {conn-100062} Connection
+2015-09-14 15:50:38 - [ DEBUG ] {conn-100062} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100063} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100063} Parameters: [1, 212]
+2015-09-14 15:50:38 - [ DEBUG ] {pstm-100063} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:39 - [ DEBUG ] {conn-100064} Connection
+2015-09-14 15:50:39 - [ DEBUG ] {conn-100064} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100065} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100065} Parameters: [1, 211]
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100065} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:39 - [ DEBUG ] {conn-100066} Connection
+2015-09-14 15:50:39 - [ DEBUG ] {conn-100066} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100067} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100067} Parameters: [1, 210]
+2015-09-14 15:50:39 - [ DEBUG ] {pstm-100067} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:50:39 - [ WARN ] No result defined for action com.rc.portal.webapp.action.PositionManageAction and result null
+2015-09-14 15:50:40 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position.countPositionInfo | c_position.queryPositionInfo | 1 | 20
+2015-09-14 15:50:40 - [ DEBUG ] {conn-100068} Connection
+2015-09-14 15:50:40 - [ DEBUG ] {conn-100068} Preparing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100069} Executing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100069} Parameters: [59]
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100069} Types: [java.lang.String]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100070} ResultSet
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100070} Header: [count(*)]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100070} Result: [6]
+2015-09-14 15:50:40 - [ DEBUG ] {conn-100071} Connection
+2015-09-14 15:50:40 - [ DEBUG ] {conn-100071} Preparing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100072} Executing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100072} Parameters: [59]
+2015-09-14 15:50:40 - [ DEBUG ] {pstm-100072} Types: [java.lang.String]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} ResultSet
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [215, 59, /口罩/slist.html, null, 1, 口罩, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [214, 59, /上臂式清凉油/slist.html, null, 1, 上臂式清凉油, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [213, 59, /血压计/slist.html, null, 1, 血压计, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [212, 59, /血糖仪/slist.html, null, 1, 血糖仪, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [211, 59, /隐形眼镜/slist.html, null, 1, 隐形眼镜, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:40 - [ DEBUG ] {rset-100073} Result: [210, 59, /避孕套/slist.html, null, 1, 避孕套, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:50:41 - [ INFO ] [OpenSqlDAOImpl] 查找返回Object :c_position_list.queryRule
+2015-09-14 15:50:41 - [ DEBUG ] {conn-100074} Connection
+2015-09-14 15:50:41 - [ DEBUG ] {conn-100074} Preparing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:50:41 - [ DEBUG ] {pstm-100075} Executing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:50:41 - [ DEBUG ] {pstm-100075} Parameters: [59]
+2015-09-14 15:50:41 - [ DEBUG ] {pstm-100075} Types: [java.lang.String]
+2015-09-14 15:50:41 - [ DEBUG ] {rset-100076} ResultSet
+2015-09-14 15:50:41 - [ DEBUG ] {rset-100076} Header: [id, rule, isrelease]
+2015-09-14 15:50:41 - [ DEBUG ] {rset-100076} Result: [59, {"img":{"ishow":"0","name":""},"img_url":{"ishow":"1","name":"链接"},"market_price":{"ishow":"0","name":""},"price":{"ishow":"0","name":""},"price_url":{"ishow":"0","name":""},"title":{"ishow":"1","name":"名称"},"title_all":{"ishow":"0","name":""},"title_url":{"ishow":"0","name":""},"txt":{"ishow":"0","name":""},"txt_url":{"ishow":"0","name":""},"type":null}, 1]
+2015-09-14 15:51:34 - [ DEBUG ] {conn-100077} Connection
+2015-09-14 15:51:34 - [ DEBUG ] {conn-100077} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100078} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100078} Parameters: [215]
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100078} Types: [java.lang.Integer]
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100079} ResultSet
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100079} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100079} Result: [215, 59, /口罩/slist.html, null, 1, 口罩, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:34 - [ DEBUG ] {conn-100080} Connection
+2015-09-14 15:51:34 - [ DEBUG ] {conn-100080} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100081} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100081} Parameters: [214]
+2015-09-14 15:51:34 - [ DEBUG ] {pstm-100081} Types: [java.lang.Integer]
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100082} ResultSet
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100082} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:34 - [ DEBUG ] {rset-100082} Result: [214, 59, /上臂式清凉油/slist.html, null, 1, 上臂式清凉油, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:35 - [ DEBUG ] {conn-100083} Connection
+2015-09-14 15:51:35 - [ DEBUG ] {conn-100083} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100084} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100084} Parameters: [213]
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100084} Types: [java.lang.Integer]
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100085} ResultSet
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100085} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100085} Result: [213, 59, /血压计/slist.html, null, 1, 血压计, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:35 - [ DEBUG ] {conn-100086} Connection
+2015-09-14 15:51:35 - [ DEBUG ] {conn-100086} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100087} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100087} Parameters: [212]
+2015-09-14 15:51:35 - [ DEBUG ] {pstm-100087} Types: [java.lang.Integer]
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100088} ResultSet
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100088} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:35 - [ DEBUG ] {rset-100088} Result: [212, 59, /血糖仪/slist.html, null, 1, 血糖仪, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100089} Connection
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100089} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100090} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100090} Parameters: [211]
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100090} Types: [java.lang.Integer]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100091} ResultSet
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100091} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100091} Result: [211, 59, /隐形眼镜/slist.html, null, 1, 隐形眼镜, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100092} Connection
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100092} Preparing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100093} Executing Statement:           select id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight,       market_price, price, price_url, title_all     from c_position     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100093} Parameters: [210]
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100093} Types: [java.lang.Integer]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100094} ResultSet
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100094} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100094} Result: [210, 59, /避孕套/slist.html, null, 1, 避孕套, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100095} Connection
+2015-09-14 15:51:36 - [ DEBUG ] {conn-100095} Preparing Statement:      select id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre     from c_position_list     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100096} Executing Statement:      select id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre     from c_position_list     where id = ?   
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100096} Parameters: [59]
+2015-09-14 15:51:36 - [ DEBUG ] {pstm-100096} Types: [java.lang.Integer]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100097} ResultSet
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100097} Header: [id, name, m_path, m_name, out_path, create_dt, rule, isrelease, genre]
+2015-09-14 15:51:36 - [ DEBUG ] {rset-100097} Result: [59, PC-头部-搜索热词, WEB-INF/T/index, header_keyword.ftl, static/imgout/header_keyword.html, 2015-08-21 11:30:58.0, {"img":{"ishow":"0","name":""},"img_url":{"ishow":"1","name":"链接"},"market_price":{"ishow":"0","name":""},"price":{"ishow":"0","name":""},"price_url":{"ishow":"0","name":""},"title":{"ishow":"1","name":"名称"},"title_all":{"ishow":"0","name":""},"title_url":{"ishow":"0","name":""},"txt":{"ishow":"0","name":""},"txt_url":{"ishow":"0","name":""},"type":null}, 1, 37]
+2015-09-14 15:51:37 - [ DEBUG ] {conn-100098} Connection
+2015-09-14 15:51:37 - [ DEBUG ] {conn-100098} Preparing Statement:           update c_position     set                                            issue = ?                                                                                                        where                (                             issue =             ?         and           channel =             ?                                    )                       
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100099} Executing Statement:           update c_position     set                                            issue = ?                                                                                                        where                (                             issue =             ?         and           channel =             ?                                    )                       
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100099} Parameters: [0, 1, 59]
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100099} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:37 - [ DEBUG ] {conn-100100} Connection
+2015-09-14 15:51:37 - [ DEBUG ] {conn-100100} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100101} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100101} Parameters: [1, 215]
+2015-09-14 15:51:37 - [ DEBUG ] {pstm-100101} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:38 - [ DEBUG ] {conn-100102} Connection
+2015-09-14 15:51:38 - [ DEBUG ] {conn-100102} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100103} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100103} Parameters: [1, 214]
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100103} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:38 - [ DEBUG ] {conn-100104} Connection
+2015-09-14 15:51:38 - [ DEBUG ] {conn-100104} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100105} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100105} Parameters: [1, 213]
+2015-09-14 15:51:38 - [ DEBUG ] {pstm-100105} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:39 - [ DEBUG ] {conn-100106} Connection
+2015-09-14 15:51:39 - [ DEBUG ] {conn-100106} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100107} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100107} Parameters: [1, 212]
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100107} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:39 - [ DEBUG ] {conn-100108} Connection
+2015-09-14 15:51:39 - [ DEBUG ] {conn-100108} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100109} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100109} Parameters: [1, 211]
+2015-09-14 15:51:39 - [ DEBUG ] {pstm-100109} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:40 - [ DEBUG ] {conn-100110} Connection
+2015-09-14 15:51:40 - [ DEBUG ] {conn-100110} Preparing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:40 - [ DEBUG ] {pstm-100111} Executing Statement:           update c_position     set                                     issue = ?                                                                                       where id = ?   
+2015-09-14 15:51:40 - [ DEBUG ] {pstm-100111} Parameters: [1, 210]
+2015-09-14 15:51:40 - [ DEBUG ] {pstm-100111} Types: [java.lang.Integer, java.lang.Integer]
+2015-09-14 15:51:40 - [ WARN ] No result defined for action com.rc.portal.webapp.action.PositionManageAction and result null
+2015-09-14 15:51:41 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position.countPositionInfo | c_position.queryPositionInfo | 1 | 20
+2015-09-14 15:51:41 - [ DEBUG ] {conn-100112} Connection
+2015-09-14 15:51:41 - [ DEBUG ] {conn-100112} Preparing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100113} Executing Statement:    SELECT   count(*)   FROM    c_position t   WHERE 1 = 1     AND t.channel = ?   
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100113} Parameters: [59]
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100113} Types: [java.lang.String]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100114} ResultSet
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100114} Header: [count(*)]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100114} Result: [6]
+2015-09-14 15:51:41 - [ DEBUG ] {conn-100115} Connection
+2015-09-14 15:51:41 - [ DEBUG ] {conn-100115} Preparing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100116} Executing Statement:     SELECT id,  channel, img_link, img_url, issue, title,       title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all  FROM    c_position   WHERE 1 = 1     AND channel = ?     ORDER BY id DESC   limit 0 ,20  
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100116} Parameters: [59]
+2015-09-14 15:51:41 - [ DEBUG ] {pstm-100116} Types: [java.lang.String]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} ResultSet
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Header: [id, channel, img_link, img_url, issue, title, title_url, txt, txt_link, type, weight, market_price, price, price_url, title_all]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [215, 59, /口罩/slist.html, null, 1, 口罩, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [214, 59, /上臂式清凉油/slist.html, null, 1, 上臂式清凉油, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [213, 59, /血压计/slist.html, null, 1, 血压计, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [212, 59, /血糖仪/slist.html, null, 1, 血糖仪, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [211, 59, /隐形眼镜/slist.html, null, 1, 隐形眼镜, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:41 - [ DEBUG ] {rset-100117} Result: [210, 59, /避孕套/slist.html, null, 1, 避孕套, null, null, null, null, 0, null, null, null, null]
+2015-09-14 15:51:42 - [ INFO ] [OpenSqlDAOImpl] 查找返回Object :c_position_list.queryRule
+2015-09-14 15:51:42 - [ DEBUG ] {conn-100118} Connection
+2015-09-14 15:51:42 - [ DEBUG ] {conn-100118} Preparing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:51:42 - [ DEBUG ] {pstm-100119} Executing Statement:     SELECT t.`id`,t.`rule`,t.isrelease FROM c_position_list t WHERE t.id=?   
+2015-09-14 15:51:42 - [ DEBUG ] {pstm-100119} Parameters: [59]
+2015-09-14 15:51:42 - [ DEBUG ] {pstm-100119} Types: [java.lang.String]
+2015-09-14 15:51:42 - [ DEBUG ] {rset-100120} ResultSet
+2015-09-14 15:51:42 - [ DEBUG ] {rset-100120} Header: [id, rule, isrelease]
+2015-09-14 15:51:42 - [ DEBUG ] {rset-100120} Result: [59, {"img":{"ishow":"0","name":""},"img_url":{"ishow":"1","name":"链接"},"market_price":{"ishow":"0","name":""},"price":{"ishow":"0","name":""},"price_url":{"ishow":"0","name":""},"title":{"ishow":"1","name":"名称"},"title_all":{"ishow":"0","name":""},"title_url":{"ishow":"0","name":""},"txt":{"ishow":"0","name":""},"txt_url":{"ishow":"0","name":""},"type":null}, 1]
+2015-09-14 16:27:22 - [ INFO ] Hibernate 3.2.5
+2015-09-14 16:27:22 - [ INFO ] hibernate.properties not found
+2015-09-14 16:27:22 - [ INFO ] Bytecode provider name : cglib
+2015-09-14 16:27:22 - [ INFO ] using JDK 1.4 java.sql.Timestamp handling
+2015-09-14 16:27:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 16:27:23 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:27:23 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:27:23 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 16:27:23 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 16:27:23 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 16:27:23 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 16:27:23 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 16:27:23 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 16:27:23 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 16:27:23 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 16:27:23 - [ INFO ] JDBC batch size: 15
+2015-09-14 16:27:23 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 16:27:23 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 16:27:23 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 16:27:23 - [ INFO ] Connection release mode: auto
+2015-09-14 16:27:23 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 16:27:23 - [ INFO ] Default batch fetch size: 1
+2015-09-14 16:27:23 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 16:27:23 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 16:27:23 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 16:27:23 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 16:27:23 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 16:27:23 - [ INFO ] Query language substitutions: {}
+2015-09-14 16:27:23 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 16:27:23 - [ INFO ] Second-level cache: enabled
+2015-09-14 16:27:23 - [ INFO ] Query cache: disabled
+2015-09-14 16:27:23 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 16:27:23 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 16:27:23 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 16:27:23 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 16:27:23 - [ INFO ] Statistics: disabled
+2015-09-14 16:27:23 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 16:27:23 - [ INFO ] Default entity-mode: pojo
+2015-09-14 16:27:23 - [ INFO ] Named query checking : enabled
+2015-09-14 16:27:23 - [ INFO ] building session factory
+2015-09-14 16:27:24 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 16:27:24 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 16:27:25 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 16:27:25 - [ INFO ] Loading global messages from ApplicationResources
+2015-09-14 16:27:25 - [ INFO ] Initializing WebWork-Spring integration...
+2015-09-14 16:27:25 - [ INFO ] Setting autowire strategy to name
+2015-09-14 16:27:25 - [ INFO ] ... initialized WebWork-Spring integration successfully
+2015-09-14 16:27:25 - [ INFO ] Instantiating Freemarker ConfigManager!, com.rc.portal.webapp.filter.ExtendFreemarkerManager
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 16:27:26 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:27:26 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:27:26 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 16:27:26 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 16:27:26 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 16:27:26 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 16:27:26 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 16:27:26 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 16:27:26 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 16:27:26 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 16:27:26 - [ INFO ] JDBC batch size: 15
+2015-09-14 16:27:26 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 16:27:26 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 16:27:26 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 16:27:26 - [ INFO ] Connection release mode: auto
+2015-09-14 16:27:26 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 16:27:26 - [ INFO ] Default batch fetch size: 1
+2015-09-14 16:27:26 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 16:27:26 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 16:27:26 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 16:27:26 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 16:27:26 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 16:27:26 - [ INFO ] Query language substitutions: {}
+2015-09-14 16:27:26 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 16:27:26 - [ INFO ] Second-level cache: enabled
+2015-09-14 16:27:26 - [ INFO ] Query cache: disabled
+2015-09-14 16:27:26 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 16:27:26 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 16:27:26 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 16:27:26 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 16:27:26 - [ INFO ] Statistics: disabled
+2015-09-14 16:27:26 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 16:27:26 - [ INFO ] Default entity-mode: pojo
+2015-09-14 16:27:26 - [ INFO ] Named query checking : enabled
+2015-09-14 16:27:26 - [ INFO ] building session factory
+2015-09-14 16:27:26 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 16:27:26 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 16:27:27 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 16:31:22 - [ INFO ] Hibernate 3.2.5
+2015-09-14 16:31:22 - [ INFO ] hibernate.properties not found
+2015-09-14 16:31:22 - [ INFO ] Bytecode provider name : cglib
+2015-09-14 16:31:22 - [ INFO ] using JDK 1.4 java.sql.Timestamp handling
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 16:31:22 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:31:22 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:31:22 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 16:31:25 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 16:31:25 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 16:31:25 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 16:31:25 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 16:31:25 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 16:31:25 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 16:31:25 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 16:31:25 - [ INFO ] JDBC batch size: 15
+2015-09-14 16:31:25 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 16:31:25 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 16:31:25 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 16:31:25 - [ INFO ] Connection release mode: auto
+2015-09-14 16:31:25 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 16:31:25 - [ INFO ] Default batch fetch size: 1
+2015-09-14 16:31:25 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 16:31:25 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 16:31:25 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 16:31:25 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 16:31:25 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 16:31:25 - [ INFO ] Query language substitutions: {}
+2015-09-14 16:31:25 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 16:31:25 - [ INFO ] Second-level cache: enabled
+2015-09-14 16:31:25 - [ INFO ] Query cache: disabled
+2015-09-14 16:31:25 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 16:31:25 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 16:31:25 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 16:31:25 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 16:31:25 - [ INFO ] Statistics: disabled
+2015-09-14 16:31:25 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 16:31:25 - [ INFO ] Default entity-mode: pojo
+2015-09-14 16:31:25 - [ INFO ] Named query checking : enabled
+2015-09-14 16:31:25 - [ INFO ] building session factory
+2015-09-14 16:31:25 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 16:31:25 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 16:31:28 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 16:31:28 - [ INFO ] Loading global messages from ApplicationResources
+2015-09-14 16:31:28 - [ INFO ] Initializing WebWork-Spring integration...
+2015-09-14 16:31:28 - [ INFO ] Setting autowire strategy to name
+2015-09-14 16:31:28 - [ INFO ] ... initialized WebWork-Spring integration successfully
+2015-09-14 16:31:28 - [ INFO ] Instantiating Freemarker ConfigManager!, com.rc.portal.webapp.filter.ExtendFreemarkerManager
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmModules -> t_adm_modules
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmOperationLogs -> t_adm_operation_logs
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPost -> t_adm_post
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmPostRole -> t_adm_post_role
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmResc -> t_adm_resc
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRescRoles -> t_adm_resc_roles
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmRoles -> t_adm_roles
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserPost -> t_adm_user_post
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUserRoles -> t_adm_user_roles
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsers -> t_adm_users
+2015-09-14 16:31:29 - [ INFO ] Mapping class: com.rc.oss.vo.TAdmUsersModules -> t_adm_users_modules
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmModules.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmPost.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmResc.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmRescRoleses -> t_adm_resc_roles
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmRoles.TAdmPostRoles -> t_adm_post_role
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUsersModuleses -> t_adm_users_modules
+2015-09-14 16:31:29 - [ INFO ] Mapping collection: com.rc.oss.vo.TAdmUsers.TAdmUserPosts -> t_adm_user_post
+2015-09-14 16:31:29 - [ INFO ] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2015-09-14 16:31:29 - [ INFO ] RDBMS: MySQL, version: 5.5.38-log
+2015-09-14 16:31:29 - [ INFO ] JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.25 ( Revision: ${bzr.revision-id} )
+2015-09-14 16:31:29 - [ INFO ] Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-14 16:31:29 - [ INFO ] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2015-09-14 16:31:29 - [ INFO ] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-09-14 16:31:29 - [ INFO ] Automatic flush during beforeCompletion(): disabled
+2015-09-14 16:31:29 - [ INFO ] Automatic session close at end of transaction: disabled
+2015-09-14 16:31:29 - [ INFO ] JDBC batch size: 15
+2015-09-14 16:31:29 - [ INFO ] JDBC batch updates for versioned data: disabled
+2015-09-14 16:31:29 - [ INFO ] Scrollable result sets: enabled
+2015-09-14 16:31:29 - [ INFO ] JDBC3 getGeneratedKeys(): enabled
+2015-09-14 16:31:29 - [ INFO ] Connection release mode: auto
+2015-09-14 16:31:29 - [ INFO ] Maximum outer join fetch depth: 2
+2015-09-14 16:31:29 - [ INFO ] Default batch fetch size: 1
+2015-09-14 16:31:29 - [ INFO ] Generate SQL with comments: disabled
+2015-09-14 16:31:29 - [ INFO ] Order SQL updates by primary key: disabled
+2015-09-14 16:31:29 - [ INFO ] Order SQL inserts for batching: disabled
+2015-09-14 16:31:29 - [ INFO ] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-09-14 16:31:29 - [ INFO ] Using ASTQueryTranslatorFactory
+2015-09-14 16:31:29 - [ INFO ] Query language substitutions: {}
+2015-09-14 16:31:29 - [ INFO ] JPA-QL strict compliance: disabled
+2015-09-14 16:31:29 - [ INFO ] Second-level cache: enabled
+2015-09-14 16:31:29 - [ INFO ] Query cache: disabled
+2015-09-14 16:31:29 - [ INFO ] Cache provider: org.hibernate.cache.NoCacheProvider
+2015-09-14 16:31:29 - [ INFO ] Optimize cache for minimal puts: disabled
+2015-09-14 16:31:29 - [ INFO ] Structured second-level cache entries: disabled
+2015-09-14 16:31:29 - [ INFO ] Echoing all SQL to stdout
+2015-09-14 16:31:29 - [ INFO ] Statistics: disabled
+2015-09-14 16:31:29 - [ INFO ] Deleted entity synthetic identifier rollback: disabled
+2015-09-14 16:31:29 - [ INFO ] Default entity-mode: pojo
+2015-09-14 16:31:29 - [ INFO ] Named query checking : enabled
+2015-09-14 16:31:29 - [ INFO ] building session factory
+2015-09-14 16:31:29 - [ INFO ] Not binding factory to JNDI, no JNDI name configured
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/test.xml
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/modules.xml
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Roles.xml
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Post.xml
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Resc.xml
+2015-09-14 16:31:29 - [ INFO ] hbnMap.xml /com/rc/oss/vo/xmlmap/Users.xml
+2015-09-14 16:31:29 - [ WARN ] Possible error: Filters at position 9 and 10 are both instances of org.springframework.security.intercept.web.FilterSecurityInterceptor
+2015-09-14 16:32:06 - [ ERROR ] Unable to find interceptor class referenced by ref-name unionPageInterceptor
+2015-09-14 16:32:06 - [ INFO ] 【登陆信息】showLogin()初始化进入 IP:127.0.0.1
+2015-09-14 16:32:15 - [ INFO ] 【登陆信息】login()初始化进入 IP:127.0.0.1
+2015-09-14 16:32:15 - [ INFO ] 【登陆信息】载入top!
+2015-09-14 16:32:15 - [ INFO ] 【登陆信息】载入left!
+2015-09-14 16:32:15 - [ INFO ] 【登陆信息】载入right!
+2015-09-14 16:32:43 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_list.count_selectByname | c_position_list.selectByname | 1 | 20
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100000} Connection
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100000} Preparing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1        
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100001} Executing Statement:     SELECT   count(*)   FROM    c_position_list t   WHERE 1=1        
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100001} Parameters: []
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100001} Types: []
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100002} ResultSet
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100002} Header: [count(*)]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100002} Result: [42]
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100003} Connection
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100003} Preparing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1       LIMIT 0 ,20   
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100004} Executing Statement:     SELECT     t.`id`,    t.`name`,    t.`m_path` AS mPath,    t.`m_name` AS mName,    t.`out_path` AS outPath,    t.`create_dt` AS createDt,    (SELECT cpt.`name` FROM c_position_type AS cpt WHERE cpt.id = t.genre) AS genre  FROM    c_position_list t   WHERE 1=1       LIMIT 0 ,20   
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100004} Parameters: []
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100004} Types: []
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} ResultSet
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Header: [id, name, mPath, mName, outPath, createDt, genre]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [17, PC-头部轮播图, WEB-INF/T/index, index_lbtp.ftl, static/imgout/index_lbtp.html, 2015-08-14 15:29:16.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [18, PC-头部广告图, WEB-INF/T/index, index_lbcdt.ftl, static/imgout/index_lbcdt.html, 2015-08-14 21:48:30.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [19, PC-首页限时抢购-左边, WEB-INF/T/index, index_countdown_left.ftl, static/imgout/index_countdown_left.html, 2015-08-15 11:36:09.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [20, PC-首页限时抢购-中间, WEB-INF/T/index, index_countdown_middle.ftl, static/imgout/index_countdown_middle.html, 2015-08-15 14:55:48.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [21, PC-首页限时抢购-右边, WEB-INF/T/index, index_countdown_right.ftl, static/imgout/index_countdown_right.html, 2015-08-17 11:01:55.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [22, PC-首页-通栏广告, WEB-INF/T/index, index_tlgg.ftl, static/imgout/index_tlgg.html, 2015-08-17 11:24:27.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [23, PC-首页-最热活动-产品-1, WEB-INF/T/index, index_zrhd_product_1.ftl, static/imgout/index_zrhd_product_1.html, 2015-08-17 11:46:22.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [24, PC-首页-最热活动-产品-2, WEB-INF/T/index, index_zrhd_product_2.ftl, static/imgout/index_zrhd_product_2.html, 2015-08-17 11:53:28.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [25, PC-首页-最热活动-产品-3, WEB-INF/T/index, index_zrhd_product_2.ftl, static/imgout/index_zrhd_product_3.html, 2015-08-17 11:54:20.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [26, PC-首页-最热活动-模块, WEB-INF/T/index, index_zrhd.ftl, static/imgout/index_zrhd.html, 2015-08-17 11:59:01.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [27, PC-首页-精选品牌, WEB-INF/T/index, index_jxpp.ftl, static/imgout/index_jxpp.html, 2015-08-17 14:08:09.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [28, PC-首页-精应季常见病-感冒, WEB-INF/T/index, index_yjcjb_ganmao.ftl, static/imgout/index_yjcjb_ganmao.html, 2015-08-17 15:51:56.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [29, PC-首页-精应季常见病-减肥, WEB-INF/T/index, index_yjcjb_jianfei.ftl, static/imgout/index_yjcjb_jianfei.html, 2015-08-17 16:06:03.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [30, PC-首页-精应季常见病-右边, WEB-INF/T/index, index_yjcjb_right.ftl, static/imgout/index_yjcjb_right.html, 2015-08-17 16:20:51.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [31, PC-首页-通栏广告-2, WEB-INF/T/index, index_tlgg_2.ftl, static/imgout/index_tlgg_2.html, 2015-08-17 16:42:02.0, PC站首页]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [33, 商品分类-01, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_01.html, 2015-08-18 13:57:02.0, 商品分类]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [36, 商品分类-02, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_02.html, 2015-08-18 16:32:14.0, 商品分类]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [37, 商品分类-03, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_03.html, 2015-08-18 16:35:19.0, 商品分类]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [38, 商品分类-04, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_04.html, 2015-08-18 16:38:33.0, 商品分类]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100005} Result: [39, 商品分类-05, WEB-INF/T/index, index_pro_ctg.ftl, static/imgout/index_pro_ctg_05.html, 2015-08-18 16:41:20.0, 商品分类]
+2015-09-14 16:32:43 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :c_position_type.ibatorgenerated_countByExample | c_position_type.selectByExampleByPage | 1 | 50
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100006} Connection
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100006} Preparing Statement:      select count(*) from c_position_type        
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100007} Executing Statement:      select count(*) from c_position_type        
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100007} Parameters: []
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100007} Types: []
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100008} ResultSet
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100008} Header: [count(*)]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100008} Result: [5]
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100009} Connection
+2015-09-14 16:32:43 - [ DEBUG ] {conn-100009} Preparing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100010} Executing Statement:      select id, name, create_date     from c_position_type     order by id desc    limit 0 ,50   
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100010} Parameters: []
+2015-09-14 16:32:43 - [ DEBUG ] {pstm-100010} Types: []
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} ResultSet
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Header: [id, name, create_date]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Result: [40, 其它, 2015-09-01 19:43:25.0]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Result: [37, PC站头部, 2015-08-21 11:24:53.0]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Result: [36, PC站底部, 2015-08-19 20:58:06.0]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Result: [35, 商品分类, 2015-08-18 13:40:05.0]
+2015-09-14 16:32:43 - [ DEBUG ] {rset-100011} Result: [34, PC站首页, 2015-08-14 15:24:45.0]
+2015-09-14 16:32:52 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :t_static.ibatorgenerated_countByExample | t_static.selectByExampleByPage | 1 | 10
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100012} Connection
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100012} Preparing Statement:      select count(*) from t_static   
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100013} Executing Statement:      select count(*) from t_static   
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100013} Parameters: []
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100013} Types: []
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100014} ResultSet
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100014} Header: [count(*)]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100014} Result: [4]
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100015} Connection
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100015} Preparing Statement:        select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date       from t_static       order by id desc    limit 0 ,10   
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100016} Executing Statement:        select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date       from t_static       order by id desc    limit 0 ,10   
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100016} Parameters: []
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100016} Types: []
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} ResultSet
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} Result: [29, 母婴馆商品分类, /static/static!buildinfantmom.action, WEB-INF/T/static, infantmom_product_category.ftl, static/imgout/infantmom_product_category.html, null, 2015-09-11 18:45:00.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} Result: [28, 保健馆商品分类, /static/static!buildheathcare.action, WEB-INF/T/static, healthcare_product_category.ftl, static/imgout/healthcare_product_category.html, 2015-09-11 17:23:48.0, 2015-09-11 17:23:19.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} Result: [27, 商品详情, /static/static!builtgoods.action, WEB-INF/T/static, goods.ftl, static/product/p/, 2015-08-27 19:51:16.0, 2015-08-27 10:57:25.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100017} Result: [24, 头部全部商品分类, /static/static!buildallprocates.action, WEB-INF/T/static, header_all_product_category.ftl, static/imgout/header_category.html, 2015-09-11 13:24:32.0, 2015-08-25 17:40:23.0]
+2015-09-14 16:32:52 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :t_category.selectallproductcategory
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100018} Connection
+2015-09-14 16:32:52 - [ DEBUG ] {conn-100018} Preparing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,1,%'       
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100019} Executing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,1,%'       
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100019} Parameters: []
+2015-09-14 16:32:52 - [ DEBUG ] {pstm-100019} Types: []
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} ResultSet
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Header: [id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap, is_app, is_pc, create_time]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [32, 中西药品, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:07:33.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [33, 营养保健, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:04.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [34, 医疗器械, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:25.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [35, 血压仪器, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:40.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [36, 性福生活, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:09:56.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [37, 孕婴专区, 0, 2, ,1,, 3, 1, 1, 1, 2015-08-25 10:10:18.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [38, 感冒呼吸, 1, 3, ,1,32,, 32, 1, 1, 1, 2015-08-25 10:28:06.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [39, 2, 2, 3, ,1,33,, 33, 1, 1, 1, 2015-08-25 10:28:41.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [40, 3, 3, 3, ,1,34,, 34, 1, 1, 1, 2015-08-25 10:28:59.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [41, 4, 4, 3, ,1,35,, 35, 1, 1, 1, 2015-08-25 10:33:45.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [42, 5, 5, 3, ,1,36,, 36, 1, 1, 1, 2015-08-25 10:34:31.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [43, 6, 7地对地导弹 , 3, ,1,37,, 37, 1, 1, 1, 2015-08-25 10:34:49.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [44, 感冒感冒感冒感冒, 0, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-25 10:44:35.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [45, 呼吸, 8, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-25 10:46:22.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [46, yinbin, sdds, 4, ,1,32,38,, 38, 1, 1, 1, 2015-08-26 16:45:00.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [61, 营养滋补, 11, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:39:49.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [62, 1, 1, 3, ,1,61,, 61, 1, 1, 1, 2015-08-31 15:40:11.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [63, 补肾, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:44:16.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [64, 补水, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:44:37.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [65, 地黄丸, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:48:42.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [66, 谷维素, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:48:43.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [67, 杜蕾斯, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:49:19.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [68, 维生素, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:49:57.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [69, 送女士, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:50:22.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [70, 健康礼品, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:50:54.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [71, 蛋白质粉, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:53:08.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [72, 日常护理, 1, 2, ,1,, 3, 1, 1, 1, 2015-08-31 15:53:26.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [73, 测试, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 13:03:18.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [74, 肝胆科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:57:48.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [75, 胃肠道药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:58:11.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [76, 神经科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:58:31.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [77, 呼吸科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:59:04.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [78, 呼吸科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 14:59:27.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [80, 泌尿科药, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:26:26.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [82, 成人用品, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:28:01.0]
+2015-09-14 16:32:52 - [ DEBUG ] {rset-100020} Result: [83, 时尚美妆, 1, 2, ,1,, 1, 1, 1, 1, 2015-09-11 15:28:19.0]
+2015-09-14 16:32:57 - [ DEBUG ] {conn-100021} Connection
+2015-09-14 16:32:57 - [ DEBUG ] {conn-100021} Preparing Statement:      select id, sys_key, sys_value, remark     from t_sys_parameter                 where                (                             sys_key =             ?                                    )                              
+2015-09-14 16:32:57 - [ DEBUG ] {pstm-100022} Executing Statement:      select id, sys_key, sys_value, remark     from t_sys_parameter                 where                (                             sys_key =             ?                                    )                              
+2015-09-14 16:32:57 - [ DEBUG ] {pstm-100022} Parameters: [healthcare]
+2015-09-14 16:32:57 - [ DEBUG ] {pstm-100022} Types: [java.lang.String]
+2015-09-14 16:32:57 - [ DEBUG ] {rset-100023} ResultSet
+2015-09-14 16:32:57 - [ DEBUG ] {rset-100023} Header: [id, sys_key, sys_value, remark]
+2015-09-14 16:32:57 - [ DEBUG ] {rset-100023} Result: [47, healthcare, 84, 保健馆ID]
+2015-09-14 16:32:58 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :t_category.selectallproductcategory
+2015-09-14 16:32:58 - [ DEBUG ] {conn-100024} Connection
+2015-09-14 16:32:58 - [ DEBUG ] {conn-100024} Preparing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,84,%'       
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100025} Executing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,84,%'       
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100025} Parameters: []
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100025} Types: []
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} ResultSet
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Header: [id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap, is_app, is_pc, create_time]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [85, 营养保健, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:31.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [86, 滋补养生, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:54.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [87, 美容护肤, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:55:14.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [89, 保健器械, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:08.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [90, 成人用品, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:31.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [92, 隐形眼镜, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:57:17.0]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100026} Result: [103, 调节免疫, 1, 4, ,84,85,, 85, 1, 1, 1, 2015-09-11 21:17:29.0]
+2015-09-14 16:32:58 - [ DEBUG ] {conn-100027} Connection
+2015-09-14 16:32:58 - [ DEBUG ] {conn-100027} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100028} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100028} Parameters: [29]
+2015-09-14 16:32:58 - [ DEBUG ] {pstm-100028} Types: [java.lang.Long]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100029} ResultSet
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100029} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:32:58 - [ DEBUG ] {rset-100029} Result: [29, 母婴馆商品分类, /static/static!buildinfantmom.action, WEB-INF/T/static, infantmom_product_category.ftl, static/imgout/infantmom_product_category.html, null, 2015-09-11 18:45:00.0]
+2015-09-14 16:32:59 - [ DEBUG ] {conn-100030} Connection
+2015-09-14 16:32:59 - [ DEBUG ] {conn-100030} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100031} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100031} Parameters: [29]
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100031} Types: [java.lang.Long]
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100032} ResultSet
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100032} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100032} Result: [29, 母婴馆商品分类, /static/static!buildinfantmom.action, WEB-INF/T/static, infantmom_product_category.ftl, static/imgout/infantmom_product_category.html, null, 2015-09-11 18:45:00.0]
+2015-09-14 16:32:59 - [ DEBUG ] {conn-100033} Connection
+2015-09-14 16:32:59 - [ DEBUG ] {conn-100033} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100034} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100034} Parameters: [29]
+2015-09-14 16:32:59 - [ DEBUG ] {pstm-100034} Types: [java.lang.Long]
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100035} ResultSet
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100035} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:32:59 - [ DEBUG ] {rset-100035} Result: [29, 母婴馆商品分类, /static/static!buildinfantmom.action, WEB-INF/T/static, infantmom_product_category.ftl, static/imgout/infantmom_product_category.html, null, 2015-09-11 18:45:00.0]
+2015-09-14 16:32:59 - [ WARN ] No result defined for action com.rc.portal.webapp.action.StaticManageAction and result null
+2015-09-14 16:33:09 - [ DEBUG ] {conn-100036} Connection
+2015-09-14 16:33:09 - [ DEBUG ] {conn-100036} Preparing Statement:      select id, sys_key, sys_value, remark     from t_sys_parameter                 where                (                             sys_key =             ?                                    )                              
+2015-09-14 16:33:09 - [ DEBUG ] {pstm-100037} Executing Statement:      select id, sys_key, sys_value, remark     from t_sys_parameter                 where                (                             sys_key =             ?                                    )                              
+2015-09-14 16:33:09 - [ DEBUG ] {pstm-100037} Parameters: [healthcare]
+2015-09-14 16:33:09 - [ DEBUG ] {pstm-100037} Types: [java.lang.String]
+2015-09-14 16:33:09 - [ DEBUG ] {rset-100038} ResultSet
+2015-09-14 16:33:09 - [ DEBUG ] {rset-100038} Header: [id, sys_key, sys_value, remark]
+2015-09-14 16:33:09 - [ DEBUG ] {rset-100038} Result: [47, healthcare, 84, 保健馆ID]
+2015-09-14 16:33:10 - [ INFO ] [OpenSqlDAOImpl] 查找返回List :t_category.selectallproductcategory
+2015-09-14 16:33:10 - [ DEBUG ] {conn-100039} Connection
+2015-09-14 16:33:10 - [ DEBUG ] {conn-100039} Preparing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,84,%'       
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100040} Executing Statement:     SELECT id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap,         is_app, is_pc, create_time    FROM t_category AS tc     WHERE 1=1    and    tc.all_parent_id LIKE '%,84,%'       
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100040} Parameters: []
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100040} Types: []
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} ResultSet
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Header: [id, category_name, category_describe, category_level, all_parent_id, parent_id, is_wap, is_app, is_pc, create_time]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [85, 营养保健, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:31.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [86, 滋补养生, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:54:54.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [87, 美容护肤, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:55:14.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [89, 保健器械, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:08.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [90, 成人用品, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:56:31.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [92, 隐形眼镜, 1, 2, ,84,, 84, 1, 1, 1, 2015-09-11 16:57:17.0]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100041} Result: [103, 调节免疫, 1, 4, ,84,85,, 85, 1, 1, 1, 2015-09-11 21:17:29.0]
+2015-09-14 16:33:10 - [ DEBUG ] {conn-100042} Connection
+2015-09-14 16:33:10 - [ DEBUG ] {conn-100042} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100043} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100043} Parameters: [28]
+2015-09-14 16:33:10 - [ DEBUG ] {pstm-100043} Types: [java.lang.Long]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100044} ResultSet
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100044} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:33:10 - [ DEBUG ] {rset-100044} Result: [28, 保健馆商品分类, /static/static!buildheathcare.action, WEB-INF/T/static, healthcare_product_category.ftl, static/imgout/healthcare_product_category.html, 2015-09-11 17:23:48.0, 2015-09-11 17:23:19.0]
+2015-09-14 16:33:11 - [ DEBUG ] {conn-100045} Connection
+2015-09-14 16:33:11 - [ DEBUG ] {conn-100045} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100046} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100046} Parameters: [28]
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100046} Types: [java.lang.Long]
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100047} ResultSet
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100047} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100047} Result: [28, 保健馆商品分类, /static/static!buildheathcare.action, WEB-INF/T/static, healthcare_product_category.ftl, static/imgout/healthcare_product_category.html, 2015-09-11 17:23:48.0, 2015-09-11 17:23:19.0]
+2015-09-14 16:33:11 - [ DEBUG ] {conn-100048} Connection
+2015-09-14 16:33:11 - [ DEBUG ] {conn-100048} Preparing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100049} Executing Statement:      select id, static_name, static_mehtod, template_path, template_name, out_path, update_date,       create_date     from t_static     where id = ?   
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100049} Parameters: [28]
+2015-09-14 16:33:11 - [ DEBUG ] {pstm-100049} Types: [java.lang.Long]
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100050} ResultSet
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100050} Header: [id, static_name, static_mehtod, template_path, template_name, out_path, update_date, create_date]
+2015-09-14 16:33:11 - [ DEBUG ] {rset-100050} Result: [28, 保健馆商品分类, /static/static!buildheathcare.action, WEB-INF/T/static, healthcare_product_category.ftl, static/imgout/healthcare_product_category.html, 2015-09-11 17:23:48.0, 2015-09-11 17:23:19.0]
+2015-09-14 16:33:11 - [ WARN ] No result defined for action com.rc.portal.webapp.action.StaticManageAction and result null

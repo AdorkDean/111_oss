@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="goods" extends="default" namespace="/goods">	
+		<!-- 商品管理 -->
+		<action name="goods" class="com.rc.portal.webapp.action.GoodsAction">
+			<result name="goods_add_page" type="freemarker" >/WEB-INF/pages/pname/goods/goods_add.ftl</result>
+			<result name="goods_add" type="redirect" >newGoods!getGoodsList.action?goodsName=${goodsf.shortname}&amp;goodsNo=${goodsf.goodsno}</result>
+			<result name="goods_list" type="freemarker" >/WEB-INF/pages/pname/goods/goods_list.ftl</result>
+			<result name="goods_view" type="freemarker" >/WEB-INF/pages/pname/goods/goods_update.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		<action name="goodsgk" class="com.rc.portal.webapp.action.GoodsGroupKeyWordAction">
+			<result name="list" type="freemarker" >/WEB-INF/pages/pname/goodsGroupKeyWord/list.ftl</result>
+			<result name="add_page" type="freemarker" >/WEB-INF/pages/pname/goodsGroupKeyWord/add.ftl</result>
+			<result name="add" type="redirect" >goodsgk!list.action</result>
+			<result name="view" type="freemarker" >/WEB-INF/pages/pname/goodsGroupKeyWord/edit.ftl</result>
+		</action>
+		
+		<action name="yktgoods" class="com.rc.portal.webapp.action.YiKaTongProduct">
+			<result name="ykt-list" type="freemarker" >/WEB-INF/pages/pname/goods/ykt_list.ftl</result>
+			
+		</action>
+		<action name="importGoodsSearchWord" class="com.rc.portal.webapp.action.GoodsSearchWordImportAction">
+			<result name="goodsSearchWordImport" type="freemarker">/WEB-INF/pages/pname/goodsImport/goodsSearchWordImport.ftl</result>
+		</action>
+		
+			<!-- 商品管理 -->
+		<action name="newGoods" class="com.rc.portal.webapp.action.NewGoodsListAction">
+			<result name="getGoodsList" type="freemarker" >/WEB-INF/pages/pname/goods/new_goods_list.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		<!-- 商品推荐   马龙 -->
+		<action name="push" class="com.rc.portal.webapp.action.GoodsSellingRecAction">
+			<result name="list" type="freemarker" >/WEB-INF/pages/pname/goods/shop_push.ftl</result>
+		</action>
+	</package>
+</xwork>

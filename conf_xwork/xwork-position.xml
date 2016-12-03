@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="position" extends="default" namespace="/position">
+		<!-- 编辑器图片上传 -->
+		<action name="position" class="com.rc.portal.webapp.action.TemplateManageAcation">
+			<result name="editPage" type="freemarker" >/WEB-INF/pages/position/position_edit.ftl</result>
+			<result name="postionlist" type="freemarker" >/WEB-INF/pages/position/templateList.ftl</result>
+		</action>
+		
+		<action name="managePosition" class="com.rc.portal.webapp.action.PositionManageAction" >
+			<result name="poslist" type="freemarker">/WEB-INF/pages/position/position_list.ftl</result>
+			<result name="addPosition" type="freemarker">/WEB-INF/pages/position/add_position.ftl</result>
+		</action>
+		<action name="uploadImage" class="com.rc.portal.webapp.action.UploadImgAction"> 
+			<result name="uploadPage" type="freemarker">/WEB-INF/pages/position/imageUpload.ftl</result>
+			<result name="uploadPage2" type="freemarker">/WEB-INF/pages/position/imageUpload2.ftl</result>
+		</action>
+		<!--<action name="relationInfo"  class="com.rc.portal.webapp.action.RelationInfo"></action>--> 
+		
+		<!-- this is position type manage configuration -->
+		<action name="managePositionType" class="com.rc.portal.webapp.action.PositionTypeManageAction" >
+			<result name="postypelist" type="freemarker">/WEB-INF/pages/position/type/postypelist.ftl</result>
+			<result name="addpage" type="freemarker">/WEB-INF/pages/position/type/addpage.ftl</result>
+			<result name="editpage" type="freemarker">/WEB-INF/pages/position/type/editpage.ftl</result>
+			<result name="commonlist" type="freemarker">/WEB-INF/pages/position/type/commonlist.ftl</result>
+			<result name="commonedit" type="freemarker">/WEB-INF/pages/position/type/commonedit.ftl</result>
+		</action>
+		
+	</package>
+</xwork>

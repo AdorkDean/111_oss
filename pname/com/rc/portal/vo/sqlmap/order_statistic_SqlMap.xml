@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="order_statistic" >
+  <select id="statisticReceiverCnt" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+	  	
+	  	SELECT id,area_name FROM `t_order` 
+	  	where 1=1 
+	  	<isNotEmpty prepend="and" property="beginDate">
+			create_date >= #beginDate#
+		</isNotEmpty>
+		<isNotEmpty prepend="and" property="endDate">
+			create_date <![CDATA[<=]]> #endDate#
+		</isNotEmpty>
+  </select>
+</sqlMap>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-2.0.4.xsd">
+
+    <http auto-config='true' access-denied-page="/accessDenied.jsp">
+    	<intercept-url pattern="/web/**" filters="none" />
+    	<intercept-url pattern="/favicon.ico" filters="none" />
+    	<intercept-url pattern="/login/showLogin.action" filters="none" />    	
+	    <form-login login-page="/login/showLogin.action"  
+		    authentication-failure-url="/login/showLogin.action?errorMessage=999" 
+		    default-target-url="/login/login.action" /> 
+
+		
+    </http>
+
+    <authentication-provider>
+    	<password-encoder hash="md5"/>    	
+        <jdbc-user-service data-source-ref="dataSource"
+            users-by-username-query="select t.login_name username,t.password,t.status as enabled from t_adm_users t 
+												where t.login_name=?"
+            authorities-by-username-query=" select  a.login_name username,e.role_name authority
+											from t_adm_users a,t_adm_user_post b ,t_adm_post c,t_adm_post_role d ,t_adm_roles e
+											where 
+											1=1
+											and a.id=b.userid 
+											and b.postid=c.id
+											and c.id=d.postid
+											and d.roleid=e.id
+											and a.login_name=?
+											order by e.id
+											"/>
+    </authentication-provider>
+
+    <beans:bean id="filterSecurityInterceptor"
+        class="org.springframework.security.intercept.web.FilterSecurityInterceptor" autowire="byType">
+        <custom-filter before="FILTER_SECURITY_INTERCEPTOR" />
+        <beans:property name="objectDefinitionSource" ref="filterInvocationDefinitionSource" />
+    </beans:bean>
+
+    <beans:bean id="filterInvocationDefinitionSource"
+        class="com.rc.portal.webapp.filter.JdbcFilterInvocationDefinitionSourceFactoryBean">
+        <beans:property name="dataSource" ref="dataSource"/>
+        <beans:property name="resourceQuery" value="
+            select c.res_string,a.role_name name from t_adm_roles a
+			join t_adm_resc_roles b on a.id=b.role_id
+			join t_adm_resc c on b.resc_id=c.id
+			order by c.priority
+        "/>
+    </beans:bean>
+</beans:beans>

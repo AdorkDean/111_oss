@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="prom-pkg" extends="default" namespace="/proms">
+		<!-- 订单 -->
+		<action name="prom" class="com.rc.portal.webapp.action.PromotionAction">
+			<result name="insert_page" type="freemarker" >/WEB-INF/pages/pname/promotion/add_prom.ftl</result>
+			<result name="list" type="freemarker" >/WEB-INF/pages/pname/promotion/list.ftl</result>
+			<result name="single" type="freemarker" >/WEB-INF/pages/pname/promotion/single_goods.ftl</result>
+			<result name="mix" type="freemarker" >/WEB-INF/pages/pname/promotion/mix_goods.ftl</result>
+			<result name="category" type="freemarker" >/WEB-INF/pages/pname/promotion/category_goods.ftl</result>
+			<result name="update_record" type="freemarker" >/WEB-INF/pages/pname/promotion/update_prom.ftl</result>
+			<result name="detail" type="freemarker" >/WEB-INF/pages/pname/promotion/detail.ftl</result>
+		</action>
+	</package>
+</xwork>

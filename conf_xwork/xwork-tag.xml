@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="label" extends="default" namespace="/label">
+		<action name="tag" class="com.rc.portal.webapp.action.TagAction" method="list">
+			<result name="list" type="freemarker">/WEB-INF/pages/pname/tag/list.ftl</result>
+			<result name="edit" type="freemarker">/WEB-INF/pages/pname/tag/edit.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/pname/tag/add.ftl</result>
+			<result name="redirect" type="redirect">tag!list.action</result>
+		</action>
+	</package>
+</xwork>

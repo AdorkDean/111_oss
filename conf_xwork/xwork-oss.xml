@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+<!-- Configuration for the user package. -->
+<package name="user" extends="default" namespace="/user">
+
+	<action name="useroperate" class="com.rc.portal.webapp.action.ShowUser" >
+		<result name="skip" type="redirect">/user/useroperate!listUsers.action</result>	
+		<result name="success" type="freemarker">/WEB-INF/pages/oss/user_list.ftl</result>
+		<result name="toedituser" type="freemarker">/WEB-INF/pages/oss/userEdit_Add.ftl</result>
+		<result name="editModules" type="freemarker">/WEB-INF/pages/oss/editModules.ftl</result>
+		<result name="toeditroles" type="freemarker">/WEB-INF/pages/oss/editRoles.ftl</result>
+		<result name="toeditresc" type="freemarker">/WEB-INF/pages/oss/editResc.ftl</result>
+		<result name="tradestatistic" type="freemarker">/WEB-INF/pages/oss/trade_detail_statistic.ftl</result>
+		<result name="toexcel" >/WEB-INF/pages/boss/down.jsp</result>
+		<result name="toeditpost" type="freemarker">/WEB-INF/pages/oss/editPost.ftl</result>
+			<result name="tochanagepassword" type="freemarker">/WEB-INF/pages/oss/editPassword.ftl</result>
+		<interceptor-ref name="loginStack" />
+	</action>	
+	<action name="roleEdit" class="com.rc.portal.webapp.action.ShowRoles" >
+		<result name="success" type="freemarker">/WEB-INF/pages/oss/role_list.ftl</result>
+		<result name="redirectToList" type="redirect">/user/roleEdit!listRoles.action</result>				
+		<result name="toeditresc" type="freemarker">/WEB-INF/pages/oss/editResc.ftl</result>
+		<result name="toaddeditmodule" type="freemarker">/WEB-INF/pages/oss/role_Edit_Add.ftl</result>		
+		<result name="toexcel" >/WEB-INF/pages/boss/down.jsp</result>
+		<interceptor-ref name="loginStack" />
+	</action>
+	
+	<action name="moduleEdit" class="com.rc.portal.webapp.action.ShowModules" >
+		<result name="success" type="freemarker">/WEB-INF/pages/oss/module_list.ftl</result>
+		<result name="toaddeditmodule" type="freemarker">/WEB-INF/pages/oss/module_Edit_Add.ftl</result>				
+		<result name="toeditresc" type="freemarker">/WEB-INF/pages/oss/editResc.ftl</result>		
+		<result name="redirectToList" type="redirect">/user/moduleEdit!listModules.action</result>	
+		<interceptor-ref name="loginStack" />
+	</action>
+	
+	<action name="rescEdit" class="com.rc.portal.webapp.action.ShowResc" >
+		<result name="skip" type="redirect">/user/rescEdit!listResc.action</result>		    
+		<result name="success" type="freemarker">/WEB-INF/pages/oss/resc_list.ftl</result>				
+		<result name="toeditresc" type="freemarker">/WEB-INF/pages/oss/editResc.ftl</result>
+		<result name="updateResc" type="freemarker">/WEB-INF/pages/oss/rescEdit_update.ftl</result>		
+		<result name="toEditResc" type="freemarker">/WEB-INF/pages/oss/rescEdit_Add.ftl</result>			
+		<result name="toexcel" >/WEB-INF/pages/boss/down.jsp</result>
+		<interceptor-ref name="loginStack" />
+	</action>
+	
+	<action name="postEdit" class="com.rc.portal.webapp.action.ShowPost" >
+		<result name="skip" type="redirect">/user/postEdit!listPost.action</result>		    
+		<result name="success" type="freemarker">/WEB-INF/pages/oss/post_list.ftl</result>				
+		<result name="toeditadd" type="freemarker">/WEB-INF/pages/oss/post_Edit_Add.ftl</result>
+		<result name="toeditPostroles" type="freemarker">/WEB-INF/pages/oss/post_editRoles.ftl</result>		
+		<result name="toEditResc" type="freemarker">/WEB-INF/pages/oss/rescEdit_Add.ftl</result>			
+		<result name="toexcel" >/WEB-INF/pages/boss/down.jsp</result>
+		<interceptor-ref name="loginStack" />
+	</action>
+</package>
+</xwork>

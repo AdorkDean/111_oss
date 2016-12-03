@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<hbnmap namespace="resc"> 
+    <hsql id="list"> 
+			select p from TAdmResc p where 1=1
+			<isNotNull property="name">
+				and p.name='#name#'
+			</isNotNull>
+			<isNotNull property="id">
+				and p.id='#id#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+			<isNotNull property="url">
+				and p.resString='#url#'
+			</isNotNull>
+			<!--
+			order by p.id desc
+    --></hsql> 
+    <hsql id="selectByIdIn"> 
+			select p from TAdmResc p where 1=1
+			and p.id in('#list#')
+			order by p.id desc
+    </hsql> 
+    <hsql id="count"> 
+			select count(p) from TAdmResc p where 1=1
+			<isNotNull property="name">
+				and p.name='#name#'
+			</isNotNull>
+			<isNotNull property="id">
+				and p.id='#id#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+			<isNotNull property="url">
+				and p.resString='#url#'
+			</isNotNull>
+    </hsql> 
+</hbnmap>

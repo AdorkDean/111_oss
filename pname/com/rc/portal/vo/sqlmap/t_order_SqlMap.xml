@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_order" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TOrder" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="order_source" property="orderSource" jdbcType="INTEGER" />
+    <result column="shipping_fee" property="shippingFee" jdbcType="DECIMAL" />
+    <result column="promotional_discount" property="promotionalDiscount" jdbcType="DECIMAL" />
+    <result column="coupon_discount" property="couponDiscount" jdbcType="DECIMAL" />
+    <result column="integration_discount" property="integrationDiscount" jdbcType="DECIMAL" />
+    <result column="use_integration" property="useIntegration" jdbcType="INTEGER" />
+    <result column="adjust_amount" property="adjustAmount" jdbcType="DECIMAL" />
+    <result column="paid_amount" property="paidAmount" jdbcType="DECIMAL" />
+    <result column="reward_integration" property="rewardIntegration" jdbcType="INTEGER" />
+    <result column="receiver" property="receiver" jdbcType="VARCHAR" />
+    <result column="area_id" property="areaId" jdbcType="BIGINT" />
+    <result column="area_name" property="areaName" jdbcType="VARCHAR" />
+    <result column="detailed_address" property="detailedAddress" jdbcType="VARCHAR" />
+    <result column="zip_code" property="zipCode" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="if_invoice" property="ifInvoice" jdbcType="INTEGER" />
+    <result column="invoice_title" property="invoiceTitle" jdbcType="VARCHAR" />
+    <result column="tax" property="tax" jdbcType="DECIMAL" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="payment_id" property="paymentId" jdbcType="BIGINT" />
+    <result column="delivery_id" property="deliveryId" jdbcType="BIGINT" />
+    <result column="member_id" property="memberId" jdbcType="BIGINT" />
+    <result column="coupon_id" property="couponId" jdbcType="BIGINT" />
+    <result column="is_push" property="isPush" jdbcType="INTEGER" />
+    <result column="push_time" property="pushTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="INTEGER" />
+    <result column="order_status" property="orderStatus" jdbcType="INTEGER" />
+    <result column="order_amount" property="orderAmount" jdbcType="DECIMAL" />
+    <result column="payable_amount" property="payableAmount" jdbcType="DECIMAL" />
+    <result column="order_type" property="orderType" jdbcType="INTEGER" />
+    <result column="return_type" property="returnType" jdbcType="INTEGER" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="verify_status" property="verifyStatus" jdbcType="INTEGER" />
+    <result column="invoice_type" property="invoiceType" jdbcType="INTEGER" />
+    <result column="finish_date" property="finishDate" jdbcType="TIMESTAMP" />
+    <result column="longitude" property="longitude" jdbcType="VARCHAR" />
+    <result column="latitude" property="latitude" jdbcType="VARCHAR" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TOrderExample" >
+    select id, order_sn, order_source, shipping_fee, promotional_discount, coupon_discount,
+      integration_discount, use_integration, adjust_amount, paid_amount, reward_integration,
+      receiver, area_id, area_name, detailed_address, zip_code, phone, if_invoice, invoice_title,
+      tax, remark, payment_id, delivery_id, member_id, coupon_id, is_push, push_time, delete_status,
+      order_status, order_amount, payable_amount, order_type, return_type, create_date,
+      verify_status, invoice_type, finish_date, longitude, latitude, store_id
+    from t_order
+    <isParameterPresent >
+      <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TOrder" >
+    select id, order_sn, order_source, shipping_fee, promotional_discount, coupon_discount,
+      integration_discount, use_integration, adjust_amount, paid_amount, reward_integration,
+      receiver, area_id, area_name, detailed_address, zip_code, phone, if_invoice, invoice_title,
+      tax, remark, payment_id, delivery_id, member_id, coupon_id, is_push, push_time, delete_status,
+      order_status, order_amount, payable_amount, order_type, return_type, create_date,
+      verify_status, invoice_type, finish_date, longitude, latitude, store_id
+    from t_order
+    where id = #id:BIGINT#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TOrder" >
+    delete from t_order
+    where id = #id:BIGINT#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TOrderExample" >
+    delete from t_order
+    <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TOrder" >
+    insert into t_order (id, order_sn, order_source, shipping_fee, promotional_discount,
+      coupon_discount, integration_discount, use_integration, adjust_amount, paid_amount,
+      reward_integration, receiver, area_id, area_name, detailed_address, zip_code, phone,
+      if_invoice, invoice_title, tax, remark, payment_id, delivery_id, member_id, coupon_id,
+      is_push, push_time, delete_status, order_status, order_amount, payable_amount, order_type,
+      return_type, create_date, verify_status, invoice_type, finish_date, longitude, latitude,
+      store_id)
+    values (#id:BIGINT#, #orderSn:VARCHAR#, #orderSource:INTEGER#, #shippingFee:DECIMAL#,
+      #promotionalDiscount:DECIMAL#, #couponDiscount:DECIMAL#, #integrationDiscount:DECIMAL#,
+      #useIntegration:INTEGER#, #adjustAmount:DECIMAL#, #paidAmount:DECIMAL#,
+      #rewardIntegration:INTEGER#, #receiver:VARCHAR#, #areaId:BIGINT#, #areaName:VARCHAR#,
+      #detailedAddress:VARCHAR#, #zipCode:VARCHAR#, #phone:VARCHAR#, #ifInvoice:INTEGER#,
+      #invoiceTitle:VARCHAR#, #tax:DECIMAL#, #remark:VARCHAR#, #paymentId:BIGINT#,
+      #deliveryId:BIGINT#, #memberId:BIGINT#, #couponId:BIGINT#, #isPush:INTEGER#,
+      #pushTime:TIMESTAMP#, #deleteStatus:INTEGER#, #orderStatus:INTEGER#, #orderAmount:DECIMAL#,
+      #payableAmount:DECIMAL#, #orderType:INTEGER#, #returnType:INTEGER#, #createDate:TIMESTAMP#,
+      #verifyStatus:INTEGER#, #invoiceType:INTEGER#, #finishDate:TIMESTAMP#, #longitude:VARCHAR#,
+      #latitude:VARCHAR#, #storeId:VARCHAR#)
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TOrder" >
+    insert into t_order
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="orderSn" >
+        order_sn
+      </isNotNull>
+      <isNotNull prepend="," property="orderSource" >
+        order_source
+      </isNotNull>
+      <isNotNull prepend="," property="shippingFee" >
+        shipping_fee
+      </isNotNull>
+      <isNotNull prepend="," property="promotionalDiscount" >
+        promotional_discount
+      </isNotNull>
+      <isNotNull prepend="," property="couponDiscount" >
+        coupon_discount
+      </isNotNull>
+      <isNotNull prepend="," property="integrationDiscount" >
+        integration_discount
+      </isNotNull>
+      <isNotNull prepend="," property="useIntegration" >
+        use_integration
+      </isNotNull>
+      <isNotNull prepend="," property="adjustAmount" >
+        adjust_amount
+      </isNotNull>
+      <isNotNull prepend="," property="paidAmount" >
+        paid_amount
+      </isNotNull>
+      <isNotNull prepend="," property="rewardIntegration" >
+        reward_integration
+      </isNotNull>
+      <isNotNull prepend="," property="receiver" >
+        receiver
+      </isNotNull>
+      <isNotNull prepend="," property="areaId" >
+        area_id
+      </isNotNull>
+      <isNotNull prepend="," property="areaName" >
+        area_name
+      </isNotNull>
+      <isNotNull prepend="," property="detailedAddress" >
+        detailed_address
+      </isNotNull>
+      <isNotNull prepend="," property="zipCode" >
+        zip_code
+      </isNotNull>
+      <isNotNull prepend="," property="phone" >
+        phone
+      </isNotNull>
+      <isNotNull prepend="," property="ifInvoice" >
+        if_invoice
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceTitle" >
+        invoice_title
+      </isNotNull>
+      <isNotNull prepend="," property="tax" >
+        tax
+      </isNotNull>
+      <isNotNull prepend="," property="remark" >
+        remark
+      </isNotNull>
+      <isNotNull prepend="," property="paymentId" >
+        payment_id
+      </isNotNull>
+      <isNotNull prepend="," property="deliveryId" >
+        delivery_id
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        member_id
+      </isNotNull>
+      <isNotNull prepend="," property="couponId" >
+        coupon_id
+      </isNotNull>
+      <isNotNull prepend="," property="isPush" >
+        is_push
+      </isNotNull>
+      <isNotNull prepend="," property="pushTime" >
+        push_time
+      </isNotNull>
+      <isNotNull prepend="," property="deleteStatus" >
+        delete_status
+      </isNotNull>
+      <isNotNull prepend="," property="orderStatus" >
+        order_status
+      </isNotNull>
+      <isNotNull prepend="," property="orderAmount" >
+        order_amount
+      </isNotNull>
+      <isNotNull prepend="," property="payableAmount" >
+        payable_amount
+      </isNotNull>
+      <isNotNull prepend="," property="orderType" >
+        order_type
+      </isNotNull>
+      <isNotNull prepend="," property="returnType" >
+        return_type
+      </isNotNull>
+      <isNotNull prepend="," property="createDate" >
+        create_date
+      </isNotNull>
+      <isNotNull prepend="," property="verifyStatus" >
+        verify_status
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceType" >
+        invoice_type
+      </isNotNull>
+      <isNotNull prepend="," property="finishDate" >
+        finish_date
+      </isNotNull>
+      <isNotNull prepend="," property="longitude" >
+        longitude
+      </isNotNull>
+      <isNotNull prepend="," property="latitude" >
+        latitude
+      </isNotNull>
+      <isNotNull prepend="," property="storeId" >
+        store_id
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="orderSn" >
+        #orderSn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="orderSource" >
+        #orderSource:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="shippingFee" >
+        #shippingFee:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="promotionalDiscount" >
+        #promotionalDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="couponDiscount" >
+        #couponDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="integrationDiscount" >
+        #integrationDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="useIntegration" >
+        #useIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="adjustAmount" >
+        #adjustAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="paidAmount" >
+        #paidAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="rewardIntegration" >
+        #rewardIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="receiver" >
+        #receiver:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="areaId" >
+        #areaId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="areaName" >
+        #areaName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="detailedAddress" >
+        #detailedAddress:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="zipCode" >
+        #zipCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="phone" >
+        #phone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ifInvoice" >
+        #ifInvoice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceTitle" >
+        #invoiceTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="tax" >
+        #tax:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="remark" >
+        #remark:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="paymentId" >
+        #paymentId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="deliveryId" >
+        #deliveryId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        #memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="couponId" >
+        #couponId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="isPush" >
+        #isPush:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pushTime" >
+        #pushTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="deleteStatus" >
+        #deleteStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="orderStatus" >
+        #orderStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="orderAmount" >
+        #orderAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payableAmount" >
+        #payableAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="orderType" >
+        #orderType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="returnType" >
+        #returnType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDate" >
+        #createDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="verifyStatus" >
+        #verifyStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceType" >
+        #invoiceType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="finishDate" >
+        #finishDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="longitude" >
+        #longitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="latitude" >
+        #latitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="storeId" >
+        #storeId:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TOrderExample" resultClass="java.lang.Integer" >
+    select count(*) from t_order
+    <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update t_order
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderSn" >
+        order_sn = #record.orderSn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderSource" >
+        order_source = #record.orderSource:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.shippingFee" >
+        shipping_fee = #record.shippingFee:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.promotionalDiscount" >
+        promotional_discount = #record.promotionalDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.couponDiscount" >
+        coupon_discount = #record.couponDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.integrationDiscount" >
+        integration_discount = #record.integrationDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.useIntegration" >
+        use_integration = #record.useIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.adjustAmount" >
+        adjust_amount = #record.adjustAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.paidAmount" >
+        paid_amount = #record.paidAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.rewardIntegration" >
+        reward_integration = #record.rewardIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.receiver" >
+        receiver = #record.receiver:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.areaId" >
+        area_id = #record.areaId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.areaName" >
+        area_name = #record.areaName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.detailedAddress" >
+        detailed_address = #record.detailedAddress:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.zipCode" >
+        zip_code = #record.zipCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.phone" >
+        phone = #record.phone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.ifInvoice" >
+        if_invoice = #record.ifInvoice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.invoiceTitle" >
+        invoice_title = #record.invoiceTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.tax" >
+        tax = #record.tax:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.remark" >
+        remark = #record.remark:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.paymentId" >
+        payment_id = #record.paymentId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.deliveryId" >
+        delivery_id = #record.deliveryId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.memberId" >
+        member_id = #record.memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.couponId" >
+        coupon_id = #record.couponId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isPush" >
+        is_push = #record.isPush:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.pushTime" >
+        push_time = #record.pushTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.deleteStatus" >
+        delete_status = #record.deleteStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderStatus" >
+        order_status = #record.orderStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderAmount" >
+        order_amount = #record.orderAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.payableAmount" >
+        payable_amount = #record.payableAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderType" >
+        order_type = #record.orderType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.returnType" >
+        return_type = #record.returnType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createDate" >
+        create_date = #record.createDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.verifyStatus" >
+        verify_status = #record.verifyStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.invoiceType" >
+        invoice_type = #record.invoiceType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.finishDate" >
+        finish_date = #record.finishDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.longitude" >
+        longitude = #record.longitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.latitude" >
+        latitude = #record.latitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.storeId" >
+        store_id = #record.storeId:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update t_order
+    set id = #record.id:BIGINT#,
+      order_sn = #record.orderSn:VARCHAR#,
+      order_source = #record.orderSource:INTEGER#,
+      shipping_fee = #record.shippingFee:DECIMAL#,
+      promotional_discount = #record.promotionalDiscount:DECIMAL#,
+      coupon_discount = #record.couponDiscount:DECIMAL#,
+      integration_discount = #record.integrationDiscount:DECIMAL#,
+      use_integration = #record.useIntegration:INTEGER#,
+      adjust_amount = #record.adjustAmount:DECIMAL#,
+      paid_amount = #record.paidAmount:DECIMAL#,
+      reward_integration = #record.rewardIntegration:INTEGER#,
+      receiver = #record.receiver:VARCHAR#,
+      area_id = #record.areaId:BIGINT#,
+      area_name = #record.areaName:VARCHAR#,
+      detailed_address = #record.detailedAddress:VARCHAR#,
+      zip_code = #record.zipCode:VARCHAR#,
+      phone = #record.phone:VARCHAR#,
+      if_invoice = #record.ifInvoice:INTEGER#,
+      invoice_title = #record.invoiceTitle:VARCHAR#,
+      tax = #record.tax:DECIMAL#,
+      remark = #record.remark:VARCHAR#,
+      payment_id = #record.paymentId:BIGINT#,
+      delivery_id = #record.deliveryId:BIGINT#,
+      member_id = #record.memberId:BIGINT#,
+      coupon_id = #record.couponId:BIGINT#,
+      is_push = #record.isPush:INTEGER#,
+      push_time = #record.pushTime:TIMESTAMP#,
+      delete_status = #record.deleteStatus:INTEGER#,
+      order_status = #record.orderStatus:INTEGER#,
+      order_amount = #record.orderAmount:DECIMAL#,
+      payable_amount = #record.payableAmount:DECIMAL#,
+      order_type = #record.orderType:INTEGER#,
+      return_type = #record.returnType:INTEGER#,
+      create_date = #record.createDate:TIMESTAMP#,
+      verify_status = #record.verifyStatus:INTEGER#,
+      invoice_type = #record.invoiceType:INTEGER#,
+      finish_date = #record.finishDate:TIMESTAMP#,
+      longitude = #record.longitude:VARCHAR#,
+      latitude = #record.latitude:VARCHAR#,
+      store_id = #record.storeId:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TOrder" >
+    update t_order
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="orderSn" >
+        order_sn = #orderSn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="orderSource" >
+        order_source = #orderSource:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="shippingFee" >
+        shipping_fee = #shippingFee:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="promotionalDiscount" >
+        promotional_discount = #promotionalDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="couponDiscount" >
+        coupon_discount = #couponDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="integrationDiscount" >
+        integration_discount = #integrationDiscount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="useIntegration" >
+        use_integration = #useIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="adjustAmount" >
+        adjust_amount = #adjustAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="paidAmount" >
+        paid_amount = #paidAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="rewardIntegration" >
+        reward_integration = #rewardIntegration:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="receiver" >
+        receiver = #receiver:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="areaId" >
+        area_id = #areaId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="areaName" >
+        area_name = #areaName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="detailedAddress" >
+        detailed_address = #detailedAddress:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="zipCode" >
+        zip_code = #zipCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="phone" >
+        phone = #phone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ifInvoice" >
+        if_invoice = #ifInvoice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceTitle" >
+        invoice_title = #invoiceTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="tax" >
+        tax = #tax:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="remark" >
+        remark = #remark:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="paymentId" >
+        payment_id = #paymentId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="deliveryId" >
+        delivery_id = #deliveryId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        member_id = #memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="couponId" >
+        coupon_id = #couponId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="isPush" >
+        is_push = #isPush:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pushTime" >
+        push_time = #pushTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="deleteStatus" >
+        delete_status = #deleteStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="orderStatus" >
+        order_status = #orderStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="orderAmount" >
+        order_amount = #orderAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payableAmount" >
+        payable_amount = #payableAmount:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="orderType" >
+        order_type = #orderType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="returnType" >
+        return_type = #returnType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDate" >
+        create_date = #createDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="verifyStatus" >
+        verify_status = #verifyStatus:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="invoiceType" >
+        invoice_type = #invoiceType:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="finishDate" >
+        finish_date = #finishDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="longitude" >
+        longitude = #longitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="latitude" >
+        latitude = #latitude:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="storeId" >
+        store_id = #storeId:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:BIGINT#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TOrder" >
+    update t_order
+    set order_sn = #orderSn:VARCHAR#,
+      order_source = #orderSource:INTEGER#,
+      shipping_fee = #shippingFee:DECIMAL#,
+      promotional_discount = #promotionalDiscount:DECIMAL#,
+      coupon_discount = #couponDiscount:DECIMAL#,
+      integration_discount = #integrationDiscount:DECIMAL#,
+      use_integration = #useIntegration:INTEGER#,
+      adjust_amount = #adjustAmount:DECIMAL#,
+      paid_amount = #paidAmount:DECIMAL#,
+      reward_integration = #rewardIntegration:INTEGER#,
+      receiver = #receiver:VARCHAR#,
+      area_id = #areaId:BIGINT#,
+      area_name = #areaName:VARCHAR#,
+      detailed_address = #detailedAddress:VARCHAR#,
+      zip_code = #zipCode:VARCHAR#,
+      phone = #phone:VARCHAR#,
+      if_invoice = #ifInvoice:INTEGER#,
+      invoice_title = #invoiceTitle:VARCHAR#,
+      tax = #tax:DECIMAL#,
+      remark = #remark:VARCHAR#,
+      payment_id = #paymentId:BIGINT#,
+      delivery_id = #deliveryId:BIGINT#,
+      member_id = #memberId:BIGINT#,
+      coupon_id = #couponId:BIGINT#,
+      is_push = #isPush:INTEGER#,
+      push_time = #pushTime:TIMESTAMP#,
+      delete_status = #deleteStatus:INTEGER#,
+      order_status = #orderStatus:INTEGER#,
+      order_amount = #orderAmount:DECIMAL#,
+      payable_amount = #payableAmount:DECIMAL#,
+      order_type = #orderType:INTEGER#,
+      return_type = #returnType:INTEGER#,
+      create_date = #createDate:TIMESTAMP#,
+      verify_status = #verifyStatus:INTEGER#,
+      invoice_type = #invoiceType:INTEGER#,
+      finish_date = #finishDate:TIMESTAMP#,
+      longitude = #longitude:VARCHAR#,
+      latitude = #latitude:VARCHAR#,
+      store_id = #storeId:VARCHAR#
+    where id = #id:BIGINT#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TOrderExample" >
+                    select id, order_sn, order_source, shipping_fee, promotional_discount, coupon_discount,
+                      integration_discount, use_integration, adjust_amount, paid_amount, reward_integration,
+                      receiver, area_id, area_name, detailed_address, zip_code, phone, if_invoice, invoice_title,
+                      tax, remark, payment_id, delivery_id, member_id, coupon_id, is_push, push_time, delete_status,
+                      order_status, order_amount, payable_amount, order_type, return_type, create_date,
+                      verify_status, invoice_type, finish_date, longitude, latitude, store_id
+                    from t_order
+                    <isParameterPresent >
+                      <include refid="t_order.ibatorgenerated_Example_Where_Clause" />
+                      <isNotNull property="orderByClause" >
+                        order by $orderByClause$
+                      </isNotNull>
+                    </isParameterPresent>
+					limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+      <select id="select_order_sn_call" resultClass="java.lang.String"  parameterClass="java.util.Map">
+        call p_order_sn(#len#,@ordersn)
+  </select>
+  
+  
+   <!-- 领秀订单查询列表-->
+  <select id="selectLeaderOrderListByMap" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+select * from (SELECT
+	t.id,
+	t.order_sn,
+	t.order_source,
+	t.remark,
+	t.is_push,
+	t.delete_status,
+	t.order_status,
+	t.payable_amount,
+	t.order_type,
+	t.create_date,
+	d.`name` AS deliName,
+	t.receiver,
+	t.phone,
+	t.delivery_id,
+	t.verify_status verifyStatus,
+	if(of.pay_method is null,p.`name`,of.pay_method) AS payName,
+	concat(t.area_name,t.detailed_address) AS deliveryName,
+  if(t1.member_id is null,t5.member_id,t1.member_id) AS memberid,
+  if(t1.member_id is null,t5.real_name,t2.user_name) AS xiufenname,
+  if(t1.member_id is null,t5.real_name,(select t6.real_name from t_leader t6 where t6.id = t1.leader_id)) AS lingxiuname
+FROM
+	t_order t
+LEFT JOIN t_member t2 ON t.member_id = t2.id
+LEFT JOIN t_member_leader t1 ON t.member_id = t1.member_id
+LEFT JOIN t_leader t5 ON t.member_id = t5.member_id
+LEFT JOIN c_payment_way p on p.id=t.payment_id
+LEFT JOIN c_delivery_way d on d.id=t.delivery_id
+LEFT JOIN t_order_flow of on t.id = of.order_id
+) t4 where t4.memberid is not null  
+<isNotNull prepend="and" property="orderNo" >
+          t4.order_sn like '%$orderNo$%'
+</isNotNull>
+ <isNotNull prepend="and" property="memberName" >
+          t4.lingxiuname like '%$memberName$%'
+ </isNotNull> 
+ <isNotNull prepend="and" property="source" >
+          t4.order_source = #source#
+ </isNotNull>
+  <isNotNull prepend="and" property="orderStatus" >
+          t4.order_status = #orderStatus#
+ </isNotNull>
+ <isNotNull prepend="and" property="deliveryId" >
+          t4.delivery_id = #deliveryId#
+ </isNotNull>
+ <isNotNull prepend="and" property="verifyStatus" >
+          t4.verifyStatus = #verifyStatus#
+ </isNotNull>
+  <isNotNull prepend="and" property="receiver" >
+         t4.receiver like '%$receiver$%'
+ </isNotNull>
+ <isNotNull prepend="and" property="phone" >
+         t4.phone like '%$phone$%'
+ </isNotNull>
+ <isNotNull property="start_date">
+				<isNotNull property="end_date">
+		    	AND DATE_FORMAT(t4.create_date ,'%Y-%m-%d') &gt;=  #start_date# AND  DATE_FORMAT(t4.create_date ,'%Y-%m-%d') &lt;=#end_date#
+		    	</isNotNull>
+		    </isNotNull>
+      order by t4.create_date desc
+     <isNotNull property="type">
+      	<isEqual property="type" compareValue="0">
+     LIMIT $pageInfo.start$,$pageInfo.end$
+      	</isEqual>
+      </isNotNull>
+  </select>
+  
+  
+   <!-- 领秀订单查询分页计数-->
+  <select id="selectLeaderOrderCountByMap" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+select count(*) from (SELECT
+	t.id,
+	t.order_sn,
+	t.order_source,
+	t.remark,
+	t.is_push,
+	t.delete_status,
+	t.order_status,
+	t.payable_amount,
+	t.order_type,
+	t.create_date,
+	d.`name` AS deliName,
+	t.receiver,
+	t.phone,
+	t.delivery_id,
+	t.verify_status verifyStatus,
+	if(of.pay_method is null,p.`name`,of.pay_method) AS payName,
+	concat(t.area_name,t.detailed_address) AS deliveryName,
+  if(t1.member_id is null,t5.member_id,t1.member_id) AS memberid,
+  if(t1.member_id is null,t5.real_name,t2.user_name) AS xiufenname,
+  if(t1.member_id is null,t5.real_name,(select t6.real_name from t_leader t6 where t6.id = t1.leader_id)) AS lingxiuname
+FROM
+	t_order t
+LEFT JOIN t_member t2 ON t.member_id = t2.id
+LEFT JOIN t_member_leader t1 ON t.member_id = t1.member_id
+LEFT JOIN t_leader t5 ON t.member_id = t5.member_id
+LEFT JOIN c_payment_way p on p.id=t.payment_id
+LEFT JOIN c_delivery_way d on d.id=t.delivery_id
+LEFT JOIN t_order_flow of on t.id = of.order_id
+) t4 where t4.memberid is not null  
+<isNotNull prepend="and" property="orderNo" >
+          t4.order_sn like '%$orderNo$%'
+</isNotNull>
+ <isNotNull prepend="and" property="memberName" >
+          t4.lingxiuname like '%$memberName$%'
+ </isNotNull> 
+ <isNotNull prepend="and" property="source" >
+          t4.order_source = #source#
+ </isNotNull>
+  <isNotNull prepend="and" property="orderStatus" >
+          t4.order_status = #orderStatus#
+ </isNotNull>
+ <isNotNull prepend="and" property="deliveryId" >
+          t4.delivery_id = #deliveryId#
+ </isNotNull>
+ <isNotNull prepend="and" property="verifyStatus" >
+          t4.verifyStatus = #verifyStatus#
+ </isNotNull>
+  <isNotNull prepend="and" property="receiver" >
+         t4.receiver like '%$receiver$%'
+ </isNotNull>
+ <isNotNull prepend="and" property="phone" >
+         t4.phone like '%$phone$%'
+ </isNotNull>
+ <isNotNull property="start_date">
+				<isNotNull property="end_date">
+		    	AND DATE_FORMAT(t4.create_date ,'%Y-%m-%d') &gt;=  #start_date# AND  DATE_FORMAT(t4.create_date ,'%Y-%m-%d') &lt;=#end_date#
+		    	</isNotNull>
+		    </isNotNull>
+
+  </select>
+  
+  
+    <!-- 订单查询列表-->
+  <select id="selectOrderListByMap" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+SELECT
+	t.id,
+	t.order_sn,
+	t.order_source,
+	t.remark,
+	t.is_push,
+	t.delete_status,
+	t.order_status,
+	t.payable_amount,
+	t.order_type,
+	t.create_date,
+	d.`name` AS deliName,
+	t.receiver,
+	t.phone,
+	m.user_name,
+	m.mobile,
+	t.verify_status verifyStatus,
+	if(of.pay_method is null,p.`name`,of.pay_method) AS payName,
+	if(t.coupon_id is null,'-1',(select co.`name`   from t_coupon_card ca left join t_coupon co on ca.ticket_id = co.id where ca.id = t.coupon_id) ) AS couponName,
+	concat(t.area_name,t.detailed_address) AS deliveryName
+FROM
+	t_order t
+left JOIN c_payment_way p on p.id=t.payment_id
+left JOIN c_delivery_way d on d.id=t.delivery_id
+LEFT JOIN t_member m on m.id=t.member_id
+left join t_order_flow of on t.id = of.order_id
+where 1=1
+<isNotNull prepend="and" property="orderNo" >
+          t.order_sn like '%$orderNo$%'
+</isNotNull>
+<isNotNull prepend="and" property="memberName" >
+         m.user_name like '%$memberName$%'
+ </isNotNull> 
+ <isNotNull prepend="and" property="source" >
+          t.order_source = #source#
+ </isNotNull>
+  <isNotNull prepend="and" property="orderStatus" >
+          t.order_status = #orderStatus#
+ </isNotNull>
+ <isNotNull prepend="and" property="deliveryId" >
+          t.delivery_id = #deliveryId#
+ </isNotNull>
+ <isNotNull prepend="and" property="verifyStatus" >
+          t.verify_status = #verifyStatus#
+ </isNotNull>
+  <isNotNull prepend="and" property="receiver" >
+         t.receiver like '%$receiver$%'
+ </isNotNull>
+ <isNotNull prepend="and" property="phone" >
+         t.phone like '%$phone$%'
+ </isNotNull>
+ <isNotNull property="start_date">
+	<isNotNull property="end_date">
+   	AND DATE_FORMAT(t.create_date ,'%Y-%m-%d') &gt;= DATE_FORMAT(#start_date#,'%Y-%m-%d') AND  DATE_FORMAT(t.create_date ,'%Y-%m-%d') &lt;= DATE_FORMAT(#end_date#,'%Y-%m-%d')
+   	</isNotNull>
+ </isNotNull>
+      order by t.create_date desc
+     <isNotNull property="type">
+      	<isEqual property="type" compareValue="0">
+     LIMIT $pageInfo.start$,$pageInfo.end$
+      	</isEqual>
+      </isNotNull>
+  </select>
+  <!-- 订单查询分页计数-->
+  <select id="selectOrderCountByMap" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+SELECT
+	count(t.id)
+FROM
+	t_order t
+left JOIN c_payment_way p on p.id=t.payment_id
+left JOIN c_delivery_way d on d.id=t.delivery_id
+LEFT JOIN t_member m on m.id=t.member_id
+left join t_order_flow of on t.id = of.order_id
+where 1=1
+<isNotNull prepend="and" property="orderNo" >
+          t.order_sn like '%$orderNo$%'
+</isNotNull>
+<isNotNull prepend="and" property="memberName" >
+         m.user_name like '%$memberName$%'
+ </isNotNull> 
+ <isNotNull prepend="and" property="receiver" >
+         t.receiver like '%$receiver$%'
+ </isNotNull>
+ <isNotNull prepend="and" property="phone" >
+         t.phone like '%$phone$%'
+ </isNotNull>
+ <isNotNull prepend="and" property="source" >
+          t.order_source = #source#
+ </isNotNull>
+ <isNotNull prepend="and" property="orderStatus" >
+          t.order_status = #orderStatus#
+ </isNotNull>
+ <isNotNull prepend="and" property="deliveryId" >
+          t.delivery_id = #deliveryId#
+ </isNotNull>
+ <isNotNull prepend="and" property="verifyStatus" >
+          t.verify_status = #verifyStatus#
+ </isNotNull>
+
+ <isNotNull property="start_date">
+	<isNotNull property="end_date">
+   	AND DATE_FORMAT(t.create_date ,'%Y-%m-%d') &gt;= DATE_FORMAT(#start_date#,'%Y-%m-%d') AND  DATE_FORMAT(t.create_date ,'%Y-%m-%d') &lt;= DATE_FORMAT(#end_date#,'%Y-%m-%d')
+   	</isNotNull>
+ </isNotNull>
+ 
+</select>
+  
+  <!-- 统计图标 -->
+    <select id="selectTongjiPriceByMap" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+    SELECT
+	t.order_source,
+	date_format(
+		t.create_date,
+		#sdfStr#
+	) as riqi,
+		SUM(t.order_amount) as price
+	FROM
+		t_order t
+	WHERE
+		date_format(t.create_date,
+			#sdfStr#) &lt;=#endDate#
+	and date_format(t.create_date,
+			#sdfStr#) &gt;=#startDate#
+	 <isNotNull prepend="and" property="orderStatus" >
+          t.order_status = #orderStatus#
+     </isNotNull>
+     <isNotNull prepend="and" property="verifyStatus" >
+          t.verify_status = #verifyStatus#
+     </isNotNull>
+     <isNotNull prepend="and" property="deliveryId" >
+          t.delivery_id = #deliveryId#
+     </isNotNull>
+	GROUP BY
+		t.order_source,
+		date_format(
+			t.create_date,
+			#sdfStr#
+		)
+    </select>
+  
+  
+  <!-- 统计图标 -->
+    <select id="selectTongjiCountByMap" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+    SELECT
+	t.order_source,
+	date_format(
+		t.create_date,
+		#sdfStr#
+	) as riqi,
+		COUNT(*) as tongji
+	FROM
+		t_order t
+	WHERE
+		date_format(t.create_date,
+			#sdfStr#) &lt;=#endDate#
+	and date_format(t.create_date,
+			#sdfStr#) &gt;=#startDate#
+	<isNotNull prepend="and" property="orderStatus" >
+          t.order_status = #orderStatus#
+     </isNotNull>
+     <isNotNull prepend="and" property="verifyStatus" >
+          t.verify_status = #verifyStatus#
+     </isNotNull>
+     <isNotNull prepend="and" property="deliveryId" >
+          t.delivery_id = #deliveryId#
+     </isNotNull>
+	GROUP BY
+		t.order_source,
+		date_format(
+			t.create_date,
+			#sdfStr#
+		)
+    </select>
+<!--     订单统计折线图之 基础信息 -->
+   <select id="selectOrderStatisticBase" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+   SELECT
+	t1.*, t2.*, t3.*, t4.*
+FROM
+	(
+		SELECT
+			SUM(t.order_amount) AS todayOrderAmount,
+			COUNT(t.id) AS todayOrderCount,
+			FORMAT(
+				SUM(t.order_amount) / COUNT(t.id),
+				2
+			) AS todayPCT
+		FROM
+			t_order t
+		WHERE
+			t.order_status IN (1, 2, 3)
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #today#
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #today#
+	) t1,
+	(
+		SELECT
+			SUM(t.order_amount) AS yesterdayOrderAmount,
+			COUNT(t.id) AS yesterdayOrderCount,
+			FORMAT(
+				SUM(t.order_amount) / COUNT(t.id),
+				2
+			) AS yesterdayPCT
+		FROM
+			t_order t
+		WHERE
+			t.order_status IN (1, 2, 3)
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #yesterday#
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #yesterday#
+	) t2,
+	(
+		SELECT
+			COUNT(t.id) AS todayPayCount
+		FROM
+			t_order t
+		WHERE
+			t.order_status = 0
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #today#
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #today#
+	) t3,
+	(
+		SELECT
+			COUNT(t.id) AS yesyterdayPayCount
+		FROM
+			t_order t
+		WHERE
+			t.order_status = 0
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #yesterday#
+		AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #yesterday#
+	) t4
+   </select>
+   
+      <select id="selectOrderSourceToday" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+      SELECT
+	COUNT(t.id) AS todaySource,
+	t.order_source AS today
+FROM
+	t_order t
+WHERE
+	t.order_status IN (1, 2, 3)
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #today#
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #today#
+GROUP BY
+	t.order_source
+      </select>
+      <select id="selectOrderSourceYesterday" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+      SELECT
+	COUNT(t.id) AS yesterdaySource,
+	t.order_source AS yesterday
+FROM
+	t_order t
+WHERE
+	t.order_status IN (1, 2, 3)
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #yesterday#
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #yesterday#
+GROUP BY
+	t.order_source
+      </select>
+      
+      
+      <select id="selectOrderDeliveryToday" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  SELECT
+	COUNT(t.id) AS todayDelivery,
+	cdw.`name` AS deliveryName,
+	t.delivery_id
+FROM
+	t_order t
+LEFT JOIN c_delivery_way cdw ON cdw.id = t.delivery_id
+WHERE
+	t.order_status IN (1, 2, 3)
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #today#
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #today#
+GROUP BY
+	t.delivery_id
+      </select>
+      <select id="selectOrderDeliveryYesterday" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+      
+        SELECT
+	COUNT(t.id) AS yesterdayDelivery,
+	cdw.`name` AS deliveryName,
+	t.delivery_id
+FROM
+	t_order t
+LEFT JOIN c_delivery_way cdw ON cdw.id = t.delivery_id
+WHERE
+	t.order_status IN (1, 2, 3)
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &gt;= #yesterday#
+AND DATE_FORMAT(t.create_date, '%Y-%m-%d') &lt;= #yesterday#
+GROUP BY
+	t.delivery_id
+      </select>
+      
+     <select id="selectOrderChart" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+	SELECT IFNULL(SUM(t.order_amount),0) AS oa,IFNULL(COUNT(t.id),0) AS oc,DATE_FORMAT(tdb.date_str, '%Y-%m-%d') AS date FROM t_date_base tdb
+left JOIN t_order t ON DATE_FORMAT(tdb.date_str, '%Y-%m-%d')=DATE_FORMAT(t.create_date, '%Y-%m-%d') AND t.order_status IN (1, 2, 3)
+WHERE 
+DATE_FORMAT(tdb.date_str, '%Y-%m-%d') &gt; #chartdate#
+AND DATE_FORMAT(tdb.date_str, '%Y-%m-%d') &lt;= #today#
+GROUP BY
+	DATE_FORMAT(tdb.date_str, '%Y-%m-%d')
+     </select>
+</sqlMap>

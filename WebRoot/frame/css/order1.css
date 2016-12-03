@@ -1,0 +1,76 @@
+/*中间内容content*/
+@charset "utf-8";
+body{padding:0;	margin:0;font-family:"微软雅黑",Arial,"宋体"; color:#666; font-size:13px;}
+p{  margin:0; padding:0;}
+input{ border:none;}
+img{border:none; vertical-align:top}
+dl,dd,dt,ul,ol,li,form,iframe,h1,h2,h3,h4,h5,h6,select,input{margin:0; padding:0; }
+textarea,input,select,table{font-size:12px;font-family:"微软雅黑",Arial,"宋体"; }
+select,input{ vertical-align:middle;}
+ul,ol,li{list-style:none}
+a,a:visited,a:active,a:link{color:#838383; text-decoration:none; }
+a:hover{color:#ffd30e; text-decoration:none }
+.clear{clear:both; height:0; line-height:0; font-size:0px; overflow:hidden}
+
+.content{width:940px;height: auto; padding:8px 17px;}
+.bread{width: 100%;height: 20px; color:#838383;border-left:4px solid #ffd30e; padding-left:10px;}
+.bread a{color:#838383; display:block; float:left}
+.border{ margin:20px 0;}
+
+/*订单*/
+.orderTit{border:1px solid #dedede; padding:10px 15px; }
+.orderTit .tit{border-bottom:1px dotted #dedede; padding:5px 0; }
+.orderTit .tit h3{font-weight:normal; float:left; font-size:14px;}
+.orderTit .tit input{float:right;width:80px; height:25px; line-height:25px; background:#ffd30e; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;cursor: pointer; color:#FFF; font-size:16px; text-align:center;}
+.orderCon{background-color:#F0F0F0; border:1px solid #dedede; padding:10px 15px; margin:10px 0; overflow:hidden;}
+.orderCon h3{font-size:14px; padding:0 0 10px 0;}
+.orderCon .conBox{background:#ffffff; padding:0 15px; overflow:hidden;}
+.orderCon .conBox .con{border-bottom:1px dotted #dedede; padding:10px 0; float:left;}
+.orderCon .conBox .con label{padding-left:5px;}
+.orderCon .conBox .con h4{font-size:14px; padding:0 0 10px 0;}
+.orderCon .conBox .con p{line-height:26px;}
+.orderCon .conBox .con table{width:100%; border-collapse: collapse;}
+.orderCon .conBox .con td{border-bottom:1px dotted #dedede; text-align:center; padding:10px 0;}
+.orderCon .conBox .con th{padding:8px 0; background:#F0F0F0}
+.orderCon .conBox .con .infoLogo{float:left;}
+.orderCon .conBox .con .info{float:left; padding:0 0 0 10px; text-align:left;}
+.orderCon .conBox .con .ts{margin:10px 0; color:#F00; line-height:20px;}
+.orderCon .conBox .con .ts label{color:#000;}
+.orderCon .conBox .con .ts span{color:#00F}
+.orderCon .mo{background:#f0f0f0; padding:15px 10px 15px 600px;}
+.orderCon .mo p{float:right; display:block; padding:5px 0; font-size:14px;}
+.orderCon .mo p.bo{border-bottom:1px dotted #666;}
+.orderCon .mo p label{display:inline-block; width:150px; text-align:left; padding:0 0 0 4px;}
+.orderCon .mo p.sum{font-size:18px; font-weight:bold; padding:8px 0;}
+.orderCon .mo p.sum label{color:#F00}
+
+
+.prag { margin:40px;}
+.prag li {height:5px; float:left; color:#ccc; line-height:23px;width:160px; background-color:#dedede; display:block; position:relative;}
+.prag li b {width:23px; height:23px; display:block; position:absolute; top:-8px; left:44px; background-color:#dedede; -moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%; text-align:center; color:#fff; font-family:Arial;}
+.prag li em{ position:absolute; text-align:center; top:15px; left:0; display:block; width:111px; color:#ccc; font-style:normal;}
+
+.prag li.pas{ background-color:#ffd30e;}
+.prag li.pas b{ background-color:#ffd30e; -moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%; }
+.prag li.pas em{ color:#ffd30e; font-style:normal;}
+
+
+/* table common */
+table{table-layout:fixed}
+table td,table th{word-wrap:break-word}
+table th{color:#50545b}
+table td{color:#50545b}
+table tr.bg{background:#fff}
+table tr.bg2{background:#f4f6f9}
+.tbl_tab{overflow:hidden;padding-left:9px;border-bottom:2px solid #1557ad;zoom:1}
+.tbl_tab li{float:left;height:29px;zoom:1}
+.tbl_tab li a{display:inline-block;height:29px;margin-left:6px;padding:0 14px 0 17px;border:1px solid #dbdada;border-bottom:none;font-size:12px;color:#666;line-height:29px;text-decoration:none;background:url(i/bg_tab.png) 0 0 repeat-x}
+.tbl_tab li a.on{ width:50px; height:30px; background:#238cdd; color:#fff;}
+.tbl_box{width:100%;border:1px solid #e4e4e4}
+.if_tbl_box{border-width:1px 0 1px 0}
+.if_page .clearfix{width:900px}
+
+.images{ float:right; margin-right:20px; margin-top:20px; }
+
+.btn01{ width:50px; height:25px; background:url(../images/16.jpg); color:#fff; cursor:pointer; }
+.all-btn{ text-align:center; margin-top:20px; }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="reserveorder" extends="default" namespace="/reserveorder">
+		<!-- 预订单 -->
+		<action name="reserveorder" class="com.rc.portal.webapp.action.RxReserveOrderAction">
+		   <result name="reserverOrderList" type="freemarker">/WEB-INF/pages/pname/rxReserveOrder/reserverOrderList.ftl</result>
+		   <result name="list" type="freemarker">/WEB-INF/pages/pname/rxReserveOrder/list.ftl</result>
+		   <result name="detail" type="freemarker">/WEB-INF/pages/pname/rxReserveOrder/detail.ftl</result>
+		   <result name="reserverOrderHandle" type="freemarker">/WEB-INF/pages/pname/rxReserveOrder/reserverOrderHandle.ftl</result>
+		   <result name="xls">${url}</result>
+		</action>
+	</package>
+</xwork>

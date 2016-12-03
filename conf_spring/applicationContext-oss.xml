@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+	<bean id="transactionManager_oss"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<aop:config proxy-target-class="true">
+		<aop:advisor pointcut="execution(* *..service..*.*(..))"
+			advice-ref="txAdvice_oss" />
+	</aop:config>
+
+	<tx:advice id="txAdvice_oss" transaction-manager="transactionManager_oss">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" rollback-for="Exception" />
+			<tx:method name="*" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+		
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+			<!-- 
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+			 -->
+
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+
+
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!--value>com/rc/oss/vo/xmlmap/NamedQuery.hbm.xml
+				</value-->
+				<value>com/rc/oss/vo/xmlmap/TAdmModules.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmOperationLogs.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmPost.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmPostRole.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmResc.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmRescRoles.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmRoles.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmUserPost.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmUserRoles.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmUsers.hbm.xml
+				</value>
+				<value>com/rc/oss/vo/xmlmap/TAdmUsersModules.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="hbnSqlFactory" class="com.rc.oss.util.HbnSqlFactory" >
+		<property name="sourceUrl">
+			<value>/hbnMap.xml</value>
+		</property>
+	</bean>	
+<!-- ==============================DAO=====================================-->
+	<bean id="openSqlDAO" class="com.rc.oss.dao.impl.OpenSqlDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<property name="hbnSqlFactory">
+			<ref bean="hbnSqlFactory" />
+		</property>
+	</bean>
+	
+	<bean id="tAdmUsersDAO" class="com.rc.oss.dao.impl.TAdmUsersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmUserPostDAO" class="com.rc.oss.dao.impl.TAdmUserPostDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmModulesDAO" class="com.rc.oss.dao.impl.TAdmModulesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmUsersModulesDAO" class="com.rc.oss.dao.impl.TAdmUsersModulesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmRolesDAO" class="com.rc.oss.dao.impl.TAdmRolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmOperationLogsDAO" class="com.rc.oss.dao.impl.TAdmOperationLogsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmUserRolesDAO" class="com.rc.oss.dao.impl.TAdmUserRolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmPostDAO" class="com.rc.oss.dao.impl.TAdmPostDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmRescDAO" class="com.rc.oss.dao.impl.TAdmRescDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmPostRoleDAO" class="com.rc.oss.dao.impl.TAdmPostRoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tAdmRescRolesDAO" class="com.rc.oss.dao.impl.TAdmRescRolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+<!-- ==============================SERVICE=====================================
+-->	
+	<bean id="openSqlManager" class="com.rc.oss.service.impl.OpenSqlManager">
+		<property name="openSqlDAO" ref="openSqlDAO" />
+	</bean>	
+	<bean id="tAdmUsersManager" class="com.rc.oss.service.impl.TAdmUsersManager">
+		<property name="tadmuserdao_oss" ref="tAdmUsersDAO" />
+	</bean>
+	<bean id="tAdmUserPostManager" class="com.rc.oss.service.impl.TAdmUserPostManager">
+		<property name="tadmuserpostdao_oss" ref="tAdmUserPostDAO" />
+	</bean>
+	<bean id="tAdmModulesManager" class="com.rc.oss.service.impl.TAdmModulesManager">
+		<property name="tadmodulesdao_oss" ref="tAdmModulesDAO" />
+	</bean>
+	<bean id="tAdmUsersModulesManager" class="com.rc.oss.service.impl.TAdmUsersModulesManager">
+		<property name="tadmusersmodulesdao_oss" ref="tAdmUsersModulesDAO" />
+		<property name="openSqlDAO" ref="openSqlDAO" />
+		<property name="tadmodulesdao_oss" ref="tAdmModulesDAO" />
+	</bean>
+	<bean id="tAdmRolesManager" class="com.rc.oss.service.impl.TAdmRolesManager">
+		<property name="tadmrolesdao_oss" ref="tAdmRolesDAO" />
+	</bean>
+	<bean id="tAdmOperationLogsManager" class="com.rc.oss.service.impl.TAdmOperationLogsManager">
+		<property name="tadmoperationlogdao_oss" ref="tAdmOperationLogsDAO" />
+	</bean>
+	<bean id="tAdmUserRolesManager" class="com.rc.oss.service.impl.TAdmUserRolesManager">
+		<property name="tadmuserolesdao_oss" ref="tAdmUserRolesDAO" />
+	</bean>
+	<bean id="tAdmPostManager" class="com.rc.oss.service.impl.TAdmPostManager">
+		<property name="tadmpostdao_oss" ref="tAdmPostDAO" />
+	</bean>
+	<bean id="tAdmRescManager" class="com.rc.oss.service.impl.TAdmRescManager">
+		<property name="tadmrescdao_oss" ref="tAdmRescDAO" />
+	</bean>
+	<bean id="tAdmPostRoleManager" class="com.rc.oss.service.impl.TAdmPostRoleManager">
+		<property name="tadmpostroledao_oss" ref="tAdmPostRoleDAO" />
+	</bean>
+	<bean id="tAdmRescRolesManager" class="com.rc.oss.service.impl.TAdmRescRolesManager">
+		<property name="tadmrescroledao_oss" ref="tAdmRescRolesDAO" />
+	</bean>
+</beans>

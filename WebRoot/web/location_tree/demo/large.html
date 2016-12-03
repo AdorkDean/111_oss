@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>jQuery treeview</title>
+
+<link rel="stylesheet" href="../jquery.treeview.css" />
+<link rel="stylesheet" href="../red-treeview.css" />
+<link rel="stylesheet" href="screen.css" />
+
+<script src="../lib/jquery.js" type="text/javascript"></script>
+<script src="../lib/jquery.cookie.js" type="text/javascript"></script>
+<script src="../jquery.treeview.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+		})
+		
+	</script>
+
+</head>
+<body>
+
+<div id="main">
+<div id="sidetree">
+<div id="sidetreecontrol"><a href="?#">合并全部</a> | <a href="?#">展开分部</a></div>
+
+<ul id="tree">
+	
+	<li><span><strong>河北省</strong></span>
+	<ul>
+		<li><a href="?/assessment/index.cfm">石家庄</a>
+		<ul>
+			<li><a href="?/assessment/assessment_faqs.cfm">兴和县</a></li>
+			<li><a href="?/assessment/property_assessment_notices.cfm">沽原县</a></li>
+		</ul>
+		</li>
+		<li><a href="?/assessment/index.cfm">张家口</a>
+		<ul>
+			<li><a href="?/assessment/assessment_faqs.cfm">康保县</a></li>
+			<li><a href="?/assessment/property_assessment_notices.cfm">张北县</a></li>
+		</ul>
+		</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

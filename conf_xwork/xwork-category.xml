@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+<!-- 分类 -->
+	<package name="category" extends="default" namespace="/category">
+		<action name="category" class="com.rc.portal.webapp.action.CategoryAction">
+			<result name="categoryList" type="freemarker" >/WEB-INF/pages/pname/category/category_list.ftl</result>
+			<result name="addOrUpdateCategory" type="freemarker" >/WEB-INF/pages/pname/category/category_add.ftl</result>
+		</action>
+		
+		<action name="categorytree" class="com.rc.portal.webapp.action.CategoryTreeAction">
+			<result name="first-grade" type="freemarker" >/WEB-INF/pages/pname/promotion/category_goods.ftl</result>
+		</action>
+		
+		
+		
+	</package>
+<!-- 	品牌 -->
+	<package name="brand" extends="default" namespace="/brand">
+		<action name="brand" class="com.rc.portal.webapp.action.BrandAction">
+			<result name="getBrandList" type="freemarker" >/WEB-INF/pages/pname/brand/brand_list.ftl</result>
+			<result name="addOrUpdateBrand" type="freemarker" >/WEB-INF/pages/pname/brand/brand_add.ftl</result>
+		</action>
+	</package>
+	
+<!-- 生产厂家 -->
+<package name="manu" extends="default" namespace="/manu">
+		<action name="manu" class="com.rc.portal.webapp.action.ManufacturerAction">
+		<result name="addOrUpdateManu" type="freemarker" >/WEB-INF/pages/pname/manu/manu_add.ftl</result>
+			<result name="getManufacturerList" type="freemarker" >/WEB-INF/pages/pname/manu/manu_list.ftl</result>
+		</action>
+	</package>
+	
+<!-- 医卡通商品-->
+	<package name="ykt" extends="default" namespace="/ykt">
+		<action name="ykt" class="com.rc.portal.webapp.action.YktGoodsAction">
+			<result name="yktGoodsList" type="freemarker" >/WEB-INF/pages/pname/ykt/yktgoods_list.ftl</result>
+			<result name="addOrEditYktGoods" type="freemarker" >/WEB-INF/pages/pname/ykt/yktGoodsEdit.ftl</result>
+		</action>
+	</package>	
+</xwork>

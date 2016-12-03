@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="healthyplan" extends="default" namespace="/healthyplan">
+		<!-- 健康方案 -->
+		<action name="healthyplan" class="com.rc.portal.webapp.action.THealthyPlanAction">
+		  <result name="healthy_plan_list" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_list.ftl</result>
+		  <result name="healthy_plan_add" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_add.ftl</result>
+		  <result name="returnMsg" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/returnMsg.ftl</result>
+		  <result name="healthy_plan_symptom_add" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_symptom_add.ftl</result>
+		  <result name="healthy_plan_combination_add" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_combination_add.ftl</result>
+		  <result name="healthy_plan_cecommend_list" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_cecommend_list.ftl</result>
+		  <result name="healthy_plan_cecommend_add" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_cecommend_add.ftl</result>
+		  <result name="healthy_plan_list_open" type="freemarker" >/WEB-INF/pages/pname/healthyPlan/healthy_plan_list_open.ftl</result>
+		</action>
+		
+		<action name="healthypla" class="com.rc.portal.webapp.action.HealthyPlaContentAction">
+			<result name="view" type="freemarker" >/WEB-INF/pages/test/healthyPlaContent.ftl</result>
+		</action>
+		
+		<action name="plan_category" class="com.rc.portal.webapp.action.PlanCategoryAction" >			
+			<result name="add_plan_category" type="freemarker">/WEB-INF/pages/pname/healthyPlan/add_plan_category.ftl</result>
+			<result name="list" type="freemarker">/WEB-INF/pages/pname/healthyPlan/list_plan_category.ftl</result>			
+		</action>
+		
+	</package>
+</xwork>

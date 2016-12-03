@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="shortbuy" extends="default" namespace="/shortbys">
+		<!-- 订单 -->
+		<action name="shortbuy" class="com.rc.portal.webapp.action.ShortBuyAction">
+		<result name="insert_page" type="freemarker" >/WEB-INF/pages/pname/shortbuy/add_shortbuy.ftl</result>
+		<result name="lists" type="freemarker" >/WEB-INF/pages/pname/shortbuy/list.ftl</result>
+		<result name="only_record" type="freemarker" >/WEB-INF/pages/pname/shortbuy/get_shortbuy.ftl</result>
+		<result name="set_goods" type="freemarker" >/WEB-INF/pages/pname/shortbuy/shortbuy_goods.ftl</result>
+		</action>
+	</package>
+</xwork>

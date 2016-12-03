@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+            
+    <aop:config proxy-target-class="true">
+        <aop:advisor pointcut="execution(* *..service..*.*(..))" advice-ref="txAdvice"/>
+    </aop:config>
+    
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+         <tx:attributes>
+             <tx:method name="get*" read-only="true"  rollback-for="Exception" />
+             <tx:method name="select*" read-only="true"  rollback-for="Exception" />
+             <tx:method name="*" rollback-for="Exception"/>
+             <tx:method name="inner*" propagation="NESTED" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    
+    <!-- add by yinbin 2011.03.30 -->
+	<!-- add SERVICE by yourself like this -->
+	<!--
+    <bean id="userinfoManager" class="com.wzl.portal.service.impl.UserinfoManagerImpl">
+        <property name="userinfoDao" ref="userinfoDao"/>      
+    </bean>
+    -->
+
+
+    <bean id="tadmmodulesmanager" class="com.rc.portal.service.impl.TAdmModulesManagerImpl">
+        <property name="tadmmodulesdao" ref="tadmmodulesdao" />
+    </bean>
+
+    <bean id="tadmoperationlogsmanager" class="com.rc.portal.service.impl.TAdmOperationLogsManagerImpl">
+        <property name="tadmoperationlogsdao" ref="tadmoperationlogsdao" />
+    </bean>
+
+    <bean id="tadmrescmanager" class="com.rc.portal.service.impl.TAdmRescManagerImpl">
+        <property name="tadmrescdao" ref="tadmrescdao" />
+    </bean>
+
+    <bean id="tadmrescrolesmanager" class="com.rc.portal.service.impl.TAdmRescRolesManagerImpl">
+        <property name="tadmrescrolesdao" ref="tadmrescrolesdao" />
+    </bean>
+
+    <bean id="tadmrolesmanager" class="com.rc.portal.service.impl.TAdmRolesManagerImpl">
+        <property name="tadmrolesdao" ref="tadmrolesdao" />
+    </bean>
+
+    <bean id="tadmuserrolesmanager" class="com.rc.portal.service.impl.TAdmUserRolesManagerImpl">
+        <property name="tadmuserrolesdao" ref="tadmuserrolesdao" />
+    </bean>
+
+    <bean id="tadmusersmanager" class="com.rc.portal.service.impl.TAdmUsersManagerImpl">
+        <property name="tadmusersdao" ref="tadmusersdao" />
+    </bean>
+
+    <bean id="tadmusersmodulesmanager" class="com.rc.portal.service.impl.TAdmUsersModulesManagerImpl">
+        <property name="tadmusersmodulesdao" ref="tadmusersmodulesdao" />
+    </bean>
+
+	<bean id="tadmpostmanager" class="com.rc.portal.service.impl.TAdmPostManagerImpl">
+        <property name="tadmpostdao" ref="tadmpostdao" />
+    </bean>
+
+    <bean id="tadmpostrolemanager" class="com.rc.portal.service.impl.TAdmPostRoleManagerImpl">
+        <property name="tadmpostroledao" ref="tadmpostroledao" />
+    </bean>
+
+    <bean id="tadmuserpostmanager" class="com.rc.portal.service.impl.TAdmUserPostManagerImpl">
+        <property name="tadmuserpostdao" ref="tadmuserpostdao" />
+    </bean>
+    
+    <bean id="tlxcontentmanager" class="com.rc.portal.service.impl.TLxContentManagerImpl">
+        <property name="tlxcontentdao" ref="tlxcontentdao" />
+    </bean>    
+</beans>

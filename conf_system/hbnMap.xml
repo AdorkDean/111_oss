@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMapings>
+	<!-- add by yinbin 2011.3.30 -->
+	<!-- add sqlmap by yourself like this -->
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/test.xml" />
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/modules.xml" />
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/Roles.xml" />
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/Post.xml" />
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/Resc.xml" />
+    <sqlMap resource="/com/rc/oss/vo/xmlmap/Users.xml" />
+</sqlMapings>

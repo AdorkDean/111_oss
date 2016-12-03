@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<!-- Configuration for the user package. -->
+	<package name="prescription" extends="default" namespace="/prescription">
+		
+		<action name="prescription" class="com.rc.portal.webapp.action.TPrescriptionAction" >
+			<result name="list_page" type="freemarker">/WEB-INF/pages/pname/prescription/prescription_list.ftl</result>
+			<result name="detail_page" type="freemarker">/WEB-INF/pages/pname/prescription/prescription_detail.ftl</result>
+			<result name="reply_page" type="freemarker">/WEB-INF/pages/pname/prescription/prescription_reply.ftl</result>
+		</action>
+		
+	</package>
+</xwork>

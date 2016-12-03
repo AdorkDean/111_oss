@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<hbnmap namespace="users"> 
+    <hsql id="list"> 
+			select p from TAdmUsers p where 1=1
+			<isNotNull property="loginName">
+				and p.loginName='#loginName#'
+			</isNotNull>
+			<isNotNull property="department">
+				and p.department='#department#'
+			</isNotNull>
+			<isNotNull property="mobile">
+				and p.telephone='#mobile#'
+			</isNotNull>
+			<isNotNull property="email">
+				and p.email='#email#'
+			</isNotNull>
+			<!--
+			order by p.id desc
+    -->
+    </hsql> 
+    <hsql id="count"> 
+			select count(p) from TAdmUsers p where 1=1
+			<isNotNull property="loginName">
+				and p.loginName='#loginName#'
+			</isNotNull>
+			<isNotNull property="department">
+				and p.department='#department#'
+			</isNotNull>
+			<isNotNull property="mobile">
+				and p.telephone='#mobile#'
+			</isNotNull>
+			<isNotNull property="email">
+				and p.email='#email#'
+			</isNotNull>
+    </hsql> 
+    <hsql id="select_up_byuserid"> 
+    from TAdmUserPost p where 1=1 and p.TAdmUsers.id='#id#'
+    </hsql> 
+    <hsql id="login"> 
+    from TAdmUsers p where 1=1 
+    <isNotNull property="username">
+				and p.loginName='#username#'
+	</isNotNull>
+    <isNotNull property="password">
+				and p.password='#password#'
+	</isNotNull>
+    <isNotNull property="userid">
+				and p.id='#userid#'
+	</isNotNull>
+	<!--
+    <isNotNull property="webid">
+				and p.webid='#webid#'
+	</isNotNull>
+    -->
+    </hsql> 
+</hbnmap>

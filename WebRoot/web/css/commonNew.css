@@ -1,0 +1,71 @@
+@charset"utf-8";
+.clear{clear:both;zoom:1}
+/*out-window*/
+.out-box{width:690px;  background:#fff;}
+.out-title{height:40px; line-height:40px; padding:0 40px; font-size:18px; text-align:left; background:#e9e9e9; border-bottom:2px solid #adadad; position:relative;}
+.out-title-login{background:#19a69f; color:#ebebeb; border:none;}
+.out-info{padding:20px 40px; background:#fff;}
+.joint-login dt{width:180px; height:210px; overflow:hidden; float:left; margin-right:40px;}
+.joint-login dd{float:left;}
+.joint-login dd li{height:36px; overflow:hidden; margin-bottom:15px; color:#959595;}
+.joint-login dd li.last-btn{height:45px; margin-bottom:0;}
+.joint-login dd li span{width:65px; height:36px; line-height:36px; display:inline-block; float:left; text-align:right; padding-right:15px;}
+.joint-login-ipt{width:300px; height:34px; border:1px solid #959595; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; float:left; position:relative; overflow:hidden;}
+.joint-login-ipt i{width:12px; height:13px; display:inline-block; background:url(../img/join-login_ico.png) no-repeat; float:left; margin:10px 10px;}
+.joint-login-ipt i.u_ico{background-position:0 0;}
+.joint-login-ipt i.p_ico{background-position:0 -13px;}
+.joint-login-ipt input{width:258px; height:14px; line-height:14px; padding:10px 10px 0 0; color:#c0c9ca;}
+.start-btn{width:300px; height:45px; line-height:45px; color:#fff; font-size:22px; font-weight:bold; text-align:center; background:#00a6a0; display:inline-block; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.close-out{width:20px; height:20px; display:inline-block; overflow:hidden; background:url(../img/close.png) no-repeat; position:absolute; right:10px; top:10px; z-index:9;}
+.out-title .close-out{background-position:0 -20px;}
+.out-title-login .close-out{background-position:0 0;}
+
+/**/
+.out{position:absolute; top:50%; margin-top:-200px; left:50%; margin-left:-345px; z-index:1000; display:none;}
+#shade {display:none;width:100%;height:100%;top:0;left:0; right:0; bottom:0; position:fixed;  _position:absolute; background: rgb(0, 0, 0); /* RGBa with 0.6 opacity */ background: rgba(0, 0, 0, 0.6); /* For IE 5.5 - 7*/ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* For IE 8*/ -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; z-index:999; }
+
+
+
+
+/*settlement new*/
+.location-box{float:left; border:1px solid #a6a6a6; padding:0 0 0 5px; position:relative; margin-left:10px;}
+.location-box input{width:185px; color:#afafaf; height: 14px;line-height: 14px;padding: 4px 5px 3px 0;}
+.location-list{width:195px; position:absolute; left:-1px; top:21px; border:1px solid #a6a6a6; background:#fff; display:none;}
+.location-list li a{ height:24px; line-height:24px; color:#a2a2a2; display:block; padding:0 5px;}
+.location-list li a:hover{ background:#f1f1f1;}
+.city-title{ background:none; border-bottom:1px solid #eee; font-size:12px; padding:0; margin:0 0 0 25px;}
+.city-main{padding-left:25px;}
+.city-location{height:60px;}
+.guess-location{padding-right:25px; height:30px; line-height:30px; border-right:1px solid #ddd; float:left; margin:15px 0; font-size:14px; color:#0089dc;}
+.guess-location span{background:#ff6000; height:22px; line-height:22px; border-radius:4px; -webkit-border-radius:4px; padding:0 20px; margin-left:15px; margin:4px 0 4px 15px; display:inline-block; color:#fff; float:right; font-size:16px;}
+.input-city{height:28px; width:188px; background:#f5f5f5; border:1px solid #a6a6a6; position:relative; padding:0 5px; float:left; margin:15px 0 0 25px;}
+.input-city input{ height:16px; line-height:16px; padding:6px 0; background:none; width:100%; color:#afafaf;}
+.input-city-list{width:198px; position:absolute; left:-1px; top:28px; border:1px solid #ededed; background:#fff; display:none;}
+.input-city-list li a{ height:24px; line-height:24px; color:#a2a2a2; display:block; padding:0 5px;}
+.input-city-list li a:hover{ background:#f1f1f1;}
+.city-location-list{height:350px; overflow-y:scroll;}
+.city-location-list dl{ font-size:14px; border-top:1px solid #eee;}
+.city-location-list dl dt{color:#0089dc; float:left; line-height:38px; width:45px;}
+.city-location-list dl dd{float:left; width:600px; overflow:hidden;}
+.citytown-list li{ width:70px; overflow:hidden; height:38px; line-height:38px; text-align:left; float:left; margin-right:4px;}
+.show-map{height:150px; width:350px; border:1px solid #a1a1a1; float:left; margin-top:10px;}
+.show-map2{height:350px; width:690px;}
+.choice-city{}
+.choice-city i{width:8px; height:5px; display:inline-block; background:url(../img/choice_city_ico.png) no-repeat; float:left; margin:8px 5px 0;}
+.second-out{display:none; z-index:9; background:#fff;}
+.third-out{display:none; z-index:19; background:#fff;}
+.double-out{position:relative;}
+.first-out,.second-out,.third-out{ position:absolute; left:0; top:0; right:0;}
+.close-city{width:20px; height:20px; display:inline-block; overflow:hidden; background:url(../img/close.png) no-repeat; position:absolute; right:10px; top:10px; z-index:9; background-position:0 -20px;}
+.close-add{width:20px; height:20px; display:inline-block; overflow:hidden; background:url(../img/close.png) no-repeat; position:absolute; right:10px; top:10px; z-index:9; background-position:0 -20px;}
+.ab-location{width:322px; height:42px; background:#fff; position:relative; left:10px; top:10px; z-index:999; float:left; box-shadow:2px 2px 4px 0 #ccc;}
+.search-location{width:42px; height:42px; display:inline-block; background:#ffa02f url(../img/search_location.png) no-repeat; float:right;}
+.fill-lication{width:260px; height:42px; float:left; padding:0 10px;}
+.ipt-lication{width:100%; height:22px; line-height:22px; padding:10px 0; color:#999; font-size:14px;}
+.map-location-list{position:absolute; width:322px; height:240px; left:0; top:50px; overflow:hidden; display:none; box-shadow:2px 2px 4px 0 #ccc; overflow-y:scroll;}
+.map-location-list li a{height:40px; display:block; padding:10px; font-size:14px; background:rgba(255,255,255,.8);}
+.map-location-list li a:hover{ background:#f1f1f1;}
+.map-location-list li a .location-title{color:#575757;}
+.map-location-list li a .location-text{color:#999;}
+
+

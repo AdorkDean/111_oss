@@ -1,0 +1,6 @@
+.shopping_popup  {width:550px; height:auto;background:#FFF; border:3px solid #639fdc; margin:0 auto;}
+.s_popup_title {width:535px; position:relative; height:34px;padding-left:15px; background:url(../images/zhifubao/title_bg.png) repeat-x;}
+.btn_close {width:11px; height:11px; position:absolute; top:10px; right:10px;}
+.s_popup_con { padding:0px;}
+.input_login {width:180px; height:22px; line-height:22px; border-top:1px solid #989696;border-left:1px solid #989696;border-top:1px solid #989696;border-bottom:1px solid #c9c7c7;border-right:1px solid #c9c7c7;}
+.btn_login {width:86px; height:30px;color:#133a62; background:url(../images/zhifubao/btn_login.png) no-repeat; border:none;}

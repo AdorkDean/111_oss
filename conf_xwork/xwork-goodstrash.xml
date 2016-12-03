@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="goodstrash" extends="default" namespace="/goodstrash">	
+		<!-- 商品回收站管理 -->
+		<action name="goodstrash" class="com.rc.portal.webapp.action.GoodsTrashAction">
+			<result name="trash_goods_list" type="freemarker" >/WEB-INF/pages/pname/goods/trash_goods_list.ftl</result>
+			<result name="trash_goods_view" type="freemarker" >/WEB-INF/pages/pname/goods/trash_goods_view.ftl</result>
+		</action>
+	</package>
+</xwork>

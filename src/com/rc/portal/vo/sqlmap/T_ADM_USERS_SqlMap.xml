@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="T_ADM_USERS" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TAdmUsers" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="LOGIN_NAME" property="loginName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DEPARTMENT" property="department" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="EXPIRE_TIME" property="expireTime" jdbcType="TIMESTAMP" />
+    <result column="TELEPHONE" property="telephone" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="USER_LEVEL" property="userLevel" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="CREATE_BY" property="createBy" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_EDIT_BY" property="lastEditBy" jdbcType="DECIMAL" />
+    <result column="LAST_EDIT_TIME" property="lastEditTime" jdbcType="TIMESTAMP" />
+    <result column="ALLOW_DELETE" property="allowDelete" jdbcType="DECIMAL" />
+    <result column="IS_ADMIN_USER" property="isAdminUser" jdbcType="DECIMAL" />
+    <result column="WEBID" property="webid" jdbcType="DECIMAL" />
+  </resultMap>
+  
+  <resultMap id="modulelistMap" class="com.rc.portal.webapp.model.ModuleModel" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="module_name" property="modulename" jdbcType="VARCHAR" />
+    <result column="editable" property="enable" jdbcType="DECIMAL" />
+    <result column="parent_id" property="parentid" jdbcType="DECIMAL" />
+    <result column="userid" property="userid" jdbcType="DECIMAL" />
+  </resultMap>  
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmUsersExample" >
+    select ID, LOGIN_NAME, NAME, DEPARTMENT, PASSWORD, EXPIRE_TIME, TELEPHONE, EMAIL, USER_LEVEL,
+      STATUS, CREATE_BY, CREATE_TIME, LAST_EDIT_BY, LAST_EDIT_TIME, ALLOW_DELETE, IS_ADMIN_USER,
+      WEBID
+    from T_ADM_USERS
+    <isParameterPresent >
+      <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmUsers" >
+    select ID, LOGIN_NAME, NAME, DEPARTMENT, PASSWORD, EXPIRE_TIME, TELEPHONE, EMAIL, USER_LEVEL,
+      STATUS, CREATE_BY, CREATE_TIME, LAST_EDIT_BY, LAST_EDIT_TIME, ALLOW_DELETE, IS_ADMIN_USER,
+      WEBID
+    from T_ADM_USERS
+    where ID = #id:DECIMAL#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmUsers" >
+    delete from T_ADM_USERS
+    where ID = #id:DECIMAL#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TAdmUsersExample" >
+    delete from T_ADM_USERS
+    <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TAdmUsers" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT SEQ_USER_ID.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_USERS (ID, LOGIN_NAME, NAME, DEPARTMENT, PASSWORD, EXPIRE_TIME, TELEPHONE,
+      EMAIL, USER_LEVEL, STATUS, CREATE_BY, CREATE_TIME, LAST_EDIT_BY, LAST_EDIT_TIME, ALLOW_DELETE,
+      IS_ADMIN_USER, WEBID)
+    values (#id:DECIMAL#, #loginName:VARCHAR#, #name:VARCHAR#, #department:VARCHAR#,
+      #password:VARCHAR#, #expireTime:TIMESTAMP#, #telephone:VARCHAR#, #email:VARCHAR#,
+      #userLevel:DECIMAL#, #status:DECIMAL#, #createBy:DECIMAL#, #createTime:TIMESTAMP#,
+      #lastEditBy:DECIMAL#, #lastEditTime:TIMESTAMP#, #allowDelete:DECIMAL#, #isAdminUser:DECIMAL#,
+      #webid:DECIMAL#)
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TAdmUsers" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT SEQ_USER_ID.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_USERS
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        ID
+      </isNotNull>
+      <isNotNull prepend="," property="loginName" >
+        LOGIN_NAME
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        NAME
+      </isNotNull>
+      <isNotNull prepend="," property="department" >
+        DEPARTMENT
+      </isNotNull>
+      <isNotNull prepend="," property="password" >
+        PASSWORD
+      </isNotNull>
+      <isNotNull prepend="," property="expireTime" >
+        EXPIRE_TIME
+      </isNotNull>
+      <isNotNull prepend="," property="telephone" >
+        TELEPHONE
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        EMAIL
+      </isNotNull>
+      <isNotNull prepend="," property="userLevel" >
+        USER_LEVEL
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        STATUS
+      </isNotNull>
+      <isNotNull prepend="," property="createBy" >
+        CREATE_BY
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        CREATE_TIME
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditBy" >
+        LAST_EDIT_BY
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditTime" >
+        LAST_EDIT_TIME
+      </isNotNull>
+      <isNotNull prepend="," property="allowDelete" >
+        ALLOW_DELETE
+      </isNotNull>
+      <isNotNull prepend="," property="isAdminUser" >
+        IS_ADMIN_USER
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="loginName" >
+        #loginName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="department" >
+        #department:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="password" >
+        #password:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="expireTime" >
+        #expireTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="telephone" >
+        #telephone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        #email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userLevel" >
+        #userLevel:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        #status:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createBy" >
+        #createBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditBy" >
+        #lastEditBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditTime" >
+        #lastEditTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="allowDelete" >
+        #allowDelete:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="isAdminUser" >
+        #isAdminUser:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        #webid:DECIMAL#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TAdmUsersExample" resultClass="java.lang.Integer" >
+    select count(*) from T_ADM_USERS
+    <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update T_ADM_USERS
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        ID = #record.id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.loginName" >
+        LOGIN_NAME = #record.loginName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.name" >
+        NAME = #record.name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.department" >
+        DEPARTMENT = #record.department:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.password" >
+        PASSWORD = #record.password:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.expireTime" >
+        EXPIRE_TIME = #record.expireTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.telephone" >
+        TELEPHONE = #record.telephone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.email" >
+        EMAIL = #record.email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.userLevel" >
+        USER_LEVEL = #record.userLevel:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.status" >
+        STATUS = #record.status:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createBy" >
+        CREATE_BY = #record.createBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        CREATE_TIME = #record.createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.lastEditBy" >
+        LAST_EDIT_BY = #record.lastEditBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.lastEditTime" >
+        LAST_EDIT_TIME = #record.lastEditTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.allowDelete" >
+        ALLOW_DELETE = #record.allowDelete:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isAdminUser" >
+        IS_ADMIN_USER = #record.isAdminUser:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.webid" >
+        WEBID = #record.webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update T_ADM_USERS
+    set ID = #record.id:DECIMAL#,
+      LOGIN_NAME = #record.loginName:VARCHAR#,
+      NAME = #record.name:VARCHAR#,
+      DEPARTMENT = #record.department:VARCHAR#,
+      PASSWORD = #record.password:VARCHAR#,
+      EXPIRE_TIME = #record.expireTime:TIMESTAMP#,
+      TELEPHONE = #record.telephone:VARCHAR#,
+      EMAIL = #record.email:VARCHAR#,
+      USER_LEVEL = #record.userLevel:DECIMAL#,
+      STATUS = #record.status:DECIMAL#,
+      CREATE_BY = #record.createBy:DECIMAL#,
+      CREATE_TIME = #record.createTime:TIMESTAMP#,
+      LAST_EDIT_BY = #record.lastEditBy:DECIMAL#,
+      LAST_EDIT_TIME = #record.lastEditTime:TIMESTAMP#,
+      ALLOW_DELETE = #record.allowDelete:DECIMAL#,
+      IS_ADMIN_USER = #record.isAdminUser:DECIMAL#,
+      WEBID = #record.webid:DECIMAL#
+    <isParameterPresent >
+      <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TAdmUsers" >
+    update T_ADM_USERS
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="loginName" >
+        LOGIN_NAME = #loginName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        NAME = #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="department" >
+        DEPARTMENT = #department:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="password" >
+        PASSWORD = #password:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="expireTime" >
+        EXPIRE_TIME = #expireTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="telephone" >
+        TELEPHONE = #telephone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        EMAIL = #email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userLevel" >
+        USER_LEVEL = #userLevel:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        STATUS = #status:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createBy" >
+        CREATE_BY = #createBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        CREATE_TIME = #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditBy" >
+        LAST_EDIT_BY = #lastEditBy:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="lastEditTime" >
+        LAST_EDIT_TIME = #lastEditTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="allowDelete" >
+        ALLOW_DELETE = #allowDelete:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="isAdminUser" >
+        IS_ADMIN_USER = #isAdminUser:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID = #webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    where ID = #id:DECIMAL#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmUsers" >
+    update T_ADM_USERS
+    set LOGIN_NAME = #loginName:VARCHAR#,
+      NAME = #name:VARCHAR#,
+      DEPARTMENT = #department:VARCHAR#,
+      PASSWORD = #password:VARCHAR#,
+      EXPIRE_TIME = #expireTime:TIMESTAMP#,
+      TELEPHONE = #telephone:VARCHAR#,
+      EMAIL = #email:VARCHAR#,
+      USER_LEVEL = #userLevel:DECIMAL#,
+      STATUS = #status:DECIMAL#,
+      CREATE_BY = #createBy:DECIMAL#,
+      CREATE_TIME = #createTime:TIMESTAMP#,
+      LAST_EDIT_BY = #lastEditBy:DECIMAL#,
+      LAST_EDIT_TIME = #lastEditTime:TIMESTAMP#,
+      ALLOW_DELETE = #allowDelete:DECIMAL#,
+      IS_ADMIN_USER = #isAdminUser:DECIMAL#,
+      WEBID = #webid:DECIMAL#
+    where ID = #id:DECIMAL#
+  </update>
+  
+  <select id="ibatorgenerated_selectByPages" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmUsersExample" >
+   	    select 
+		    *
+	     from 
+    			(
+		    			select A.*,ROWNUM as rn from
+		    					(
+					    select ID, LOGIN_NAME, NAME, DEPARTMENT, PASSWORD, EXPIRE_TIME, TELEPHONE, EMAIL, USER_LEVEL,
+					      STATUS, CREATE_BY, CREATE_TIME, LAST_EDIT_BY, LAST_EDIT_TIME, ALLOW_DELETE, IS_ADMIN_USER,WEBID
+					    from T_ADM_USERS
+					    <isParameterPresent >
+					      <include refid="T_ADM_USERS.ibatorgenerated_Example_Where_Clause" />
+					      <isNotNull property="orderByClause" >
+					        order by $orderByClause$
+					      </isNotNull>
+					    </isParameterPresent>
+			    		) A				
+			<![CDATA[  where ROWNUM<= ($pageInfo.page$*$pageInfo.pageSize$)  ]]>
+		<![CDATA[   ) where rn > ($pageInfo.page$ - 1) * $pageInfo.pageSize$]]>									  
+  </select>
+  <select id="modulelist" resultMap="modulelistMap" parameterClass="java.util.Map" >
+			select a.id,a.module_name,a.parent_id,a.editable,c.userid from t_adm_modules a
+			left join t_adm_modules d on d.id=a.parent_id      
+			left join (select * from t_adm_users_modules b where 1=1 
+						<isNotNull property="userid">
+							and b.userid=$userid$
+						</isNotNull>								 
+					 ) c on a.id=c.moduleid
+			where 1=1
+			<isNotNull property="webid">
+				and a.webid=$webid$
+			</isNotNull>
+			<isNotNull property="name">
+				and (d.module_name  like  '%$name$%' or a.module_name  like  '%$name$%')
+			</isNotNull>
+  </select>
+  
+  <select id="modulelist_count" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+			select count(*) from t_adm_modules a
+			left join t_adm_modules d on d.id=a.parent_id      
+			left join (select * from  t_adm_users_modules b where 1=1 
+						<isNotNull property="userid">
+							and b.userid=$userid$
+						</isNotNull>								 
+					 ) c on a.id=c.moduleid
+			where 1=1
+			<isNotNull property="webid">
+				and a.webid=$webid$
+			</isNotNull>
+			<isNotNull property="name">
+				and (d.module_name  like  '%$name$%' or a.module_name  like  '%$name$%')
+			</isNotNull>
+  </select>  
+</sqlMap>

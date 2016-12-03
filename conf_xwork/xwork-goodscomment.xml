@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<!-- Configuration for the user package. -->
+	<package name="goodsComment" extends="default" namespace="/goodsComment">
+		<action name="goodsComment" class="com.rc.portal.webapp.action.GoodsCommentAction" method="goodsCommentPage">			
+			<result name="goods_comment_page" type="freemarker">/WEB-INF/pages/pname/goodsComment/goods_comment_list.ftl</result>
+			<result name="update_page" type="freemarker">/WEB-INF/pages/pname/goodsComment/goods_comment_edit.ftl</result>
+		</action>
+		<action name="setShowGoodsComment" class="com.rc.portal.webapp.action.GoodsCommentAction" method="setShowGoodsComment"></action>
+		<action name="delGoodsComment" class="com.rc.portal.webapp.action.GoodsCommentAction" method="delGoodsComment"></action>
+	</package>
+</xwork>

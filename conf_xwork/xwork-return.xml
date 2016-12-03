@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<!-- Configuration for the user package. -->
+	<package name="returns" extends="default" namespace="/returns">
+		<action name="returns" class="com.rc.portal.webapp.action.ReturnAction" method="returnPage">			
+			<result name="return_page" type="freemarker">/WEB-INF/pages/pname/return/return_list.ftl</result>
+		</action>
+		<action name="detailReturns" class="com.rc.portal.webapp.action.ReturnAction" method="detailPage">			
+			<result name="detail_return_page" type="freemarker">/WEB-INF/pages/pname/return/return_detail.ftl</result>
+		</action>
+		
+		<action name="operateReturnPage" class="com.rc.portal.webapp.action.ReturnAction" method="operateReturnPage">			
+			<result name="operate_return_page" type="freemarker">/WEB-INF/pages/pname/return/return_operate_page.ftl</result>
+		</action>
+		
+		<action name="updateStatus" class="com.rc.portal.webapp.action.ReturnAction" method="updateStatus"></action>
+		<action name="validateNotPass" class="com.rc.portal.webapp.action.ReturnAction" method="updateStatus"></action>
+		
+	</package>
+</xwork>

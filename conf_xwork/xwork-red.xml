@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="red" extends="default" namespace="/red">
+		<!-- 红包 -->
+		<action name="red" class="com.rc.portal.webapp.action.RedAction">
+		  <result name="red_list" type="freemarker" >/WEB-INF/pages/pname/red/red_list.ftl</result>
+		  <result name="xls">${url}</result>
+		</action>
+	</package>
+</xwork>

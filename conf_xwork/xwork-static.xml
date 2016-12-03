@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="static" extends="default" namespace="/static">
+		<action name="static" class="com.rc.portal.webapp.action.StaticManageAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/static/list.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/static/add.ftl</result>
+			<result name="edit" type="freemarker">/WEB-INF/pages/static/edit.ftl</result>
+			<result name="showstaticp" type="freemarker">/WEB-INF/pages/static/select.ftl</result>
+			<result name="headercategory" type="freemarker">/WEB-INF/pages/static/header.ftl</result>
+			<result name="test" type="freemarker">/WEB-INF/T/static/newHealthyPlan.ftl</result>
+		</action>
+		
+		<action name="chart" class="com.rc.portal.webapp.action.MemberStatistcEChartAction">
+		   <result name="getMemberCountIndex" type="freemarker" >/WEB-INF/pages/statistic/memberStatisticChart.ftl</result>
+		   <result name="xls">${url}</result>
+		</action>
+		<action name="leaderChart" class="com.rc.portal.webapp.action.LeaderStatistcEChartAction">
+		   <result name="getLeaderCountBase" type="freemarker" >/WEB-INF/pages/statistic/leaderStatisticChart.ftl</result>
+		   <result name="xls">${url}</result>
+		</action>
+	</package>
+</xwork>

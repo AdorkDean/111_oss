@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="T_ADM_MODULES" >
+	<cacheModel id="domain-model-cache" type="LRU" > 
+		<flushInterval hours="1"/> 
+		<property name="size" value="100" /> 
+	</cacheModel>
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TAdmModules" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODULE_NAME" property="moduleName" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="MODULE_TYPE" property="moduleType" jdbcType="DECIMAL" />
+    <result column="FOR_LOG" property="forLog" jdbcType="DECIMAL" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="MODULE_ID" property="moduleId" jdbcType="VARCHAR" />
+    <result column="DISPNUM" property="dispnum" jdbcType="DECIMAL" />
+    <result column="MODULE_KEY" property="moduleKey" jdbcType="VARCHAR" />
+    <result column="EDITABLE" property="editable" jdbcType="DECIMAL" />
+    <result column="WEBID" property="webid" jdbcType="DECIMAL" />
+  </resultMap>
+  
+  <resultMap id="parentModule" class="com.rc.portal.vo.TAdmModulesParent" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODULE_NAME" property="moduleName" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="MODULE_TYPE" property="moduleType" jdbcType="DECIMAL" />
+    <result column="FOR_LOG" property="forLog" jdbcType="DECIMAL" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="MODULE_ID" property="moduleId" jdbcType="VARCHAR" />
+    <result column="DISPNUM" property="dispnum" jdbcType="DECIMAL" />
+    <result column="MODULE_KEY" property="moduleKey" jdbcType="VARCHAR" />
+    <result column="PARENT_MODULE_NAME" property="moduleParentName" jdbcType="VARCHAR" />
+    <result column="EDITABLE" property="editable" jdbcType="DECIMAL" />
+    <result column="WEBID" property="webid" jdbcType="DECIMAL" />
+  </resultMap>
+    
+    
+  <resultMap id="module_login" class="com.rc.portal.vo.TAdmModules" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODULE_NAME" property="moduleName" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap id="getdomain" class="com.rc.portal.webapp.model.Domain" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DOMAIN" property="domain" jdbcType="VARCHAR" />
+  </resultMap>
+      
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmModulesExample" >
+    select ID, MODULE_NAME, PARENT_ID, CREATE_TIME, MEMO, MODULE_TYPE, FOR_LOG, URL, MODULE_ID,
+      DISPNUM, MODULE_KEY, EDITABLE, WEBID
+    from T_ADM_MODULES
+    <isParameterPresent >
+      <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmModules" >
+    select ID, MODULE_NAME, PARENT_ID, CREATE_TIME, MEMO, MODULE_TYPE, FOR_LOG, URL, MODULE_ID,
+      DISPNUM, MODULE_KEY, EDITABLE, WEBID
+    from T_ADM_MODULES
+    where ID = #id:DECIMAL#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmModules" >
+    delete from T_ADM_MODULES
+    where ID = #id:DECIMAL#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TAdmModulesExample" >
+    delete from T_ADM_MODULES
+    <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TAdmModules" >
+    insert into T_ADM_MODULES (ID, MODULE_NAME, PARENT_ID, CREATE_TIME, MEMO, MODULE_TYPE, FOR_LOG,
+      URL, MODULE_ID, DISPNUM, MODULE_KEY, EDITABLE, WEBID)
+    values (SEQ_T_ADM_MODULES.nextval, #moduleName:VARCHAR#, #parentId:DECIMAL#, #createTime:TIMESTAMP#,
+      #memo:VARCHAR#, #moduleType:DECIMAL#, #forLog:DECIMAL#, #url:VARCHAR#, #moduleId:VARCHAR#,
+      #dispnum:DECIMAL#, #moduleKey:VARCHAR#, #editable:DECIMAL#, #webid:DECIMAL#)      
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TAdmModules" >
+    insert into T_ADM_MODULES
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        ID
+      </isNotNull>
+      <isNotNull prepend="," property="moduleName" >
+        MODULE_NAME
+      </isNotNull>
+      <isNotNull prepend="," property="parentId" >
+        PARENT_ID
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        CREATE_TIME
+      </isNotNull>
+      <isNotNull prepend="," property="memo" >
+        MEMO
+      </isNotNull>
+      <isNotNull prepend="," property="moduleType" >
+        MODULE_TYPE
+      </isNotNull>
+      <isNotNull prepend="," property="forLog" >
+        FOR_LOG
+      </isNotNull>
+      <isNotNull prepend="," property="url" >
+        URL
+      </isNotNull>
+      <isNotNull prepend="," property="moduleId" >
+        MODULE_ID
+      </isNotNull>
+      <isNotNull prepend="," property="dispnum" >
+        DISPNUM
+      </isNotNull>
+      <isNotNull prepend="," property="moduleKey" >
+        MODULE_KEY
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        EDITABLE
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleName" >
+        #moduleName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="parentId" >
+        #parentId:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="memo" >
+        #memo:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleType" >
+        #moduleType:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="forLog" >
+        #forLog:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="url" >
+        #url:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleId" >
+        #moduleId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="dispnum" >
+        #dispnum:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleKey" >
+        #moduleKey:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        #editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        #webid:DECIMAL#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TAdmModulesExample" resultClass="java.lang.Integer" >
+    select count(*) from T_ADM_MODULES
+    <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update T_ADM_MODULES
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        ID = #record.id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.moduleName" >
+        MODULE_NAME = #record.moduleName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.parentId" >
+        PARENT_ID = #record.parentId:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        CREATE_TIME = #record.createTime:DATE#
+      </isNotNull>
+      <isNotNull prepend="," property="record.memo" >
+        MEMO = #record.memo:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.moduleType" >
+        MODULE_TYPE = #record.moduleType:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.forLog" >
+        FOR_LOG = #record.forLog:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.url" >
+        URL = #record.url:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.moduleId" >
+        MODULE_ID = #record.moduleId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dispnum" >
+        DISPNUM = #record.dispnum:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.moduleKey" >
+        MODULE_KEY = #record.moduleKey:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.editable" >
+        EDITABLE = #record.editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.webid" >
+        WEBID = #record.webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update T_ADM_MODULES
+    set ID = #record.id:DECIMAL#,
+      MODULE_NAME = #record.moduleName:VARCHAR#,
+      PARENT_ID = #record.parentId:DECIMAL#,
+      CREATE_TIME = #record.createTime:DATE#,
+      MEMO = #record.memo:VARCHAR#,
+      MODULE_TYPE = #record.moduleType:DECIMAL#,
+      FOR_LOG = #record.forLog:DECIMAL#,
+      URL = #record.url:VARCHAR#,
+      MODULE_ID = #record.moduleId:VARCHAR#,
+      DISPNUM = #record.dispnum:DECIMAL#,
+      MODULE_KEY = #record.moduleKey:VARCHAR#,
+      EDITABLE = #record.editable:DECIMAL#,
+      WEBID = #record.webid:DECIMAL#
+    <isParameterPresent >
+      <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TAdmModules" >
+    update T_ADM_MODULES
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="moduleName" >
+        MODULE_NAME = #moduleName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="parentId" >
+        PARENT_ID = #parentId:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        CREATE_TIME = #createTime:DATE#
+      </isNotNull>
+      <isNotNull prepend="," property="memo" >
+        MEMO = #memo:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleType" >
+        MODULE_TYPE = #moduleType:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="forLog" >
+        FOR_LOG = #forLog:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="url" >
+        URL = #url:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleId" >
+        MODULE_ID = #moduleId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="dispnum" >
+        DISPNUM = #dispnum:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="moduleKey" >
+        MODULE_KEY = #moduleKey:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="editable" >
+        EDITABLE = #editable:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="webid" >
+        WEBID = #webid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    where ID = #id:DECIMAL#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmModules" >
+    update T_ADM_MODULES
+    set MODULE_NAME = #moduleName:VARCHAR#,
+      PARENT_ID = #parentId:DECIMAL#,
+      CREATE_TIME = #createTime:DATE#,
+      MEMO = #memo:VARCHAR#,
+      MODULE_TYPE = #moduleType:DECIMAL#,
+      FOR_LOG = #forLog:DECIMAL#,
+      URL = #url:VARCHAR#,
+      MODULE_ID = #moduleId:VARCHAR#,
+      DISPNUM = #dispnum:DECIMAL#,
+      MODULE_KEY = #moduleKey:VARCHAR#,
+      EDITABLE = #editable:DECIMAL#,
+      WEBID = #webid:DECIMAL#
+    where ID = #id:DECIMAL#
+  </update>
+  
+  
+  <select id="ibatorgenerated_selectByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmModulesExample" >
+     	    select 
+		    *
+	     	from 
+    			(
+		    			select A.*,ROWNUM as rn from
+		    					(
+									    select *
+									    from T_ADM_MODULES
+									    <isParameterPresent >
+									      <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+									      <isNotNull property="orderByClause" >
+									        order by $orderByClause$
+									      </isNotNull>
+									    </isParameterPresent>									  
+			    				) A				
+		<![CDATA[  where ROWNUM<= ($pageInfo.page$*$pageInfo.pageSize$)  ]]>
+		<![CDATA[   ) where rn > ($pageInfo.page$ - 1) * $pageInfo.pageSize$]]>									
+	</select>  	
+	
+	
+	<select id="ibatorgenerated_selectParentByExample" resultMap="parentModule" parameterClass="com.rc.portal.vo.TAdmModulesExample" >
+     	    select 
+		    *
+	     	from 
+    			(
+		    			select A.*,ROWNUM as rn from
+		    					(	
+										select b.module_name as PARENT_MODULE_NAME,a.* from (
+										    select *
+										    from T_ADM_MODULES
+										    <isParameterPresent >
+										      <include refid="T_ADM_MODULES.ibatorgenerated_Example_Where_Clause" />
+										      <isNotNull property="orderByClause" >
+										        order by $orderByClause$
+										      </isNotNull>
+										    </isParameterPresent>
+										) a left join  t_adm_modules b
+										on a.parent_id=b.id
+										order by a.id
+			    				) A				
+		<![CDATA[  where ROWNUM<= ($pageInfo.page$*$pageInfo.pageSize$)  ]]>
+		<![CDATA[   ) where rn > ($pageInfo.page$ - 1) * $pageInfo.pageSize$]]>			
+  </select>		
+  <select id="ibatorgenerated_selectByExample_new" resultMap="ibatorgenerated_BaseResultMap" parameterClass="int" >
+    	select b.* from t_adm_users_modules a,t_adm_modules b 
+    			where  a.moduleid=b.id 
+    		<isNotNull property="userid">
+    			and a.userid=1
+    		</isNotNull>
+    			and b.module_type=3
+  </select>
+  
+  <select id="getModuleList" resultMap="module_login" parameterClass="java.util.Map" >
+			select a.id,a.module_name,a.parent_id,a.url from t_adm_modules a,t_adm_users_modules b 
+					where a.id=b.moduleid and b.userid=#userid# and a.webid=#webid# order by a.id 
+  </select>   
+  
+  <select id="getUnionLogin" resultClass="java.lang.Integer" parameterClass="java.util.Map"  cacheModel="domain-model-cache">
+			select flag from t_adm_unionlogin t where id=#id#
+  </select>
+  
+  <select id="listDomain" resultMap="getdomain" parameterClass="java.util.Map"  cacheModel="domain-model-cache">
+			select id,name,domain from t_adm_domain t where 1=1
+			<isNotNull property="isall">
+				and id=#id#
+			</isNotNull>
+  </select>
+</sqlMap>

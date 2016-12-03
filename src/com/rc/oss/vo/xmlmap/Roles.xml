@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<hbnmap namespace="roles"> 
+    <hsql id="list"> 
+			select p from TAdmRoles p where 1=1
+			<isNotNull property="name">
+				and p.roleName='#name#'
+			</isNotNull>
+			<isNotNull property="desc">
+				and p.roleDesc='#desc#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull><!--
+			order by p.id desc
+    --></hsql> 
+    <hsql id="count"> 
+			select count(p) from TAdmRoles p where 1=1
+				<isNotNull property="name">
+				and p.roleName='#name#'
+			</isNotNull>
+			<isNotNull property="desc">
+				and p.roleDesc='#desc#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+    </hsql> 
+    <hsql id="select_rr_byroleid"> 
+		from TAdmRescRoles p where 1=1 and p.TAdmRoles.id='#id#'
+    </hsql> 
+</hbnmap>

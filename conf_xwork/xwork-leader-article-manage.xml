@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="wxam" extends="default" namespace="/wxam">
+		<action name="wxam" class="com.rc.portal.webapp.action.LeaderArticleManageAction">
+			<result name="add" type="freemarker" >/WEB-INF/pages/pname/leader_article/add.ftl</result>
+			<result name="edit" type="freemarker" >/WEB-INF/pages/pname/leader_article/edit.ftl</result>
+			<result name="view1" type="freemarker" >/WEB-INF/pages/pname/leader_article/view1.ftl</result>
+			<result name="view2" type="freemarker" >/WEB-INF/pages/pname/leader_article/view2.ftl</result>
+			<result name="list" type="freemarker" >/WEB-INF/pages/leader/leaderArticle_list.ftl</result>
+		</action>
+		
+	</package>
+</xwork>

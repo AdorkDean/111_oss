@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="cut" extends="default" namespace="/cut">
+		<action name="word" class="com.rc.portal.webapp.action.CutWordAction" method="list">
+			<result name="list" type="freemarker">/WEB-INF/pages/pname/cut_word/list.ftl</result>
+			<result name="edit" type="freemarker">/WEB-INF/pages/pname/cut_word/edit.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/pname/cut_word/add.ftl</result>
+			<result name="redirect" type="redirect">word!list.action</result>
+		</action>
+	</package>
+</xwork>

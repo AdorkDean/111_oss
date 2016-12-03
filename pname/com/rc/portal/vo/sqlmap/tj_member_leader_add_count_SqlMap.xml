@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="tj_member_leader_add_count" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="date_str" property="dateStr" jdbcType="VARCHAR" />
+    <result column="leader_count" property="leaderCount" jdbcType="INTEGER" />
+    <result column="member_count" property="memberCount" jdbcType="INTEGER" />
+    <result column="powder_count" property="powderCount" jdbcType="INTEGER" />
+    <result column="leader_sum" property="leaderSum" jdbcType="INTEGER" />
+    <result column="member_sum" property="memberSum" jdbcType="INTEGER" />
+    <result column="powder_sum" property="powderSum" jdbcType="INTEGER" />
+    <result column="create_dt" property="createDt" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCountExample" >
+    select id, date_str, leader_count, member_count, powder_count, leader_sum, member_sum,
+      powder_sum, create_dt
+    from tj_member_leader_add_count
+    <isParameterPresent >
+      <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    select id, date_str, leader_count, member_count, powder_count, leader_sum, member_sum,
+      powder_sum, create_dt
+    from tj_member_leader_add_count
+    where id = #id:BIGINT#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    delete from tj_member_leader_add_count
+    where id = #id:BIGINT#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCountExample" >
+    delete from tj_member_leader_add_count
+    <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    insert into tj_member_leader_add_count (id, date_str, leader_count, member_count, powder_count,
+      leader_sum, member_sum, powder_sum, create_dt)
+    values (#id:BIGINT#, #dateStr:VARCHAR#, #leaderCount:INTEGER#, #memberCount:INTEGER#,
+      #powderCount:INTEGER#, #leaderSum:INTEGER#, #memberSum:INTEGER#, #powderSum:INTEGER#,
+      #createDt:TIMESTAMP#)
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    insert into tj_member_leader_add_count
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="dateStr" >
+        date_str
+      </isNotNull>
+      <isNotNull prepend="," property="leaderCount" >
+        leader_count
+      </isNotNull>
+      <isNotNull prepend="," property="memberCount" >
+        member_count
+      </isNotNull>
+      <isNotNull prepend="," property="powderCount" >
+        powder_count
+      </isNotNull>
+      <isNotNull prepend="," property="leaderSum" >
+        leader_sum
+      </isNotNull>
+      <isNotNull prepend="," property="memberSum" >
+        member_sum
+      </isNotNull>
+      <isNotNull prepend="," property="powderSum" >
+        powder_sum
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dateStr" >
+        #dateStr:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="leaderCount" >
+        #leaderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="memberCount" >
+        #memberCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="powderCount" >
+        #powderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="leaderSum" >
+        #leaderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="memberSum" >
+        #memberSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="powderSum" >
+        #powderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        #createDt:TIMESTAMP#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCountExample" resultClass="java.lang.Integer" >
+    select count(*) from tj_member_leader_add_count
+    <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update tj_member_leader_add_count
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dateStr" >
+        date_str = #record.dateStr:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.leaderCount" >
+        leader_count = #record.leaderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.memberCount" >
+        member_count = #record.memberCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.powderCount" >
+        powder_count = #record.powderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.leaderSum" >
+        leader_sum = #record.leaderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.memberSum" >
+        member_sum = #record.memberSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.powderSum" >
+        powder_sum = #record.powderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createDt" >
+        create_dt = #record.createDt:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update tj_member_leader_add_count
+    set id = #record.id:BIGINT#,
+      date_str = #record.dateStr:VARCHAR#,
+      leader_count = #record.leaderCount:INTEGER#,
+      member_count = #record.memberCount:INTEGER#,
+      powder_count = #record.powderCount:INTEGER#,
+      leader_sum = #record.leaderSum:INTEGER#,
+      member_sum = #record.memberSum:INTEGER#,
+      powder_sum = #record.powderSum:INTEGER#,
+      create_dt = #record.createDt:TIMESTAMP#
+    <isParameterPresent >
+      <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    update tj_member_leader_add_count
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="dateStr" >
+        date_str = #dateStr:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="leaderCount" >
+        leader_count = #leaderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="memberCount" >
+        member_count = #memberCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="powderCount" >
+        powder_count = #powderCount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="leaderSum" >
+        leader_sum = #leaderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="memberSum" >
+        member_sum = #memberSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="powderSum" >
+        powder_sum = #powderSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt = #createDt:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    where id = #id:BIGINT#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCount" >
+    update tj_member_leader_add_count
+    set date_str = #dateStr:VARCHAR#,
+      leader_count = #leaderCount:INTEGER#,
+      member_count = #memberCount:INTEGER#,
+      powder_count = #powderCount:INTEGER#,
+      leader_sum = #leaderSum:INTEGER#,
+      member_sum = #memberSum:INTEGER#,
+      powder_sum = #powderSum:INTEGER#,
+      create_dt = #createDt:TIMESTAMP#
+    where id = #id:BIGINT#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMemberLeaderAddCountExample" >
+                    select id, date_str, leader_count, member_count, powder_count, leader_sum, member_sum,
+                      powder_sum, create_dt
+                    from tj_member_leader_add_count
+                    <isParameterPresent >
+                      <include refid="tj_member_leader_add_count.ibatorgenerated_Example_Where_Clause" />
+                      <isNotNull property="orderByClause" >
+                        order by $orderByClause$
+                      </isNotNull>
+                    </isParameterPresent>
+					limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+  <select id="selectBaseList" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  select mlgb.* FROM tj_member_leader_add_count mlgb
+WHERE 1=1
+AND mlgb.date_str &lt;=#yesterday# AND mlgb.date_str &gt;=#halfMonth#
+GROUP BY mlgb.date_str
+  </select>
+  <select id="selectDateListExcel" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  select mlgb.* FROM tj_member_leader_add_count mlgb
+WHERE 1=1
+AND mlgb.date_str &lt;=#yesterday# AND mlgb.date_str &gt;=#halfMonth#
+GROUP BY mlgb.date_str
+order by mlgb.date_str desc
+  </select>
+  <select id="selectStatistcListByPage" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  select mlgb.* FROM tj_member_leader_add_count mlgb
+WHERE 1=1
+AND mlgb.date_str &lt;=#yesterday# AND mlgb.date_str &gt;=#halfMonth#
+GROUP BY mlgb.date_str
+order by mlgb.date_str desc
+LIMIT $pageInfo.start$,$pageInfo.end$
+  </select>
+  <select id="selectStatistcListCount" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+  select count(1) from (
+  select mlgb.id FROM tj_member_leader_add_count mlgb
+WHERE 1=1
+AND mlgb.date_str &lt;=#yesterday# AND mlgb.date_str &gt;=#halfMonth#
+GROUP BY mlgb.date_str
+)A
+  </select>
+  <select id="selectLeaderListById" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+ SELECT count(1) AS powderCount,DATE_FORMAT(tm.register_date,'%Y-%m-%d') date_str  FROM t_member_leader tml
+  LEFT JOIN t_member tm ON tm.id=tml.member_id
+  LEFT JOIN t_leader tl ON tl.id=tml.leader_id
+  WHERE tl.phone=#mobile# AND DATE_FORMAT(tm.register_date,'%Y-%m-%d') &gt;= #halfMonth# AND DATE_FORMAT(tm.register_date,'%Y-%m-%d') &lt;= #yesterday#
+	GROUP BY date_str
+  </select>
+  <select id="selectDateBaseList" resultClass="java.util.HashMap" parameterClass="java.util.Map"> 
+  SELECT 
+  DATE_FORMAT(tdb.date_str,'%Y-%m-%d') AS data_str
+   FROM t_date_base tdb WHERE DATE_FORMAT(tdb.date_str,'%Y-%m-%d')&gt;=#halfMonth# AND DATE_FORMAT(tdb.date_str,'%Y-%m-%d')&lt;=#yesterday#
+  </select>
+</sqlMap>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="/web/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/web/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/web/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/web/js/cookieUtil.js"></script>
+<script type="text/javascript" src="/web/js/common.new.js"></script>
+<script type="text/javascript" src="/web/js/alert.main.js"></script>
+<title>商品详情</title>
+</head>
+
+<body onLoad="loaded()">
+<header class="header">
+    <a href="javascript:;" class="iconfont top-left-btn">B</a>
+    <h2 class="header-title">
+        商品详情
+    </h2>
+    <a href="javascript:;" class="iconfont top-heart-btn" id="collect-btn">H</a>
+    <a href="/index.html" class="iconfont top-right-btn">h</a>
+</header>
+
+<script type="text/javascript" src="/web/js/iscroll.js"></script>
+<script type="text/javascript">
+	var myScroll;
+	function loaded ()
+	{
+		myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+</script>
+
+<article class="details-main">
+  <!--效果html开始-->
+  <div class="slider">
+    <div class="slider-page"><span id="cur-num">1</span>/<span>5</span></div>
+	  <ul>
+	            	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+	  </ul>
+  </div>
+  <script type="text/javascript" src="/web/js/yxMobileSlider.js"></script>
+  <script>
+      $(".slider").yxMobileSlider({width:640,height:640,during:3000})
+  </script>  
+  <!--效果html结束-->
+  <article class="product-box">
+    <header class="product-info">
+      <h1 class="product-title">丹南泰 和胃整肠丸 0.2g*50丸</h1>
+      <input type="hidden" id="goodsid" value="243"/>
+      <p class="product-price">
+        <i style="font-family:'Microsoft Yahei'">￥</i><b id="mprice">16.8</b>
+        <span id="pcount">8折</span>
+      </p>
+      <p class="priduct-spec"><span>原价:<i style="font-family:'Microsoft Yahei'">￥</i><b id="oprice">19.9</b></span><span style="text-decoration:none;">规格:</span></p>
+    </header>
+  </article>
+  <ul class="explain clearfix">
+  	<li><span class="iconfont">M</span>30天无理由退换货</li>
+    <li><span class="iconfont">M</span>真品假一赔十</li>
+    <li><span class="iconfont">M</span>全程冷藏运输</li>
+    <li><span class="iconfont">M</span>全国规模化采购，药厂直销</li>
+  </ul>
+  <article class="product-info-link">
+    <a href="/goodscomment/gcmt!list.action?id=243" class="product-info-link-title">商品评论<b class="iconfont">J</b></a>
+    <h2 class="product-info-link-title">商品详情</h2>
+    <div class="details-img">
+    	<p><span title="end_rate_experts_1014237390_endrate"></span> </p><p><br/></p><p><span style="font-family:瀹嬩綋">銆愬晢鍝佸悕绉般�</span><span style="font-family:瀹嬩綋">涓瑰崡娉�/span> <span style="font-family: 瀹嬩綋">鍜岃儍鏁磋偁涓�/span></p><p><span style="font-family:瀹嬩綋">銆愰�鐢ㄥ悕绉般�</span><span style="font-family:瀹嬩綋">鍜岃儍鏁磋偁涓�/span></p><p><span style="font-family:瀹嬩綋">銆愮敓浜т紒涓氥�</span><span style="font-family:瀹嬩綋">娉板浗鏉庝竾灞辫嵂鍘�/span></p><p><span style="font-family:瀹嬩綋">銆愬晢鍝佽鏍笺�</span>0.2<span style="font-family:瀹嬩綋">鍏�/span>*50<span style="font-family:瀹嬩綋">涓�/span></p><p><span style="font-family:瀹嬩綋">銆愬姛鑳戒富娌汇�</span><span style="font-family:瀹嬩綋">娓╀腑鍜岃儍锛岀悊姘旀鐥涖�閫傜敤浜庨偑婊炰腑鐒︽墍鑷寸殑鎭跺績銆佸憰鍚愩�绾冲樊銆佽儍鐥涖�鑵圭棝銆佽儍鑳��鑵硅儉銆佹硠娉汇�</span></p><p><span style="font-family:瀹嬩綋">銆愬墏鍨嬨�</span><span style="font-family:瀹嬩綋">涓稿墏</span></p><p><span style="font-family:瀹嬩綋">銆愭垚鍒嗐�</span><span style="font-family:瀹嬩綋">棰犺寗鎻愬彇鐗┿�鑲夋銆佷竵棣欍�鐢樿崏銆佹湪棣忔补銆佹按鏉ㄩ吀鑻叝銆佽杽鑽疯剳銆傝緟鏂欙細娣�矇銆佺敇娌广�闃挎媺浼兌</span></p><p><span style="font-family:瀹嬩綋">銆愭�鐘躲�</span><span style="font-family:瀹嬩綋">鏈搧涓烘瑜愯壊鐨勪父鍓傦紱姘旂壒寮傘�鍛宠緵鑻︺�寰夯銆佹湁娓呭噳鎰熴�</span></p><p><span style="font-family:瀹嬩綋">銆愮敤娉曠敤閲忋�</span><span style="font-family:瀹嬩綋">娓╁紑姘撮�鏈嶏紝鎴愪汉姣忔</span>4-6<span style="font-family:瀹嬩綋">涓革紱灏忓効鍑忓崐锛屾瘡鏃�/span>3<span style="font-family:瀹嬩綋">娆°�</span></p><p><span style="font-family:瀹嬩綋">銆愪笉鑹弽搴斻�</span><span style="font-family:瀹嬩綋">杈冨父瑙佺殑鏈夛細鍙ｅ共銆佷究绉樸�鍑烘睏鍑忓皯銆佸彛榧诲捊鍠夊強鐨偆骞茬嚗銆佽鍔涙ā绯娿�鎺掑翱鍥伴毦</span>(<span style="font-family:瀹嬩綋">鑰佷汉</span>)<span style="font-family:瀹嬩綋">銆�/span></p><p><span style="font-family:瀹嬩綋">銆愮蹇屻�</span>&nbsp; &nbsp; &nbsp; &nbsp;</p><p>1.<span style="font-family:瀹嬩綋">鍓嶅垪鑵鸿偉澶с�闈掑厜鐪兼偅鑰呯鐢ㄣ�</span></p><p>2.<span style="font-family:瀹嬩綋">鍝轰钩鏈熷濂崇鐢ㄣ�</span></p><p>3.<span style="font-family:瀹嬩綋">瀛曞绂佺敤銆�/span></p><p><span style="font-family:瀹嬩綋">銆愭敞鎰忎簨椤广�</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>1.<span style="font-family:瀹嬩綋">楗瀹滄竻娣★紝蹇岄杈涜荆銆佺敓鍐枫�娌硅吇椋熺墿銆�/span></p><p>2.<span style="font-family:瀹嬩綋">涓嶅疁鍦ㄦ湇鑽湡闂村悓鏃舵湇鐢ㄦ粙琛ユ�涓嵂銆�/span></p><p>3.<span style="font-family:瀹嬩綋">楂樿鍘嬨�蹇冭剰鐥呫�杩旀祦鎬ч绠＄値銆佽儍鑲犻亾闃诲鎬х柧鎮ｃ�鐢茬姸鑵烘満鑳戒孩杩涖�婧冪枴鎬х粨鑲犵値鎮ｈ�鎱庣敤銆�/span></p><p>4.<span style="font-family:瀹嬩綋">鏈夎倽鐥呫�绯栧翱鐥呫�鑲剧梾绛夋參鎬х梾涓ラ噸鑰呭簲鍦ㄥ尰甯堟寚瀵间笅鏈嶇敤銆�/span></p><p>5.<span style="font-family:瀹嬩綋">鏈夋參鎬х粨鑲犵値銆佹簝鐤℃�缁撹偁鐐庝究鑴撹绛夋參鎬х梾鍙茶�锛屾偅娉勬郴鍚庡簲鍘诲尰闄㈠氨璇娿�</span></p><p>6.<span style="font-family:瀹嬩綋">鍎跨銆佽�浜哄簲鍦ㄥ尰甯堟寚瀵间笅浣跨敤銆�/span></p><p>7.<span style="font-family:瀹嬩綋">鏈嶈嵂</span>3<span style="font-family:瀹嬩綋">澶╃棁鐘舵棤缂撹В锛屽簲鍘诲尰闄㈠氨璇娿�</span></p><p>8.<span style="font-family:瀹嬩綋">瀵规湰鍝佽繃鏁忚�绂佺敤锛岃繃鏁忎綋璐ㄨ�鎱庣敤銆�/span></p><p>9.<span style="font-family:瀹嬩綋">鏈搧鎬х姸鍙戠敓鏀瑰彉鏃剁姝娇鐢ㄣ�</span></p><p>10.<span style="font-family:瀹嬩綋">鍎跨蹇呴』鍦ㄦ垚浜虹洃鎶や笅浣跨敤銆�/span></p><p>11.<span style="font-family:瀹嬩綋">璇峰皢鏈搧鏀惧湪鍎跨涓嶈兘鎺ヨЕ鐨勫湴鏂广�</span></p><p>12.<span style="font-family:瀹嬩綋">濡傛鍦ㄤ娇鐢ㄥ叾浠栬嵂鍝侊紝浣跨敤鏈搧鍓嶈鍜ㄨ鍖诲笀鎴栬嵂甯堛�</span></p><p><span style="font-family:瀹嬩綋">銆愯串钘忋�</span><span style="font-family:瀹嬩綋">瀵嗗皝</span></p><p><span style="font-family:瀹嬩綋">銆愬寘瑁呫�</span><span style="font-family:瀹嬩綋">鍙ｆ湇鍥轰綋鑽敤濉戞枡鍖呰銆�/span>50<span style="font-family:瀹嬩綋">涓�/span>/<span style="font-family:瀹嬩綋">鐡讹紱</span></p><p><span style="font-family:瀹嬩綋">銆愭湁鏁堟湡銆�/span>48<span style="font-family:瀹嬩綋">涓湀</span></p><p><span style="font-family:瀹嬩綋">銆愭墽琛屾爣鍑嗐�</span><span style="font-family:瀹嬩綋">杩涘彛鑽搧娉ㄥ唽鏍囧噯</span>JZ20010032</p><p><img src="http://www.111yao.com/upload/images/201503011425171152398008457.jpg" style="" title="201503011425171152398008457.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152404021307.jpg" style="" title="201503011425171152404021307.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152573046888.jpg" style="" title="201503011425171152573046888.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152599059541.jpg" style="" title="201503011425171152599059541.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152827060055.jpg" style="" title="201503011425171152827060055.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152845092255.jpg" style="" title="201503011425171152845092255.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171152845075155.jpg" style="" title="201503011425171152845075155.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171153023000120.jpg" style="" title="201503011425171153023000120.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171153023081714.jpg" style="" title="201503011425171153023081714.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171153243020555.jpg" style="" title="201503011425171153243020555.jpg"/></p><p><img src="http://www.111yao.com/upload/images/201503011425171153283090145.jpg" style="" title="201503011425171153283090145.jpg"/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>
+    </div>
+  </article>
+  <div class="groom-box">
+    <h2 class="guess-title"><span>猜你在找</span></h2>
+    <div class="guess-box" id="wrapper">
+        <div class="guess-box-list" id="scroller">
+            <ul>
+            </ul>
+        </div>
+    </div>
+  </div>
+</article>
+<div class="details-btn-fixed">
+	<ul class="clearfix">
+    	<li><a href="/carts/cart!page.action" class="iconfont">C</a><span class="cart-count">0</span></li>
+        <li><a href="javascript:;" class="add-cart-btn">加入购物车</a></li>
+    </ul>
+</div>
+<!--loading-->
+<div class="spinner" style="display:none;">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<script type="text/javascript" src="/web/js/hotsale-goods.js"></script>
+<script type="text/javascript" src="/web/js/wap-cart.js"></script>
+<script>
+var jsCtx = "";
+$(function(){
+	var id = $.trim($("#goodsid").val());
+	if(checklogin())
+	{
+		$.get("/index!isattent.action?id="+id,null,function(data)
+		{
+			if(data == 1)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+				$("#collect-btn").html("H");
+			}
+			if(data == 0)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+				$("#collect-btn").html("I");
+			}
+		});
+	}
+	//Get the number of shopping cart from server
+	getnum();
+	//This is collection button
+	$("#collect-btn").click(function(){
+		if(checklogin()){
+			$.get("/index!attentionpro.action?id="+id+"&type=0",null,function(data)
+			{
+				if(data == 0)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+					$("#collect-btn").html("H");
+				}
+				if(data == 1)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+					$("#collect-btn").html("I");
+				}
+			});
+		}else{
+			window.location.href = "/login/login!index.action?redirectUrl="+location.href;
+		}
+	});
+	//Put goods into shopping cart
+	$(".add-cart-btn").click(function(){
+		var rs = add_cart(id,1);
+		if(rs > 0)
+		{
+			$alert("success","已成功添加至购物车");
+			getnum();
+			return false;
+		} 
+		if(rs == -2)
+		{
+			$alert("warn","库存不足");
+			return false;
+		}
+		if(rs == -3)
+		{
+			$alert("warn","超出购买数量");
+			return false;
+		}
+		if(rs == 0)
+		{
+			$alert("warn","操作失败");
+			return false;
+		}
+	});
+});
+
+//Get the number of shopping cart from server
+function getnum()
+{
+	jQuery.ajax
+	({
+       type: "post",
+       url: "/carts/cart!getCartSum.action",	 
+       async:false, 
+       success: function(data)
+       {
+    	   $(".cart-count").html(data);
+       }
+     }); 	  
+}
+</script>
+</body>
+</html>

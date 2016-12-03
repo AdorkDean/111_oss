@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="leader" extends="default" namespace="/leader">	
+		<!-- 商品管理 -->
+		<action name="leaderGoods" class="com.rc.portal.webapp.action.LeaderGoodsAction">
+			<result name="list" type="freemarker" >/WEB-INF/pages/leader/leaderGoods_list.ftl</result>
+			<result name="leaderGoodsEdit" type="freemarker" >/WEB-INF/pages/leader/leaderGoodsEdit.ftl</result>
+			<result name="leaderGoodsUpEdit" type="freemarker" >/WEB-INF/pages/leader/leaderGoodsUpEdit.ftl</result>
+		    <result name="redirect" type="redirect">leaderGoods!list.action</result>
+		    <result name="delete_list">${url}</result>
+		</action>
+		<action name="leaderMoney" class="com.rc.portal.webapp.action.LeaderMoneyAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/leaderMoney_list.ftl</result>
+			<result name="view" type="freemarker">/WEB-INF/pages/leader/leaderMoney_view.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		<action name="authstrLeader" class="com.rc.portal.webapp.action.AuthstrLeaderAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/authstrLeader_list.ftl</result>
+			<result name="view" type="freemarker">/WEB-INF/pages/leader/authstrLeader_view.ftl</result>
+			<result name="nopasslist" type="freemarker">/WEB-INF/pages/leader/authstrLeader_nopass.ftl</result>
+			<result name="redirect" type="redirect">authstrLeader!list.action</result>
+		</action>
+		
+		<action name="leaderagent" class="com.rc.portal.webapp.action.LeaderAgentAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/leader-agent-list.ftl</result>
+			<result name="leader-agent-insert" type="freemarker">/WEB-INF/pages/leader/leader-agent-insert.ftl</result>
+			<result name="record" type="freemarker">/WEB-INF/pages/leader/leader-agent-insert.ftl</result>
+		</action>
+		<action name="showfen" class="com.rc.portal.webapp.action.LeaderMoneyAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/showfen_list.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		<!-- 领秀内容管理	-->
+		<action name="leaderContent" class="com.rc.portal.webapp.action.LeaderContentAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/content_list.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/leader/content_add.ftl</result>
+			<result name="save" type="redirect">leaderContent!list.action</result>
+			<result name="view" type="freemarker">/WEB-INF/pages/leader/content_edit.ftl</result>
+		</action>
+		<!-- 领秀红包分享语	-->
+		<action name="leaderRedShare" class="com.rc.portal.webapp.action.LeaderRedShareAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/redshare_list.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/leader/redshare_add.ftl</result>
+			<result name="save" type="redirect">leaderRedShare!list.action</result>
+			<result name="view" type="freemarker">/WEB-INF/pages/leader/redshare_edit.ftl</result>
+		</action>
+		<!-- 领秀图片管理	-->
+		<action name="uploadImage" class="com.rc.portal.webapp.action.LeaderImgAction"> 
+			<result name="uploadPage" type="freemarker">/WEB-INF/pages/leader/imageUpload.ftl</result>
+		</action>
+		
+		<!-- 分享统计	-->
+		<action name="statistics" class="com.rc.portal.webapp.action.StatisticsLeaderAction"> 
+			<result name="statisticList" type="freemarker">/WEB-INF/pages/pname/statistics/statistics_leader_list.ftl</result>
+			<result name="statisticArticleList" type="freemarker">/WEB-INF/pages/pname/statistics/statistics_article_list.ftl</result>
+			<result name="statisticGoodsList" type="freemarker">/WEB-INF/pages/pname/statistics/statistics_goods_list.ftl</result>
+		</action>
+		<!-- 领秀公告	-->
+		<action name="leaderAnnouncement" class="com.rc.portal.webapp.action.LeaderAnnouncementAction" >
+			<result name="list" type="freemarker">/WEB-INF/pages/leader/announcement_list.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/leader/announcement_add.ftl</result>
+			<result name="save" type="redirect">leaderAnnouncement!list.action</result>
+			<result name="view" type="freemarker">/WEB-INF/pages/leader/announcement_edit.ftl</result>
+		</action>
+		<!-- 新的领袖商品 -->
+		<action name="newLeaderGoods" class="com.rc.portal.webapp.action.NewLeaderGoodsAction">
+			<result name="getLeaderGoodsList" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderGoods_list.ftl</result>
+			<result name="edit" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderGoodsEdit.ftl</result>
+			<result name="add" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderGoodsAdd.ftl</result>
+		</action>
+		
+		<!-- 新的领袖文章 -->
+		<action name="newLeaderArticle" class="com.rc.portal.webapp.action.NewArticleLeaderAction">
+			<result name="geiArticleList" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderArticle_list.ftl</result>
+			<result name="articleDetail" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderArticle_check.ftl</result>
+		</action>
+		<!-- 新的领袖提现-->
+		<action name="newLeaderAccount" class="com.rc.portal.webapp.action.NewAccountLeaderAction">
+			<result name="getAccountList" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderAccount_list.ftl</result>
+			<result name="getAccountOrderList" type="freemarker" >/WEB-INF/pages/new_leader/new_Account_Order_list.ftl</result>
+			<result name="getGoodsList" type="freemarker" >/WEB-INF/pages/new_leader/new_Account_Goods_list.ftl</result>
+			<result name="goNoCheckAccount" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderAccount_no_check.ftl</result>
+			<result name="xls">${url}</result>
+		</action>
+		
+		
+		
+		<!-- 领秀推荐 注册赠送商品 -->
+		<action name="leaderGoodsRecommend" class="com.rc.portal.webapp.action.TLeaderGoodsRecommendAction">
+		    <result name="leader_recommend_goods_list" type="freemarker" >/WEB-INF/pages/pname/leaderGoodsRecommend/leader_recommend_goods_list.ftl</result>
+		    <result name="register_leader_goods_list" type="freemarker" >/WEB-INF/pages/pname/leaderGoodsRecommend/register_leader_goods_list.ftl</result>
+		    <result name="add_leader_recommend_goods" type="freemarker" >/WEB-INF/pages/pname/leaderGoodsRecommend/add_leader_recommend_goods.ftl</result>
+		
+		</action>
+		
+		
+			<!-- 领秀商品佣金审核 -->
+		<action name="leaderGoodsCheck" class="com.rc.portal.webapp.action.NewLeaderGoodsCheckAction">
+			<result name="getLeaderGoodsCheckList" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderGoods_check_list.ftl</result>
+			<result name="goNoCheckGoods" type="freemarker" >/WEB-INF/pages/new_leader/new_leaderGoods_no_check.ftl</result>
+		</action>
+	</package>
+</xwork>

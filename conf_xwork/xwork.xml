@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "xwork-1.1.1.dtd">
+<xwork>
+	<!-- Include webwork defaults -->	
+	<include file="webwork-default.xml"/>
+	<include file="config-browser.xml"/> 	
+	<include file="xwork-system.xml"/>
+	
+	<!-- add by yinbin 2011.03.30 -->
+	<!-- add  webwork config file by yourself like this -->
+	
+	<!-- include file="xwork-example.xml"/-->
+	<include file="xwork-oss.xml"/>
+	<include file="xwork-login.xml"/>
+	<include file="xwork-position.xml"/>	
+	<include file="xwork-customer-call.xml"/>
+	
+	<include file="xwork-category.xml"/>
+	<include file="xwork-systemmanage.xml"/>
+	<include file="xwork-order.xml"/>
+	<include file="xwork-goods.xml"/>
+	<include file="xwork-card-manage.xml"/>
+	<include file="xwork-integral.xml"/>
+	<include file="xwork-physician.xml"/>
+	
+	<include file="xwork-shortbuy.xml"/>
+	
+	<include file="xwork-return.xml"/>
+	<include file="xwork-goodscomment.xml"/>
+	<include file="xwork-goodsconsult.xml"/>
+	<include file="xwork-member.xml"/>
+	
+	<include file="xwork-pharmacist-comment.xml"/>
+	
+	<include file="xwork-prom.xml"/>
+	
+	
+	<include file="xwork-location.xml"/>
+	<include file="xwork-static.xml"/>
+	<include file="xwork-leader.xml"/>
+	<include file="xwork-prescription.xml"/>
+	
+	
+	<include file="xwork-version.xml"/>
+	<include file="xwork-feedback.xml"/>
+	
+
+	<include file="xwork-subject.xml"/>
+	
+	<include file="xwork-leader-article-manage.xml"/>
+	
+	<include file="xwork-tag.xml"/>
+	<include file="xwork-red.xml"/>
+    <include file="xwork-healthyplan.xml"/>
+    <include file="xwork-order-statistic.xml"/>
+    <include file="xwork-cut-word.xml"/>
+    <include file="xwork-store.xml"/>
+    <include file="xwork-rx-reserve-order.xml"/>
+    <include file="xwork-goods-freight.xml"/>
+    <include file="xwork-goodstrash.xml"/>
+</xwork>

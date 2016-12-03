@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<!-- Configuration for the user package. -->
+	<package name="goodsConsult" extends="default" namespace="/goodsConsult">
+		<action name="goodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="goodsConsultPage">			
+			<result name="goods_consult_page" type="freemarker">/WEB-INF/pages/pname/goodsConsult/goods_consult_list.ftl</result>
+		</action>
+		<action name="replyGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="replyPage">			
+			<result name="reply_page" type="freemarker">/WEB-INF/pages/pname/goodsConsult/goods_consult_reply.ftl</result>
+		</action>
+		<action name="saveReplyGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="saveReplyGoodsConsult">			
+			<result name="goods_consult_page" type="redirect">/goodsConsult/goodsConsult!goodsConsultPage.action</result>
+		</action>
+		<action name="updateGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="updateGoodsConsult">			
+			<result name="goods_consult_page" type="redirect">/goodsConsult/goodsConsult!goodsConsultPage.action</result>
+		</action>
+		
+		<action name="delGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="delGoodsConsult"></action>
+		<action name="setShowGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="setShowGoodsConsult"></action>
+		
+		<action name="detailGoodsConsult" class="com.rc.portal.webapp.action.GoodsConsultAction" method="detailGoodsConsult">
+			<result name="detail_page" type="freemarker">/WEB-INF/pages/pname/goodsConsult/goods_consult_detail.ftl</result>
+		</action>
+		
+	</package>
+</xwork>

@@ -1,0 +1,16 @@
+.bigdiv{margin:0 auto; width:450px; height:auto; border:1px solid #aacded;}
+.title{width:420px; height:20px; border-bottom:1px solid #aacded; background-color:#aacded; font:14px bold; padding:3px 15px;}
+.con{width:420px; height:auto; padding:10px 15px; font-size:12px;}
+.righttext{text-align:right; padding:10px 15px; width:390px;}
+.centertext{text-align:center; padding:10px 0;}
+.t_area{width:300px; height:60px; color:#B7B7B7; font-size:12px;}
+.t_areac{width:300px; height:60px; color:#000; font-size:12px;}
+.t_areal{width:96%; height:100px;color:#B7B7B7; font-size:12px;}
+.t_arealc{width:96%; height:100px;color:#000; font-size:12px;}
+.uldiv li{float:left; list-style:none; width:49%; height:30px; margin:0; padding:0;}
+.clear{clear:both;}
+.floatleft{float:left;}
+.patb{padding:10px 0;}
+.msg{width:450px; height:20px; padding:3px 0; color:red; background-color:#F1EEBA; border:1px dashed #aacded; font-size:12px; margin:0 auto;}
+.dggoods{border-collapse:collapse; width:100%; height:auto; text-align:center;font-size:12px;}
+.dggoods td{border: solid 1px #a0c6e5; height: 25px;}

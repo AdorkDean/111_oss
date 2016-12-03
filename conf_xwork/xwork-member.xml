@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+<!-- 会员管理 -->
+	<package name="member" extends="default" namespace="/member">
+		<action name="member" class="com.rc.portal.webapp.action.MemberAction">
+			<result name="getMemberList" type="freemarker" >/WEB-INF/pages/pname/member/member_list.ftl</result>
+		    <result name="toUpdatePassword" type="freemarker" >/WEB-INF/pages/pname/member/password.ftl</result>
+		    <result name="toMemberCoupon" type="freemarker" >/WEB-INF/pages/pname/member/member_coupon.ftl</result>
+		    <result name="toMemberInfo" type="freemarker" >/WEB-INF/pages/pname/member/member_info.ftl</result>
+		</action>
+		
+		<action name="grade" class="com.rc.portal.webapp.action.MemberGradeAction" method="list">
+			<result name="list" type="freemarker">/WEB-INF/pages/pname/member_grade/list.ftl</result>
+			<result name="edit" type="freemarker">/WEB-INF/pages/pname/member_grade/edit.ftl</result>
+			<result name="add" type="freemarker">/WEB-INF/pages/pname/member_grade/add.ftl</result>
+			<result name="redirect" type="redirect">grade!list.action</result>
+		</action>
+		
+		<action name="amountOut" class="com.rc.portal.webapp.action.AmountOutAction">
+			<result name="outList" type="freemarker">/WEB-INF/pages/pname/amountOut/list.ftl</result>
+			<result name="details" type="freemarker">/WEB-INF/pages/pname/amountOut/details.ftl</result>
+			<result name="audit" type="freemarker">/WEB-INF/pages/pname/amountOut/audit.ftl</result>
+			<result name="finish" type="freemarker">/WEB-INF/pages/pname/amountOut/finish.ftl</result>
+			<result name="brokerageOrderList" type="freemarker">/WEB-INF/pages/pname/amountOut/brokerageOrderList.ftl</result>				
+			<result name="list" type="redirect">amountOut!list.action</result>
+		    <result name="xls">${url}</result>
+		</action>
+		
+	<!-- 	<action name="initHdTables" class="com.rc.portal.webapp.action.InitHDTableInfoAction">
+		</action>
+		
+		<action name="initGuanWangMemberCouponInfo" class="com.rc.portal.webapp.action.InitGuanWangMemberCouponInfoAction">
+		</action>
+		
+		<action name="initMenDianMemberCouponInfo" class="com.rc.portal.webapp.action.InitMenDianMemberCouponInfoAction">
+		</action>
+		
+		<action name="initDSTProductInfoAction" class="com.rc.portal.webapp.action.InitDSTProductInfoAction">
+		</action> -->
+		
+		
+		
+		<action name="newMember" class="com.rc.portal.webapp.action.NewMemberListAction">
+			<result name="getNewMemberList" type="freemarker" >/WEB-INF/pages/pname/member/newmember_list.ftl</result>
+		</action>
+	</package>
+</xwork>

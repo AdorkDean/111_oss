@@ -1,0 +1,27 @@
+<link href="/web/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/web/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/web/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/web/js/cookieUtil.js"></script>
+<script type="text/javascript" src="/web/js/common.new.js"></script>
+<script type="text/javascript" src="/web/js/alert.main.js"></script>
+<script type="text/javascript" src="/web/js/iscroll.js"></script>
+<script type="text/javascript" src="/web/js/loadingbefore.js"></script>
+<script type="text/javascript">
+	var myScroll;
+	function loaded(){
+		myScroll = new IScroll('#wrapper',{eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+</script>
+<header class="header">
+     <a href="/" class="top-logo"></a>
+     <!--#include virtual="/static/inc/wap/searchbox.html" -->
+     <a href="/member/profile.action" class="iconfont top-right-btn">m</a>
+</header>
+<!--#include virtual="/static/imgout/wap/header_nav.html" -->
+<script type="text/javascript">
+	$(function()
+	{
+		var lg = document.getElementById("scroller").getElementsByTagName("li").length;
+		$("#scroller").css("width",lg*90+"px");
+	});
+</script>

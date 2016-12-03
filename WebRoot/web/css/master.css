@@ -1,0 +1,19 @@
+body{padding:0;margin:0;font-size:12px;line-height:22px; font-family:"宋体", Arial; background:url(../images/login_03.png) repeat-x #152753; color: #adc8d8;}
+div{ margin:0 auto}
+img{border:none;}
+dl,dd,dt,ul,ol,li,form,iframe,h1,h2,h3,h4,h5,h6{margin:0; padding:0; }
+ul,li{list-style:none}
+
+#top {margin:0 auto;height:242px;width:847px;background:url(../images/login_04.jpg) no-repeat;}
+#center {margin:0 auto; background:url(../images/login_bg.png) no-repeat; height:221px; width:847px;}
+#footer {margin:0 auto;background:url(../images/login_11.png) no-repeat;height:144px;width:847px;}
+.tip{ padding:20px 0 0 325px; line-height:25px;color:#ea5723; width:235Ppx;}
+.user_box{ padding:10px 320px 0 300px; font-size:14px; width:225px;line-height:25px;}
+.user_box li{ padding-bottom:12px; line-height:24px;}
+.user_box li span{ float:right; margin-right:33px;}
+.login_input{width:155px; border:1px solid #153865; height:20px; line-height:20px; padding-left:5px; color:#000; background-color:#88ADBF}
+.chknumber_input {width:75px; border:1px solid #153865; height:20px; line-height:20px; padding-left:5px; color:#000;background-color:#88ADBF}
+.btn{background:url(../images/btn_bg.png) no-repeat 0 0; width:62px; height:27px; border:0px; cursor:pointer; line-height:24px; text-align:center; color:#bfc9d2; font-weight:bold;}
+.pl60{ padding-left:57px;}
+
+

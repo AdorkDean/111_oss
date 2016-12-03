@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="T_ADM_USER_POST" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TAdmUserPost" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="POSTID" property="postid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmUserPostExample" >
+    select ID, USERID, POSTID
+    from T_ADM_USER_POST
+    <isParameterPresent >
+      <include refid="T_ADM_USER_POST.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+    select ID, USERID, POSTID
+    from T_ADM_USER_POST
+    where ID = #id:DECIMAL#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+    delete from T_ADM_USER_POST
+    where ID = #id:DECIMAL#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TAdmUserPostExample" >
+    delete from T_ADM_USER_POST
+    <include refid="T_ADM_USER_POST.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT seq_user_post_id.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_USER_POST (ID, USERID, POSTID)
+    values (#id:DECIMAL#, #userid:DECIMAL#, #postid:DECIMAL#)
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+	<selectKey resultClass="java.lang.Long" keyProperty="id" type="pre">
+		SELECT seq_user_post_id.NEXTVAL AS id FROM DUAL
+	</selectKey>
+
+    insert into T_ADM_USER_POST
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        ID
+      </isNotNull>
+      <isNotNull prepend="," property="userid" >
+        USERID
+      </isNotNull>
+      <isNotNull prepend="," property="postid" >
+        POSTID
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="userid" >
+        #userid:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="postid" >
+        #postid:DECIMAL#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TAdmUserPostExample" resultClass="java.lang.Integer" >
+    select count(*) from T_ADM_USER_POST
+    <include refid="T_ADM_USER_POST.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update T_ADM_USER_POST
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        ID = #record.id:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.userid" >
+        USERID = #record.userid:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.postid" >
+        POSTID = #record.postid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="T_ADM_USER_POST.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update T_ADM_USER_POST
+    set ID = #record.id:DECIMAL#,
+      USERID = #record.userid:DECIMAL#,
+      POSTID = #record.postid:DECIMAL#
+    <isParameterPresent >
+      <include refid="T_ADM_USER_POST.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+    update T_ADM_USER_POST
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="userid" >
+        USERID = #userid:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="postid" >
+        POSTID = #postid:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    where ID = #id:DECIMAL#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TAdmUserPost" >
+    update T_ADM_USER_POST
+    set USERID = #userid:DECIMAL#,
+      POSTID = #postid:DECIMAL#
+    where ID = #id:DECIMAL#
+  </update>
+</sqlMap>

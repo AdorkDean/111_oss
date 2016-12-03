@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<hbnmap namespace="post"> 
+    <hsql id="list"> 
+			select p from TAdmPost p where 1=1
+			<isNotNull property="name">
+				and p.name='#name#'
+			</isNotNull>
+			<isNotNull property="remark">
+				and p.remark='#remark#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+			<order>
+				order by p.id desc
+			</order>
+</hsql> 
+    <hsql id="count"> 
+			select count(p) from TAdmPost p where 1=1
+			<isNotNull property="name">
+				and p.name='#name#'
+			</isNotNull>
+			<isNotNull property="remark">
+				and p.remark='#remark#'
+			</isNotNull>
+			<isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+    </hsql> 
+    <hsql id="select_pr_bypostid"> 
+    from TAdmPostRole p where 1=1 and p.TAdmPost.id='#id#'
+    </hsql> 
+</hbnmap>

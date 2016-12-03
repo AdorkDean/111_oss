@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "sql-map-config-2.dtd">
+<sqlMapConfig>
+	<settings
+	cacheModelsEnabled="true"
+	enhancementEnabled="true"
+	lazyLoadingEnabled="true" 
+	errorTracingEnabled="true"
+	maxRequests="32"
+	maxSessions="10"
+	maxTransactions="5"
+	useStatementNamespaces="true"
+	/>
+	<!-- add by yinbin 2011.3.30 -->
+	<!-- add sqlmap by yourself like this -->
+	
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_MODULES_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_OPERATION_LOGS_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_RESC_ROLES_SqlMap.xml" />    
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_ROLES_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_USER_ROLES_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_USERS_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_RESC_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_USERS_MODULES_SqlMap.xml" />
+    
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_POST_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_POST_ROLE_SqlMap.xml" />
+    <sqlMap resource="com/rc/portal/vo/sqlmap/T_ADM_USER_POST_SqlMap.xml" />
+    
+</sqlMapConfig>

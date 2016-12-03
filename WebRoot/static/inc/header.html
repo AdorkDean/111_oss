@@ -1,0 +1,65 @@
+<style type="text/css">
+.subitem-article{height:160px; overflow:hidden;}
+.subitem-article a{ display:block; font-size:12px; line-height:16px;}
+.subitem-article dl{margin-top:13px; height:66px; overflow:hidden;}
+.subitem-article dl dt,.subitem-article dl dt img{width:88px; height:66px; display:block; float:left;}
+.subitem-article dl dt{ margin-right:15px;}
+.subitem-article dl p{padding:0 !important; color:#616161;}
+.subitem-article-title{font-size:14px; font-weight:bold; font-family:"Microsoft Yahei"}
+.subitem-article-text,.subitem-article-time{font-family:"5b8b\4f53";}
+.subitem-article-text{height:32px; line-height:16px; overflow:hidden;}
+</style>
+<div class="header">
+	<!--#include virtual="/static/inc/header_common.html" -->
+    <!--搜索-->
+    <div class="logo-search-cart">
+        <div class="w1210 clearfix clear">
+            <h1 class="logo fl">
+            <!--#include virtual="/static/imgout/header_logo.html" -->
+            </h1>
+
+			<!--#include virtual="/static/inc/header_shopcart.html" -->
+
+            <div class="header-search fl">
+				<!--#include virtual="/static/inc/header_search.html" -->
+				<!--#include virtual="/static/imgout/header_keyword.html" -->
+            </div>
+        </div>
+    </div>
+    <!--menu开始-->
+    <div class="nav-box">
+        <div class="menu">
+            <div class="all-sort">
+            <h2><a href="javascript:void(0)">全部商品分类</a></h2>
+            <!--#include virtual="/static/imgout/index_category.html" -->
+            <!--#include virtual="/static/imgout/house/infant-mom/myg_category.html" -->
+            <!--#include virtual="/static/imgout/house/healthcare/bjg_category.html" -->
+            <script>
+            var type = parseInt(document.getElementById("header-nav").value);
+            switch(type)
+            {
+            case 1:
+                $("#index-pro-category").css("display","block");
+            break;
+            case 3:
+                $("#bjg-pro-category").css("display","block");
+            break;
+            case 5:
+                $("#myg-pro-category").css("display","block");
+            default:
+            	
+            }
+            </script>
+            
+            </div>
+            <div class="important"><img src="/static/image/400.png"></div>
+			<!--#include virtual="/static/imgout/header_nav.html" -->
+        </div>
+    </div>
+    <!--menu结束-->
+</div>
+<!--#include virtual="/static/inc/header_cartjs.html" -->
+
+
+
+

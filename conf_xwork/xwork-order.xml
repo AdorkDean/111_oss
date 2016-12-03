@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<package name="order" extends="default" namespace="/order">
+		<!-- 订单 -->
+		<action name="order" class="com.rc.portal.webapp.action.OrderAction">
+		  <result name="order_add" type="freemarker" >/WEB-INF/pages/pname/order/order_add.ftl</result>
+		  <result name="order_memberList" type="freemarker" >/WEB-INF/pages/pname/order/order_memberList.ftl</result>
+		  <result name="add_receiver" type="freemarker" >/WEB-INF/pages/pname/order/add_receiver.ftl</result>
+		   <result name="getOrderList" type="freemarker" >/WEB-INF/pages/pname/order/order_list.ftl</result>
+		   <result name="order_update" type="freemarker" >/WEB-INF/pages/pname/order/order_update.ftl</result>
+		   <result name="order_detail" type="freemarker" >/WEB-INF/pages/pname/order/order_detail.ftl</result>
+		   <result name="order_statistics" type="freemarker" >/WEB-INF/pages/pname/order/order_statistics.ftl</result>
+		   <result name="leader_orderList" type="freemarker" >/WEB-INF/pages/pname/order/leader_orderList.ftl</result>
+		   <result name="xls">${url}</result>
+		</action>
+		
+			<!-- 处方药订单 -->
+		<action name="rxorder" class="com.rc.portal.webapp.action.RxOrderListAction">
+		  <result name="getReOrderList" type="freemarker" >/WEB-INF/pages/pname/rxorder/rx_order_list.ftl</result>
+		  <result name="getOrderDetail" type="freemarker" >/WEB-INF/pages/pname/rxorder/rx_order_detail.ftl</result>
+		  <result name="xls">${url}</result>
+		</action>
+	</package>
+</xwork>

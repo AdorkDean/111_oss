@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="tj_member" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.portal.vo.TjMember" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="date_day" property="dateDay" jdbcType="TIMESTAMP" />
+    <result column="pc_day_add" property="pcDayAdd" jdbcType="INTEGER" />
+    <result column="wap_day_add" property="wapDayAdd" jdbcType="INTEGER" />
+    <result column="ios_day_add" property="iosDayAdd" jdbcType="INTEGER" />
+    <result column="android_day_add" property="androidDayAdd" jdbcType="INTEGER" />
+    <result column="day_add_sum" property="dayAddSum" jdbcType="INTEGER" />
+    <result column="yesterday_add_sum" property="yesterdayAddSum" jdbcType="INTEGER" />
+    <result column="pc_cumulative_add" property="pcCumulativeAdd" jdbcType="BIGINT" />
+    <result column="wap_cumulative_add" property="wapCumulativeAdd" jdbcType="BIGINT" />
+    <result column="ios_cumulative_add" property="iosCumulativeAdd" jdbcType="BIGINT" />
+    <result column="android_cumulative_add" property="androidCumulativeAdd" jdbcType="BIGINT" />
+    <result column="day_cumulative_sum" property="dayCumulativeSum" jdbcType="BIGINT" />
+    <result column="yesterday_cumulative_sum" property="yesterdayCumulativeSum" jdbcType="BIGINT" />
+    <result column="day_active" property="dayActive" jdbcType="INTEGER" />
+    <result column="pc_daypay_add" property="pcDaypayAdd" jdbcType="INTEGER" />
+    <result column="wap_daypay_add" property="wapDaypayAdd" jdbcType="INTEGER" />
+    <result column="android_daypay_add" property="androidDaypayAdd" jdbcType="INTEGER" />
+    <result column="ios_daypay_add" property="iosDaypayAdd" jdbcType="INTEGER" />
+    <result column="daypay_sum" property="daypaySum" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMemberExample" >
+    select id, date_day, pc_day_add, wap_day_add, ios_day_add, android_day_add, day_add_sum,
+      yesterday_add_sum, pc_cumulative_add, wap_cumulative_add, ios_cumulative_add,
+      android_cumulative_add, day_cumulative_sum, yesterday_cumulative_sum, day_active,
+      pc_daypay_add, wap_daypay_add, android_daypay_add, ios_daypay_add, daypay_sum
+    from tj_member
+    <isParameterPresent >
+      <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMember" >
+    select id, date_day, pc_day_add, wap_day_add, ios_day_add, android_day_add, day_add_sum,
+      yesterday_add_sum, pc_cumulative_add, wap_cumulative_add, ios_cumulative_add,
+      android_cumulative_add, day_cumulative_sum, yesterday_cumulative_sum, day_active,
+      pc_daypay_add, wap_daypay_add, android_daypay_add, ios_daypay_add, daypay_sum
+    from tj_member
+    where id = #id:BIGINT#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.portal.vo.TjMember" >
+    delete from tj_member
+    where id = #id:BIGINT#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.portal.vo.TjMemberExample" >
+    delete from tj_member
+    <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.portal.vo.TjMember" >
+    insert into tj_member (id, date_day, pc_day_add, wap_day_add, ios_day_add, android_day_add,
+      day_add_sum, yesterday_add_sum, pc_cumulative_add, wap_cumulative_add, ios_cumulative_add,
+      android_cumulative_add, day_cumulative_sum, yesterday_cumulative_sum, day_active,
+      pc_daypay_add, wap_daypay_add, android_daypay_add, ios_daypay_add, daypay_sum)
+    values (#id:BIGINT#, #dateDay:TIMESTAMP#, #pcDayAdd:INTEGER#, #wapDayAdd:INTEGER#,
+      #iosDayAdd:INTEGER#, #androidDayAdd:INTEGER#, #dayAddSum:INTEGER#, #yesterdayAddSum:INTEGER#,
+      #pcCumulativeAdd:BIGINT#, #wapCumulativeAdd:BIGINT#, #iosCumulativeAdd:BIGINT#,
+      #androidCumulativeAdd:BIGINT#, #dayCumulativeSum:BIGINT#, #yesterdayCumulativeSum:BIGINT#,
+      #dayActive:INTEGER#, #pcDaypayAdd:INTEGER#, #wapDaypayAdd:INTEGER#,
+      #androidDaypayAdd:INTEGER#, #iosDaypayAdd:INTEGER#, #daypaySum:INTEGER#)
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.portal.vo.TjMember" >
+    insert into tj_member
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="dateDay" >
+        date_day
+      </isNotNull>
+      <isNotNull prepend="," property="pcDayAdd" >
+        pc_day_add
+      </isNotNull>
+      <isNotNull prepend="," property="wapDayAdd" >
+        wap_day_add
+      </isNotNull>
+      <isNotNull prepend="," property="iosDayAdd" >
+        ios_day_add
+      </isNotNull>
+      <isNotNull prepend="," property="androidDayAdd" >
+        android_day_add
+      </isNotNull>
+      <isNotNull prepend="," property="dayAddSum" >
+        day_add_sum
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayAddSum" >
+        yesterday_add_sum
+      </isNotNull>
+      <isNotNull prepend="," property="pcCumulativeAdd" >
+        pc_cumulative_add
+      </isNotNull>
+      <isNotNull prepend="," property="wapCumulativeAdd" >
+        wap_cumulative_add
+      </isNotNull>
+      <isNotNull prepend="," property="iosCumulativeAdd" >
+        ios_cumulative_add
+      </isNotNull>
+      <isNotNull prepend="," property="androidCumulativeAdd" >
+        android_cumulative_add
+      </isNotNull>
+      <isNotNull prepend="," property="dayCumulativeSum" >
+        day_cumulative_sum
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayCumulativeSum" >
+        yesterday_cumulative_sum
+      </isNotNull>
+      <isNotNull prepend="," property="dayActive" >
+        day_active
+      </isNotNull>
+      <isNotNull prepend="," property="pcDaypayAdd" >
+        pc_daypay_add
+      </isNotNull>
+      <isNotNull prepend="," property="wapDaypayAdd" >
+        wap_daypay_add
+      </isNotNull>
+      <isNotNull prepend="," property="androidDaypayAdd" >
+        android_daypay_add
+      </isNotNull>
+      <isNotNull prepend="," property="iosDaypayAdd" >
+        ios_daypay_add
+      </isNotNull>
+      <isNotNull prepend="," property="daypaySum" >
+        daypay_sum
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dateDay" >
+        #dateDay:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="pcDayAdd" >
+        #pcDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="wapDayAdd" >
+        #wapDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="iosDayAdd" >
+        #iosDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="androidDayAdd" >
+        #androidDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="dayAddSum" >
+        #dayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayAddSum" >
+        #yesterdayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pcCumulativeAdd" >
+        #pcCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="wapCumulativeAdd" >
+        #wapCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="iosCumulativeAdd" >
+        #iosCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="androidCumulativeAdd" >
+        #androidCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dayCumulativeSum" >
+        #dayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayCumulativeSum" >
+        #yesterdayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dayActive" >
+        #dayActive:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pcDaypayAdd" >
+        #pcDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="wapDaypayAdd" >
+        #wapDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="androidDaypayAdd" >
+        #androidDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="iosDaypayAdd" >
+        #iosDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="daypaySum" >
+        #daypaySum:INTEGER#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.portal.vo.TjMemberExample" resultClass="java.lang.Integer" >
+    select count(*) from tj_member
+    <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update tj_member
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dateDay" >
+        date_day = #record.dateDay:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.pcDayAdd" >
+        pc_day_add = #record.pcDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.wapDayAdd" >
+        wap_day_add = #record.wapDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.iosDayAdd" >
+        ios_day_add = #record.iosDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.androidDayAdd" >
+        android_day_add = #record.androidDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dayAddSum" >
+        day_add_sum = #record.dayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.yesterdayAddSum" >
+        yesterday_add_sum = #record.yesterdayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.pcCumulativeAdd" >
+        pc_cumulative_add = #record.pcCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.wapCumulativeAdd" >
+        wap_cumulative_add = #record.wapCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.iosCumulativeAdd" >
+        ios_cumulative_add = #record.iosCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.androidCumulativeAdd" >
+        android_cumulative_add = #record.androidCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dayCumulativeSum" >
+        day_cumulative_sum = #record.dayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.yesterdayCumulativeSum" >
+        yesterday_cumulative_sum = #record.yesterdayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.dayActive" >
+        day_active = #record.dayActive:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.pcDaypayAdd" >
+        pc_daypay_add = #record.pcDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.wapDaypayAdd" >
+        wap_daypay_add = #record.wapDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.androidDaypayAdd" >
+        android_daypay_add = #record.androidDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.iosDaypayAdd" >
+        ios_daypay_add = #record.iosDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.daypaySum" >
+        daypay_sum = #record.daypaySum:INTEGER#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update tj_member
+    set id = #record.id:BIGINT#,
+      date_day = #record.dateDay:TIMESTAMP#,
+      pc_day_add = #record.pcDayAdd:INTEGER#,
+      wap_day_add = #record.wapDayAdd:INTEGER#,
+      ios_day_add = #record.iosDayAdd:INTEGER#,
+      android_day_add = #record.androidDayAdd:INTEGER#,
+      day_add_sum = #record.dayAddSum:INTEGER#,
+      yesterday_add_sum = #record.yesterdayAddSum:INTEGER#,
+      pc_cumulative_add = #record.pcCumulativeAdd:BIGINT#,
+      wap_cumulative_add = #record.wapCumulativeAdd:BIGINT#,
+      ios_cumulative_add = #record.iosCumulativeAdd:BIGINT#,
+      android_cumulative_add = #record.androidCumulativeAdd:BIGINT#,
+      day_cumulative_sum = #record.dayCumulativeSum:BIGINT#,
+      yesterday_cumulative_sum = #record.yesterdayCumulativeSum:BIGINT#,
+      day_active = #record.dayActive:INTEGER#,
+      pc_daypay_add = #record.pcDaypayAdd:INTEGER#,
+      wap_daypay_add = #record.wapDaypayAdd:INTEGER#,
+      android_daypay_add = #record.androidDaypayAdd:INTEGER#,
+      ios_daypay_add = #record.iosDaypayAdd:INTEGER#,
+      daypay_sum = #record.daypaySum:INTEGER#
+    <isParameterPresent >
+      <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.portal.vo.TjMember" >
+    update tj_member
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="dateDay" >
+        date_day = #dateDay:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="pcDayAdd" >
+        pc_day_add = #pcDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="wapDayAdd" >
+        wap_day_add = #wapDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="iosDayAdd" >
+        ios_day_add = #iosDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="androidDayAdd" >
+        android_day_add = #androidDayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="dayAddSum" >
+        day_add_sum = #dayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayAddSum" >
+        yesterday_add_sum = #yesterdayAddSum:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pcCumulativeAdd" >
+        pc_cumulative_add = #pcCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="wapCumulativeAdd" >
+        wap_cumulative_add = #wapCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="iosCumulativeAdd" >
+        ios_cumulative_add = #iosCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="androidCumulativeAdd" >
+        android_cumulative_add = #androidCumulativeAdd:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dayCumulativeSum" >
+        day_cumulative_sum = #dayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="yesterdayCumulativeSum" >
+        yesterday_cumulative_sum = #yesterdayCumulativeSum:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="dayActive" >
+        day_active = #dayActive:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pcDaypayAdd" >
+        pc_daypay_add = #pcDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="wapDaypayAdd" >
+        wap_daypay_add = #wapDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="androidDaypayAdd" >
+        android_daypay_add = #androidDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="iosDaypayAdd" >
+        ios_daypay_add = #iosDaypayAdd:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="daypaySum" >
+        daypay_sum = #daypaySum:INTEGER#
+      </isNotNull>
+    </dynamic>
+    where id = #id:BIGINT#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.portal.vo.TjMember" >
+    update tj_member
+    set date_day = #dateDay:TIMESTAMP#,
+      pc_day_add = #pcDayAdd:INTEGER#,
+      wap_day_add = #wapDayAdd:INTEGER#,
+      ios_day_add = #iosDayAdd:INTEGER#,
+      android_day_add = #androidDayAdd:INTEGER#,
+      day_add_sum = #dayAddSum:INTEGER#,
+      yesterday_add_sum = #yesterdayAddSum:INTEGER#,
+      pc_cumulative_add = #pcCumulativeAdd:BIGINT#,
+      wap_cumulative_add = #wapCumulativeAdd:BIGINT#,
+      ios_cumulative_add = #iosCumulativeAdd:BIGINT#,
+      android_cumulative_add = #androidCumulativeAdd:BIGINT#,
+      day_cumulative_sum = #dayCumulativeSum:BIGINT#,
+      yesterday_cumulative_sum = #yesterdayCumulativeSum:BIGINT#,
+      day_active = #dayActive:INTEGER#,
+      pc_daypay_add = #pcDaypayAdd:INTEGER#,
+      wap_daypay_add = #wapDaypayAdd:INTEGER#,
+      android_daypay_add = #androidDaypayAdd:INTEGER#,
+      ios_daypay_add = #iosDaypayAdd:INTEGER#,
+      daypay_sum = #daypaySum:INTEGER#
+    where id = #id:BIGINT#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.portal.vo.TjMemberExample" >
+                    select id, date_day, pc_day_add, wap_day_add, ios_day_add, android_day_add, day_add_sum,
+                      yesterday_add_sum, pc_cumulative_add, wap_cumulative_add, ios_cumulative_add,
+                      android_cumulative_add, day_cumulative_sum, yesterday_cumulative_sum, day_active,
+                      pc_daypay_add, wap_daypay_add, android_daypay_add, ios_daypay_add, daypay_sum
+                    from tj_member
+                    <isParameterPresent >
+                      <include refid="tj_member.ibatorgenerated_Example_Where_Clause" />
+                      <isNotNull property="orderByClause" >
+                        order by $orderByClause$
+                      </isNotNull>
+                    </isParameterPresent>
+					limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+  
+    
+  <select id="selectMemberStatisticsBase" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+  SELECT A.day_add_sum,A.day_cumulative_sum,A.dayAddGrowthRate,A.dayCumGrowthRate,ROUND((A.day_cumulative_sum-B.yesterWeekCum)/B.yesterWeekCum*100) AS weekCumGrowthRate,ROUND((A.day_cumulative_sum-C.yesterMonthCum)/C.yesterMonthCum*100) AS monthCumGrowthRate FROM 
+(SELECT tj.day_add_sum,ROUND((tj.day_add_sum-tj.yesterday_add_sum)/tj.yesterday_add_sum*100) AS dayAddGrowthRate,tj.day_cumulative_sum,ROUND((tj.day_cumulative_sum-tj.yesterday_cumulative_sum)/tj.yesterday_cumulative_sum*100) AS dayCumGrowthRate  FROM tj_member tj WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d') =#yesterday#)A,
+(SELECT tj.day_cumulative_sum as yesterWeekCum FROM tj_member tj WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d') =#yesterweek#)B,
+(SELECT tj.day_cumulative_sum as yesterMonthCum FROM tj_member tj WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d') =#yestermonth#)C
+  </select>
+  
+  
+  <select id="selectEChartBase" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  SELECT DATE_FORMAT(tj.date_day,'%Y-%m-%d') AS date,
+  	
+	<isEqual property="source" compareValue="0">
+	tj.day_add_sum AS xzyh,
+	tj.day_cumulative_sum AS ljyh
+	</isEqual>
+	<isEqual property="source" compareValue="1">
+	tj.pc_day_add AS xzyh,
+	tj.pc_cumulative_add AS ljyh
+	</isEqual>
+	<isEqual property="source" compareValue="2">
+	tj.wap_day_add AS xzyh,
+	tj.wap_cumulative_add AS ljyh
+	</isEqual>
+	<isEqual property="source"  compareValue="3">
+	tj.android_day_add AS xzyh,
+	tj.android_cumulative_add AS ljyh
+	</isEqual>
+	<isEqual property="source" compareValue="4">
+	tj.ios_day_add AS xzyh,
+	tj.ios_cumulative_add AS ljyh
+	</isEqual>
+	 FROM tj_member tj
+	WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;=#startDate#
+	GROUP BY DATE_FORMAT(tj.date_day,'%Y-%m-%d')
+  </select>
+  
+    <select id="selectContrastEChartBase1" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  SELECT DATE_FORMAT(tj.date_day,'%Y-%m-%d') AS date,
+	tj.day_add_sum AS xzyh,
+	tj.day_cumulative_sum AS ljyh
+	 FROM tj_member tj
+	WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate1# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;=#startDate1#
+	GROUP BY DATE_FORMAT(tj.date_day,'%Y-%m-%d')
+  </select>
+    <select id="selectContrastEChartBase2" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+  SELECT DATE_FORMAT(tj.date_day,'%Y-%m-%d') AS date,
+	tj.day_add_sum AS xzyh,
+	tj.day_cumulative_sum AS ljyh
+	 FROM tj_member tj
+	WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate2# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;=#startDate2#
+	GROUP BY DATE_FORMAT(tj.date_day,'%Y-%m-%d')
+  </select>
+    <select id="selectDateListByPage" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+select 
+ DATE_FORMAT(tj.date_day,'%Y-%m-%d') as date,
+ <isEqual property="source" compareValue="0">
+	tj.day_add_sum AS xzyh,
+	tj.daypay_sum AS ps,
+	</isEqual>
+	<isEqual property="source" compareValue="1">
+	tj.pc_day_add AS xzyh,
+	tj.pc_daypay_add ps,
+	</isEqual>
+	<isEqual property="source" compareValue="2">
+	tj.wap_day_add AS xzyh,
+	tj.wap_daypay_add AS ps,
+	</isEqual>
+	<isEqual property="source"  compareValue="3">
+	tj.android_day_add AS xzyh,
+	tj.android_daypay_add AS ps,
+	</isEqual>
+	<isEqual property="source" compareValue="4">
+	tj.ios_day_add AS xzyh,
+	tj.ios_daypay_add AS ps,
+	</isEqual>
+tj.day_active,
+tj.day_cumulative_sum 
+FROM tj_member tj 
+WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;= #startDate# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate#
+order by DATE_FORMAT(tj.date_day,'%Y-%m-%d') desc
+LIMIT $pageInfo.start$,$pageInfo.end$
+  </select>
+    <select id="selectDateListCount" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+select 
+count(tj.id)
+FROM tj_member tj 
+WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;= #startDate# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate#
+  </select>
+  
+      <select id="selectDateListExcel" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+select 
+ DATE_FORMAT(tj.date_day,'%Y-%m-%d') as date,
+ <isEqual property="source" compareValue="0">
+	tj.day_add_sum AS xzyh,
+	tj.daypay_sum AS ps,
+	</isEqual>
+	<isEqual property="source" compareValue="1">
+	tj.pc_day_add AS xzyh,
+	tj.pc_daypay_add ps,
+	</isEqual>
+	<isEqual property="source" compareValue="2">
+	tj.wap_day_add AS xzyh,
+	tj.wap_daypay_add AS ps,
+	</isEqual>
+	<isEqual property="source"  compareValue="3">
+	tj.android_day_add AS xzyh,
+	tj.android_daypay_add AS ps,
+	</isEqual>
+	<isEqual property="source" compareValue="4">
+	tj.ios_day_add AS xzyh,
+	tj.ios_daypay_add AS ps,
+	</isEqual>
+tj.day_active,
+tj.day_cumulative_sum 
+FROM tj_member tj 
+WHERE DATE_FORMAT(tj.date_day,'%Y-%m-%d')&gt;= #startDate# AND DATE_FORMAT(tj.date_day,'%Y-%m-%d')&lt;=#endDate#
+order by DATE_FORMAT(tj.date_day,'%Y-%m-%d') desc
+  </select>
+</sqlMap>

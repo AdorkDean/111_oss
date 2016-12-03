@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hbnmap namespace="modules">
+	<hsql id="list">
+		select p from TAdmModules p where 1=1 
+		<isNotNull property="moduleName">
+			and p.moduleName='#moduleName#'
+		</isNotNull>
+		<isNotNull property="url">
+			and p.url='#url#'
+		</isNotNull>
+		<isNotNull property="webid">
+			and p.webid='#webid#'
+		</isNotNull>
+		<order>
+			order by p.id
+		</order>
+	</hsql>
+	<hsql id="count">
+		select count(p) from TAdmModules p where 1=1
+		<isNotNull property="moduleName">
+			and p.moduleName='#moduleName#'
+		</isNotNull>
+		<isNotNull property="url">
+			and p.url='#url#'
+			</isNotNull>
+		<isNotNull property="webid">
+			and p.webid='#webid#'
+		</isNotNull>
+	</hsql>
+	<hsql id="listparent">
+	 from TAdmModules p where 1=1 and p.parentid is null
+		 <isNotNull property="webid">
+				and p.webid='#webid#'
+			</isNotNull>
+			<isNotNull property="name">
+			and p.moduleName='#name#'
+		</isNotNull>
+	</hsql>
+</hbnmap>

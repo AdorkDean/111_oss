@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="/web/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/web/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/web/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/web/js/cookieUtil.js"></script>
+<script type="text/javascript" src="/web/js/common.new.js"></script>
+<script type="text/javascript" src="/web/js/alert.main.js"></script>
+<title>商品详情</title>
+</head>
+
+<body onLoad="loaded()">
+<header class="header">
+    <a href="javascript:;" class="iconfont top-left-btn">B</a>
+    <h2 class="header-title">
+        商品详情
+    </h2>
+    <a href="javascript:;" class="iconfont top-heart-btn" id="collect-btn">H</a>
+    <a href="/index.html" class="iconfont top-right-btn">h</a>
+</header>
+
+<script type="text/javascript" src="/web/js/iscroll.js"></script>
+<script type="text/javascript">
+	var myScroll;
+	function loaded ()
+	{
+		myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+</script>
+
+<article class="details-main">
+  <!--效果html开始-->
+  <div class="slider">
+    <div class="slider-page"><span id="cur-num">1</span>/<span>5</span></div>
+	  <ul>
+	            	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+        	<li><a href="javascript:;"><img src="/web/images/noPro_img.png"></a></li>
+	  </ul>
+  </div>
+  <script type="text/javascript" src="/web/js/yxMobileSlider.js"></script>
+  <script>
+      $(".slider").yxMobileSlider({width:640,height:640,during:3000})
+  </script>  
+  <!--效果html结束-->
+  <article class="product-box">
+    <header class="product-info">
+      <h1 class="product-title">肤阴洁复方黄松洗液 280ml*1瓶</h1>
+      <input type="hidden" id="goodsid" value="288"/>
+      <p class="product-price">
+        <i style="font-family:'Microsoft Yahei'">￥</i><b id="mprice">12.3</b>
+        <span id="pcount">4折</span>
+      </p>
+      <p class="priduct-spec"><span>原价:<i style="font-family:'Microsoft Yahei'">￥</i><b id="oprice">25</b></span><span style="text-decoration:none;">规格:</span></p>
+    </header>
+  </article>
+  <ul class="explain clearfix">
+  	<li><span class="iconfont">M</span>30天无理由退换货</li>
+    <li><span class="iconfont">M</span>真品假一赔十</li>
+    <li><span class="iconfont">M</span>全程冷藏运输</li>
+    <li><span class="iconfont">M</span>全国规模化采购，药厂直销</li>
+  </ul>
+  <article class="product-info-link">
+    <a href="/goodscomment/gcmt!list.action?id=288" class="product-info-link-title">商品评论<b class="iconfont">J</b></a>
+    <h2 class="product-info-link-title">商品详情</h2>
+    <div class="details-img">
+    	<p>&nbsp;</p><p style="LINE-HEIGHT: 23px; FONT-FAMILY: arial verdana 瀹嬩綋; COLOR: #666666; FONT-SIZE: small">銆愬晢鍝佸悕绉般�鑲ら槾娲�br/>銆愰�鐢ㄥ悕绉般�澶嶆柟榛勬澗娲楁恫锛堣偆闃存磥锛夛紙闄勫姞鎵嬪姩鍔犲帇寮忔磥闃村櫒锛�br/>銆愮敓浜т紒涓氥�骞胯タ婧愬畨鍫傝嵂涓氭湁闄愬叕鍙�br/>銆愬晢鍝佽鏍笺�姣忕摱瑁�80ml<br/>銆愭壒鍑嗘枃鍙枫�鍥借嵂鍑嗗瓧Z20026294<br/>銆愰�鐢ㄥ悕绉般�澶嶆柟榛勬澗娲楁恫锛堣偆闃存磥锛夛紙闄勫姞鎵嬪姩鍔犲帇寮忔磥闃村櫒锛�br/>銆愬晢 鍝�鍚嶃�鑲ら槾娲�br/>銆愭眽璇嫾闊炽�FufanghuangsongxiYe<br/>銆愭垚 鍒嗐�宀楁澗娌广�澶у彾妗夋补銆佹弧灞遍娌广�铔囧簥瀛愭补銆佸崈閲屽厜銆佸湴鑲ゅ瓙銆侀粍鏌忋�閱嬮吀娲楀繀娉般�鑱氬北姊ㄩ叝銆佽嫰鐢查吀閽犮�<br/>銆愭� 鐘躲�鏈搧涓轰钩榛勮壊鑷虫榛勮壊鐨勬恫浣擄紱姘旇姵棣欍�<br/>銆愬姛鑳戒富娌汇�娓呯儹鐕ユ箍锛岀椋庢鐥掋�鐢ㄤ簬婀跨儹涓嬫敞鎵�嚧鐨勯槾閮ㄧ槞鐥掞紝鎴栫伡鐑棝锛屽甫涓嬮噺澶氾紝鑹查粍锛涢湁鑿屾�銆佹淮铏�闃撮亾鐐庡強澶栭槾鐐庤浠ヤ笂鐥囧�鑰呫�<br/>銆愯 鏍笺�姣忕摱瑁�80ml<br/>銆愮敤娉曠敤閲忋�澶栫敤锛岀敤鍓嶆憞鍖��闃撮亾鐤剧梾鐢ㄦ湰鍝�5姣崌鍔犳俯寮�按鑷�000姣崌鍐叉礂鎴栧潗娴达紝涓�棩1-2娆★紝涓�懆涓�鐤楃▼銆�br/>銆愪笉鑹弽搴斻�灏氫笉鏄庣‘銆�br/>銆愮 蹇屻�缁忔湡銆佸瓡鏈熷瓡濡囩鐢ㄣ�<br/>銆愭敞鎰忎簨椤广�<br/>1.鏈搧涓哄鐢ㄨ嵂锛岀姝㈠唴鏈嶃�<br/>2.蹇岄杈涜荆椋熺墿銆�br/>3.鍒囧嬁鎺ヨЕ鐪肩潧銆佸彛鑵旂瓑榛忚啘澶勩�鐨偆鐮存簝澶勭鐢ㄣ�<br/>4.娌荤枟鏈熼棿蹇屾埧浜嬶紝閰嶅伓濡傛湁鎰熸煋搴斿悓鏃舵不鐤椼�<br/>5.鏈鎴栫粷缁忓悗鎮ｈ�锛屽簲鍦ㄥ尰甯堟寚瀵间笅浣跨敤銆�br/>6.澶栭槾鐧借壊鐥呭彉銆佺硸灏跨梾鎵�嚧鐨勭槞鐥掍笉瀹滀娇鐢ㄣ�<br/>7.甯︿笅浼磋鎬у垎娉岀墿锛屾垨浼存湁灏块銆佸翱鎬ャ�灏跨棝鑰咃紝搴斿幓鍖婚櫌灏辫瘖銆�br/>8.鏈搧鍦ㄨ串瀛樹腑濡傛湁灏戦噺娴戞祳鎴栧垎灞傦紝鎽囧潎鍚庝娇鐢ㄣ�<br/>9.鐢ㄨ嵂7澶╃棁鐘舵棤缂撹В锛屽簲鍘诲尰闄㈠氨璇娿�<br/>10.瀵规湰鍝佽繃鏁忚�绂佺敤锛岃繃鏁忎綋璐ㄨ�鎱庣敤銆�br/>11.鏈搧鎬х姸鍙戠敓鏀瑰彉鏃剁姝娇鐢ㄣ�<br/>12.璇峰皢鏈搧鏀惧湪鍎跨涓嶈兘鎺ヨЕ鐨勫湴鏂广�<br/>13.濡傛鍦ㄤ娇鐢ㄥ叾浠栬嵂鍝侊紝浣跨敤鏈搧鍓嶈鍜ㄨ鍖诲笀鎴栬嵂甯堛�<br/>銆愯串 钘忋�瀵嗗皝锛岀疆闃村噳澶勶紙涓嶈秴杩�0鈩冿級銆�br/>銆愬寘 瑁呫�澶栫敤娑蹭綋鑽敤鑱氭隘涔欑儻濉戞枡鐡惰锛屾瘡鐡惰250姣崌<br/>銆愭湁 鏁�鏈熴�36涓湀<br/>銆愭壒鍑嗘枃鍙枫�鍥借嵂鍑嗗瓧Z20026294<br/>銆愮敓浜т紒涓氥�骞胯タ婧愬畨鍫傝嵂涓氭湁闄愬叕鍙�br/>銆愬墏 鍨嬨�澶栫敤娲楁恫</p><p><img title="201501051420442153796057298.jpg" src="http://www.111yao.com/upload/images/201501051420442153796057298.jpg"/></p><p>&nbsp;</p><p><img title="201501051420442153831092148.jpg" src="http://www.111yao.com/upload/images/201501051420442153831092148.jpg"/></p><p><img title="201501051420442153942034863.jpg" src="http://www.111yao.com/upload/images/201501051420442153942034863.jpg"/></p><p><br/></p>
+    </div>
+  </article>
+  <div class="groom-box">
+    <h2 class="guess-title"><span>猜你在找</span></h2>
+    <div class="guess-box" id="wrapper">
+        <div class="guess-box-list" id="scroller">
+            <ul>
+            </ul>
+        </div>
+    </div>
+  </div>
+</article>
+<div class="details-btn-fixed">
+	<ul class="clearfix">
+    	<li><a href="/carts/cart!page.action" class="iconfont">C</a><span class="cart-count">0</span></li>
+        <li><a href="javascript:;" class="add-cart-btn">加入购物车</a></li>
+    </ul>
+</div>
+<!--loading-->
+<div class="spinner" style="display:none;">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<script type="text/javascript" src="/web/js/hotsale-goods.js"></script>
+<script type="text/javascript" src="/web/js/wap-cart.js"></script>
+<script>
+var jsCtx = "";
+$(function(){
+	var id = $.trim($("#goodsid").val());
+	if(checklogin())
+	{
+		$.get("/index!isattent.action?id="+id,null,function(data)
+		{
+			if(data == 1)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+				$("#collect-btn").html("H");
+			}
+			if(data == 0)
+			{
+				document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+				$("#collect-btn").html("I");
+			}
+		});
+	}
+	//Get the number of shopping cart from server
+	getnum();
+	//This is collection button
+	$("#collect-btn").click(function(){
+		if(checklogin()){
+			$.get("/index!attentionpro.action?id="+id+"&type=0",null,function(data)
+			{
+				if(data == 0)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn";
+					$("#collect-btn").html("H");
+				}
+				if(data == 1)
+				{
+					document.getElementById("collect-btn").className = "iconfont top-heart-btn alr";
+					$("#collect-btn").html("I");
+				}
+			});
+		}else{
+			window.location.href = "/login/login!index.action?redirectUrl="+location.href;
+		}
+	});
+	//Put goods into shopping cart
+	$(".add-cart-btn").click(function(){
+		var rs = add_cart(id,1);
+		if(rs > 0)
+		{
+			$alert("success","已成功添加至购物车");
+			getnum();
+			return false;
+		} 
+		if(rs == -2)
+		{
+			$alert("warn","库存不足");
+			return false;
+		}
+		if(rs == -3)
+		{
+			$alert("warn","超出购买数量");
+			return false;
+		}
+		if(rs == 0)
+		{
+			$alert("warn","操作失败");
+			return false;
+		}
+	});
+});
+
+//Get the number of shopping cart from server
+function getnum()
+{
+	jQuery.ajax
+	({
+       type: "post",
+       url: "/carts/cart!getCartSum.action",	 
+       async:false, 
+       success: function(data)
+       {
+    	   $(".cart-count").html(data);
+       }
+     }); 	  
+}
+</script>
+</body>
+</html>
